@@ -382,3 +382,9 @@ h1, h2, h3, p { margin: 0; }
 .label-connect::before { left: -9px; top: -8px; }
 .label-connect::after { left: 50%; bottom: 100%; height: 22px; border-left: 1px dashed currentColor; }
 @media (max-width: 780px) { .label-connect { right: 18%; bottom: 10%; } }
+
+/* Unambiguous final callout geometry: keep labels clean and outside material silhouettes. */
+.hero-function-label::after { display: none !important; }
+.label-connect { right: 5%; bottom: 20%; }
+.label-connect::before { display: none; }
+@media (max-width: 780px) { .label-connect { right: 4%; bottom: 14%; } }

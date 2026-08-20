@@ -46,3 +46,7 @@
 - [x] Fix and verify the Home hero logo/visual assets without breaking mobile, Arabic RTL, or Light/Dark modes
 - [x] Verify the repaired Home hero in desktop/mobile, English/Arabic RTL, and both Light/Dark modes after the logo/hero change
 - [x] Decide and document whether the hero uses inline vector visuals or uploaded concept assets; keep the selected approach consistent with the approved concept
+
+- [x] Improve Light Mode contrast for secondary text, labels, borders, and accent colors
+- [x] Strengthen Arabic hero typography hierarchy and reduce the washed-out green treatment
+- [x] Rebalance the Home hero composition so the headline and orbit visual feel connected and intentional

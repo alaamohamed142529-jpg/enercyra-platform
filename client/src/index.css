@@ -135,3 +135,34 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .orbit-core { background: rgba(255,255,255,.78); box-shadow: 0 0 45px rgba(95,170,137,.2); }
 .app-shell.theme-light .waste-object { background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(224,239,234,.84)); color: #087f77; box-shadow: 0 18px 40px rgba(13,64,75,.12); }
 .app-shell.theme-light .orbit-ring { box-shadow: 0 0 30px rgba(28,145,149,.1); }
+
+/* Readability refinement: the light variant uses deeper semantic accents instead of pale neon text. */
+.app-shell.theme-light {
+  --muted: #425d66;
+  --line: rgba(4, 54, 67, .22);
+  --lime: #6d9f2e;
+  --green: #187a61;
+  --cyan: #087f8d;
+}
+.app-shell.theme-light .hero h1 { background: linear-gradient(180deg, #092b36 30%, #5d8e2b); background-clip: text; -webkit-background-clip: text; }
+.app-shell.theme-light .hero-copy > p,
+.app-shell.theme-light .trust-row,
+.app-shell.theme-light .feature-card p,
+.app-shell.theme-light .recent-row small,
+.app-shell.theme-light .recent-stat small,
+.app-shell.theme-light .how-preview p { color: #425d66; }
+.app-shell.theme-light .eyebrow,
+.app-shell.theme-light .orbit-label { font-weight: 800; }
+.app-shell.theme-light .hero-visual { min-height: 485px; }
+.app-shell.theme-light .feature-card,
+.app-shell.theme-light .recent-card { box-shadow: 0 14px 34px rgba(15, 64, 70, .07); }
+[dir="rtl"] .hero h1 { letter-spacing: -.04em; }
+@media (min-width: 821px) {
+  .hero { min-height: 570px; }
+  .hero-visual { min-height: 485px; }
+}
+@media (max-width: 560px) {
+  .hero { padding-top: 18px; }
+  .hero-visual { min-height: 365px; margin-top: -4px; }
+  .hero h1 { line-height: 1.04; }
+}

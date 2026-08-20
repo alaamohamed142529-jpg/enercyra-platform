@@ -178,7 +178,9 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
   );
 }
 
-function BrandMark() { return <span className="brand-mark" aria-hidden="true"><span /><span /><span /><b /></span>; }
+const ENERCYRA_MARK_URL = "/manus-storage/enercyra-circular-mark_43fba3fa.png";
+
+function BrandMark({ className = "" }: { className?: string }) { return <img className={`brand-mark ${className}`} src={ENERCYRA_MARK_URL} alt="" aria-hidden="true" />; }
 
 function Home({ text, lang }: { text: Copy; lang: Lang }) {
   return <div className="page home-page">
@@ -201,8 +203,12 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
 function InteractiveHeroVisual({ lang }: { lang: Lang }) {
   return <div className="hero-visual hero-composed" data-hero-version="realistic-material-art-v3" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية حول مركز الطاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste around an energy center"}>
     <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
-    <img className="hero-material-art" src="/manus-storage/enercyra-realistic-waste-hero_0d4908a3.png" alt={lang === "ar" ? "مواد نفايات واقعية تدور حول مركز طاقة من Enercyra" : "Realistic waste materials orbiting an Enercyra energy center"} />
-    <div className="hero-motion-layer" aria-hidden="true"><span className="motion-ring motion-ring-one" /><span className="motion-ring motion-ring-two" /><span className="motion-ring motion-ring-three" /><span className="motion-orb orb-one" /><span className="motion-orb orb-two" /><span className="motion-orb orb-three" /><span className="motion-orb orb-four" /><span className="material-glint glint-bottle" /><span className="material-glint glint-can" /><span className="material-glint glint-glass" /><span className="material-glint glint-cardboard" /><span className="material-glint glint-organic" /><span className="material-anchor anchor-bottle" /><span className="material-anchor anchor-can" /><span className="material-anchor anchor-glass" /><span className="material-anchor anchor-cardboard" /><span className="material-anchor anchor-organic" /></div>
+    <div className="interactive-material-orbit" role="img" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية تتحرك حول مركز طاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste moving around an energy core"}>
+      <span className="energy-ring energy-ring-outer" /><span className="energy-ring energy-ring-middle" /><span className="energy-ring energy-ring-inner" />
+      <span className="energy-particle particle-a" /><span className="energy-particle particle-b" /><span className="energy-particle particle-c" /><span className="energy-particle particle-d" />
+      <span className="material-object material-bottle"><span className="object-bottle" /></span><span className="material-object material-can"><span className="object-can" /></span><span className="material-object material-glass"><span className="object-glass" /></span><span className="material-object material-cardboard"><span className="object-cardboard" /></span><span className="material-object material-organic"><span className="object-organic" /></span>
+      <span className="energy-core"><BrandMark /><span className="core-pulse" /></span>
+    </div>
     <div className="hero-function-label label-classify"><Sparkles size={13} /><span>{lang === "ar" ? "تصنيف" : "CLASSIFY"}</span></div><div className="hero-function-label label-calculate"><BarChart3 size={13} /><span>{lang === "ar" ? "حساب" : "CALCULATE"}</span></div><div className="hero-function-label label-connect"><UsersRound size={13} /><span>{lang === "ar" ? "تواصل" : "CONNECT"}</span></div>
     <div className="hero-scan-line" aria-hidden="true" /><div className="hero-corner corner-tl" aria-hidden="true" /><div className="hero-corner corner-br" aria-hidden="true" />
   </div>;

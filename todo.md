@@ -191,3 +191,12 @@
 - [x] Verify the published homepage in English and Arabic RTL, light/dark, and mobile views
 
 - [x] Prepare a comprehensive Arabic report covering Enercyra features, architecture, calculations, design iterations, validation, deployment, assumptions, and remaining limitations
+
+- [x] Replace only the top-left logo icon in the supplied website screenshot with the exact attached Enercyra logo; preserve all other pixels and text
+
+- [x] Restore the exact circular Enercyra logo mark in the top-left header without changing the wordmark or tagline
+- [x] Remove the static/image-like right-side hero treatment and rebuild it as separate interactive material objects with animated energy rings
+- [x] Verify the new header and interactive hero in English, Arabic RTL, light/dark, desktop, mobile, and reduced-motion modes, then publish
+
+- [ ] Save a checkpoint to publish the exact circular logo and interactive material hero
+- [ ] Verify the published homepage in English and Arabic RTL, light/dark, desktop, and mobile views

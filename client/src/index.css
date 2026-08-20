@@ -314,10 +314,8 @@ h1, h2, h3, p { margin: 0; }
 .energy-wave { position: absolute; z-index: 2; border-radius: 50%; border: 1px solid rgba(68,217,238,.3); opacity: 0; pointer-events: none; animation: energyWave 5.8s ease-out infinite; }
 .energy-wave-one { inset: 26%; animation-delay: -.8s; }
 .energy-wave-two { inset: 26%; animation-delay: -3.7s; border-color: rgba(193,244,91,.26); }
-.energy-beam { position: absolute; z-index: 2; left: 50%; top: 50%; width: 43%; height: 2px; transform-origin: left center; background: linear-gradient(90deg, rgba(193,244,91,.5), rgba(68,217,238,.16), transparent); filter: blur(.4px); opacity: .46; pointer-events: none; animation: energyBeam 9s linear infinite; }
 @keyframes energyWave { 0% { transform: scale(.72); opacity: 0; } 12% { opacity: .38; } 70%,100% { transform: scale(1.95); opacity: 0; } }
-@keyframes energyBeam { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .energy-wave, .energy-beam { animation: none !important; opacity: .16; } }
+@media (prefers-reduced-motion: reduce) { .energy-wave { animation: none !important; opacity: .16; } }
 
 /* Businesses directory and compact icon-led navigation refinement. */
 .site-header { gap: 20px; padding: 10px 16px; border-radius: 999px; }

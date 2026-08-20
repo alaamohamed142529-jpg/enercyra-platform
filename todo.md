@@ -229,3 +229,6 @@
 - [x] Reposition CLASSIFY, CALCULATE, and CONNECT around the hero orbit to match the supplied reference composition
 - [x] Restyle their icons and connector accents for clear contrast in Light, Dark, and Arabic RTL layouts
 - [x] Verify the revised hero labels on desktop/mobile and publish the update
+
+- [x] Remove the thin light beam emerging from the center logo without changing the energy rings or material animation
+- [x] Verify the beam removal in Light, Dark, Arabic RTL, mobile, and reduced-motion modes, then publish

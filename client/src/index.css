@@ -209,3 +209,44 @@ h1, h2, h3, p { margin: 0; }
 @keyframes realisticHeroFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-5px) scale(1.006); } }
 @media (prefers-reduced-motion: reduce) { .hero-material-art { animation: none; } .hero-visual:hover .hero-material-art { transform: none; } }
 @media (max-width: 780px) { .hero-material-art { width: 118%; max-width: none; margin-inline: -9%; aspect-ratio: 16 / 10; object-position: center; } }
+
+/* Visible motion inside the realistic artwork: energy rings rotate while particles and material glints travel independently. */
+.hero-motion-layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.motion-ring { position: absolute; left: 63%; top: 51%; width: 22%; aspect-ratio: 1; border: 1px solid rgba(68,217,238,.78); border-radius: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 18px rgba(68,217,238,.22), inset 0 0 14px rgba(193,244,91,.12); }
+.motion-ring-one { animation: imageRingSpin 9s linear infinite; border-top-color: var(--lime); border-right-color: transparent; }
+.motion-ring-two { width: 31%; border-color: rgba(193,244,91,.65); border-left-color: transparent; border-bottom-style: dashed; animation: imageRingSpinReverse 13s linear infinite; }
+.motion-ring-three { width: 41%; border-color: rgba(68,217,238,.46); border-top-style: dotted; border-right-color: transparent; animation: imageRingSpin 18s linear infinite; }
+.motion-orb { position: absolute; left: 63%; top: 51%; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px 3px rgba(68,217,238,.75); transform-origin: 0 0; }
+.orb-one { animation: imageOrbOne 7s linear infinite; }
+.orb-two { background: var(--lime); box-shadow: 0 0 12px 3px rgba(193,244,91,.8); animation: imageOrbTwo 10s linear infinite; }
+.orb-three { animation: imageOrbThree 12s linear infinite reverse; }
+.orb-four { background: var(--green); box-shadow: 0 0 12px 3px rgba(97,215,156,.72); animation: imageOrbFour 15s linear infinite; }
+.material-glint { position: absolute; width: 28px; height: 3px; border-radius: 99px; opacity: .25; background: linear-gradient(90deg, transparent, white, transparent); filter: blur(.4px); animation: materialGlint 3.6s ease-in-out infinite; }
+.glint-bottle { top: 25%; left: 77%; transform: rotate(-18deg); animation-delay: -.6s; }
+.glint-can { top: 45%; left: 52%; transform: rotate(-62deg); animation-delay: -1.4s; }
+.glint-glass { top: 47%; left: 88%; transform: rotate(72deg); animation-delay: -2.1s; }
+.glint-cardboard { top: 69%; left: 67%; transform: rotate(14deg); animation-delay: -2.8s; }
+.glint-organic { top: 72%; left: 81%; transform: rotate(-28deg); animation-delay: -1.9s; }
+@keyframes imageRingSpin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes imageRingSpinReverse { to { transform: translate(-50%, -50%) rotate(-360deg); } }
+@keyframes imageOrbOne { from { transform: rotate(0deg) translateX(78px) rotate(0deg); } to { transform: rotate(360deg) translateX(78px) rotate(-360deg); } }
+@keyframes imageOrbTwo { from { transform: rotate(120deg) translateX(108px) rotate(-120deg); } to { transform: rotate(480deg) translateX(108px) rotate(-480deg); } }
+@keyframes imageOrbThree { from { transform: rotate(220deg) translateX(140px) rotate(-220deg); } to { transform: rotate(-140deg) translateX(140px) rotate(140deg); } }
+@keyframes imageOrbFour { from { transform: rotate(40deg) translateX(170px) rotate(-40deg); } to { transform: rotate(400deg) translateX(170px) rotate(-400deg); } }
+@keyframes materialGlint { 0%, 100% { opacity: .08; transform: translateX(-8px) scaleX(.65); } 50% { opacity: .9; transform: translateX(16px) scaleX(1.2); } }
+@media (prefers-reduced-motion: reduce) { .motion-ring, .motion-orb, .material-glint { animation: none; } }
+@media (max-width: 780px) { .motion-ring { left: 63%; top: 60%; } .motion-orb { left: 63%; top: 60%; } .material-glint { transform-origin: center; } }
+
+/* Independent artwork echoes: each clipped crop drifts separately so the materials feel alive inside the hero image. */
+.material-anchor { position: absolute; inset: 0; z-index: 1; background: url('/manus-storage/enercyra-realistic-waste-hero_0d4908a3.png') center / 100% 100% no-repeat; opacity: .34; filter: saturate(1.25) brightness(1.18) drop-shadow(0 0 9px rgba(68,217,238,.46)); mix-blend-mode: screen; pointer-events: none; }
+.anchor-bottle { clip-path: ellipse(12% 10% at 77% 23%); animation: materialDriftBottle 6.8s ease-in-out infinite; }
+.anchor-can { clip-path: ellipse(10% 13% at 54% 43%); animation: materialDriftCan 7.6s ease-in-out infinite; }
+.anchor-glass { clip-path: ellipse(10% 17% at 89% 46%); animation: materialDriftGlass 8.4s ease-in-out infinite; }
+.anchor-cardboard { clip-path: polygon(60% 61%, 78% 61%, 82% 75%, 58% 75%); animation: materialDriftCardboard 7.2s ease-in-out infinite; }
+.anchor-organic { clip-path: ellipse(13% 11% at 84% 73%); animation: materialDriftOrganic 9s ease-in-out infinite; }
+@keyframes materialDriftBottle { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(5px,-4px) rotate(1.2deg); } }
+@keyframes materialDriftCan { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-5px,3px) rotate(-1.4deg); } }
+@keyframes materialDriftGlass { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(4px,5px) rotate(.9deg); } }
+@keyframes materialDriftCardboard { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-4px,-3px) rotate(-.8deg); } }
+@keyframes materialDriftOrganic { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(3px,-5px) rotate(1deg); } }
+@media (prefers-reduced-motion: reduce) { .material-anchor { animation: none; } }

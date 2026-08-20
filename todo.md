@@ -165,7 +165,20 @@
 - [x] Replace the CSS placeholder material objects with the generated visual asset while preserving responsive and reduced-motion behavior
 - [x] Verify and publish the improved hero in English, Arabic RTL, light/dark, and mobile views
 
-- [ ] Save a checkpoint to publish the realistic-material hero asset and removal of old icon overlays
-- [ ] Verify the published homepage in English and Arabic RTL, light/dark, and at least one mobile viewport
+- [x] Save a checkpoint to publish the realistic-material hero asset and removal of old icon overlays
+- [x] Verify the published homepage in English and Arabic RTL, light/dark, and at least one mobile viewport
 
-- [ ] Force-refresh the public homepage bundle after realistic hero integration so the live domain no longer serves the old CSS material icons
+- [x] Force-refresh the public homepage bundle after realistic hero integration so the live domain no longer serves the old CSS material icons
+
+- [x] Confirm the refreshed realistic hero on the live public page in both English and Arabic RTL with explicit light and dark visual states
+- [x] Confirm the published release remains responsive using the matching mobile preview after the public bundle refresh
+
+- [x] Add clearly visible layered animation over the realistic hero image: rotating rings, moving energy particles, and independent material drift
+- [x] Preserve reduced-motion behavior and verify the animation in English, Arabic RTL, light/dark, and mobile views before publishing
+
+- [x] Add independent motion anchors for the five material positions so the objects visibly drift separately from the base artwork
+- [x] Re-verify the animated hero after this motion-layer change in English, Arabic RTL, light/dark, and mobile
+- [ ] Save a checkpoint and verify the published homepage shows the new in-image animation
+
+- [x] Capture explicit local light-mode and dark-mode hero checks after adding material drift anchors
+- [x] Verify the updated hero with reduced-motion enabled so the motion layer stops cleanly without visual breakage

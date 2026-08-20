@@ -187,5 +187,7 @@
 - [x] Make the central Energy Core visibly animated with fluid cyan/lime plasma, continuous orbit rings, particles, and independently orbiting waste materials
 - [x] Keep CLASSIFY, CALCULATE, and CONNECT labels static, preserve RTL/theme/mobile/reduced-motion support, then test and publish
 
-- [ ] Save a checkpoint to publish the reference-aligned animated Energy Core and static function labels
-- [ ] Verify the published homepage in English and Arabic RTL, light/dark, and mobile views
+- [x] Save a checkpoint to publish the reference-aligned animated Energy Core and static function labels
+- [x] Verify the published homepage in English and Arabic RTL, light/dark, and mobile views
+
+- [x] Prepare a comprehensive Arabic report covering Enercyra features, architecture, calculations, design iterations, validation, deployment, assumptions, and remaining limitations

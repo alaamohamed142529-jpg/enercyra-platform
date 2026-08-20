@@ -91,4 +91,4 @@
 - [x] Approve and wire explicitly labeled notebook-derived reference price and LHV values for the supported result class
 - [x] Make weight-to-price and weight-to-energy calculations visibly update on Result with units and reference-source labeling
 - [x] Remove the framed/image-like treatment from the homepage hero and simplify the composition without losing responsive motion
-- [ ] Re-test and publish the calculation and visual cleanup changes on the public URL
+- [x] Re-test and publish the calculation and visual cleanup changes on the public URL

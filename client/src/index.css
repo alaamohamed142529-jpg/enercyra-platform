@@ -250,3 +250,16 @@ h1, h2, h3, p { margin: 0; }
 @keyframes materialDriftCardboard { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-4px,-3px) rotate(-.8deg); } }
 @keyframes materialDriftOrganic { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(3px,-5px) rotate(1deg); } }
 @media (prefers-reduced-motion: reduce) { .material-anchor { animation: none; } }
+
+/* Static functional callouts from the reference stay anchored while the energy core moves beneath them. */
+.hero-function-label { position: absolute; z-index: 4; display: inline-flex; align-items: center; gap: 6px; color: var(--lime); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; text-shadow: 0 0 12px rgba(193,244,91,.45); }
+.hero-function-label::after { content: ""; position: absolute; width: 34px; height: 1px; background: linear-gradient(90deg, currentColor, transparent); opacity: .7; }
+.hero-function-label svg { color: var(--cyan); }
+.label-classify { left: 25%; top: 22%; }
+.label-classify::after { left: 100%; top: 50%; transform: rotate(32deg); transform-origin: left center; }
+.label-calculate { right: 7%; top: 23%; color: var(--cyan); }
+.label-calculate::after { right: 100%; top: 50%; transform: rotate(148deg); transform-origin: right center; }
+.label-connect { left: 60%; bottom: 9%; color: var(--green); }
+.label-connect::after { left: 50%; bottom: 100%; transform: rotate(-90deg); transform-origin: bottom center; height: 28px; width: 1px; }
+[dir="rtl"] .hero-function-label { letter-spacing: 0; }
+@media (max-width: 780px) { .hero-function-label { font-size: 8px; transform: scale(.9); } .label-classify { left: 16%; top: 58%; } .label-calculate { right: 5%; top: 57%; } .label-connect { left: 57%; bottom: 4%; } }

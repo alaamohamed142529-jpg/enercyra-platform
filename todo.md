@@ -178,7 +178,14 @@
 
 - [x] Add independent motion anchors for the five material positions so the objects visibly drift separately from the base artwork
 - [x] Re-verify the animated hero after this motion-layer change in English, Arabic RTL, light/dark, and mobile
-- [ ] Save a checkpoint and verify the published homepage shows the new in-image animation
+- [x] Save a checkpoint and verify the published homepage shows the new in-image animation
 
 - [x] Capture explicit local light-mode and dark-mode hero checks after adding material drift anchors
 - [x] Verify the updated hero with reduced-motion enabled so the motion layer stops cleanly without visual breakage
+
+- [x] Align the hero composition with the supplied reference while preserving the static navigation, headline, CTA buttons, and bottom cards
+- [x] Make the central Energy Core visibly animated with fluid cyan/lime plasma, continuous orbit rings, particles, and independently orbiting waste materials
+- [x] Keep CLASSIFY, CALCULATE, and CONNECT labels static, preserve RTL/theme/mobile/reduced-motion support, then test and publish
+
+- [ ] Save a checkpoint to publish the reference-aligned animated Energy Core and static function labels
+- [ ] Verify the published homepage in English and Arabic RTL, light/dark, and mobile views

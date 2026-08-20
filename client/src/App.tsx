@@ -191,10 +191,24 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
         <div className="hero-actions"><Link href="/classify" className="btn btn-primary"><Sparkles size={18} />{text.classify}<ArrowRight size={17} /></Link><Link href="/marketplace" className="btn btn-secondary"><PackageSearch size={18} />{text.marketplace}<ArrowRight size={17} /></Link></div>
         <div className="trust-row"><ShieldCheck size={17} /><span>{lang === "ar" ? "التقديرات مرجعية وواضحة المصدر" : "Estimates are labeled and transparent"}</span><span className="dot-separator" /> <span>{lang === "ar" ? "عربي / English" : "Arabic / English"}</span></div>
       </div>
-      <div className="hero-visual"><img className="hero-orbit-image" src="/manus-storage/enercyra-waste-orbit-hero_e9e2ae6c.png" alt={lang === "ar" ? "منظومة إنرسيرا لتصنيف النفايات وحساب قيمتها وربطها بالأعمال" : "Enercyra waste intelligence orbit for classifying, calculating, and connecting materials"} /></div>
+      <InteractiveHeroVisual lang={lang} />
     </section>
     <section className="feature-strip container"><FeatureCard icon={<Sparkles />} title={lang === "ar" ? "تصنيف بالذكاء الاصطناعي" : "AI Classification"} copy={lang === "ar" ? "تعرّف على نوع المادة من صورة واحدة." : "Identify a material from a single image."} /><FeatureCard icon={<BarChart3 />} title={text.valueTitle} copy={text.valueCopy} /><FeatureCard icon={<UsersRound />} title={text.connectTitle} copy={text.connectCopy} /><RecentAnalysis lang={lang} /></section>
     <section className="how-preview container"><div><span className="eyebrow"><Zap size={15} /> {lang === "ar" ? "ثلاث خطوات واضحة" : "A simple three-step flow"}</span><h2>{text.featureTitle}</h2><p>{text.featureCopy}</p></div><div className="step-line"><Step n="01" title={lang === "ar" ? "صنّف" : "Classify"} /><Step n="02" title={lang === "ar" ? "احسب" : "Calculate"} /><Step n="03" title={lang === "ar" ? "تواصل" : "Connect"} /></div></section>
+  </div>;
+}
+
+function InteractiveHeroVisual({ lang }: { lang: Lang }) {
+  return <div className="hero-visual hero-composed" aria-label={lang === "ar" ? "تصميم تفاعلي يوضح تصنيف المواد وحساب القيمة والطاقة" : "Interactive material intelligence visual showing classification, value, and energy"}>
+    <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
+    <div className="hero-orbit orbit-outer" aria-hidden="true" /><div className="hero-orbit orbit-middle" aria-hidden="true" /><div className="hero-orbit orbit-inner" aria-hidden="true" />
+    <div className="hero-center"><div className="hero-center-mark"><BrandMark /></div><strong>Enercyra</strong><small>{lang === "ar" ? "ذكاء المواد" : "MATERIAL INTELLIGENCE"}</small><span className="hero-center-pulse" aria-hidden="true" /></div>
+    <div className="material-chip chip-plastic"><span className="chip-icon"><PackageSearch size={17} /></span><span><b>{lang === "ar" ? "بلاستيك" : "Plastic"}</b><small>96.8%</small></span></div>
+    <div className="material-chip chip-metal"><span className="chip-icon"><Zap size={17} /></span><span><b>{lang === "ar" ? "معدن" : "Metal"}</b><small>{lang === "ar" ? "قابل للتدوير" : "Recyclable"}</small></span></div>
+    <div className="material-chip chip-organic"><span className="chip-icon"><Leaf size={17} /></span><span><b>{lang === "ar" ? "عضوي" : "Organic"}</b><small>{lang === "ar" ? "استرداد طاقي" : "Energy potential"}</small></span></div>
+    <div className="hero-insight insight-value"><Tag size={15} /><span>{lang === "ar" ? "القيمة المرجعية" : "Reference value"}<strong>{lang === "ar" ? "قيد التحقق" : "Pending"}</strong></span></div>
+    <div className="hero-insight insight-energy"><BarChart3 size={15} /><span>{lang === "ar" ? "إمكانات الطاقة" : "Energy potential"}<strong>{lang === "ar" ? "تقدير مرجعي" : "Reference estimate"}</strong></span></div>
+    <div className="hero-scan-line" aria-hidden="true" /><div className="hero-corner corner-tl" aria-hidden="true" /><div className="hero-corner corner-br" aria-hidden="true" />
   </div>;
 }
 

@@ -140,8 +140,19 @@
 
 - [x] Add a compact calculation disclaimer without naming the notebook or showing a source section: indicative price, LHV meaning, MJ-to-kWh conversion, and market/date/grade confirmation
 - [x] Verify the new hero locally in light mode, dark mode, Arabic RTL, and mobile viewport after the material-orbit implementation
-- [ ] Publish the dynamic hero and source-panel removal, then verify the public homepage and Result page
+- [x] Publish the dynamic hero and source-panel removal, then verify the public homepage and Result page
 
 - [x] Capture explicit local post-change hero checks in dark and light mode on desktop and mobile before publishing
 
-- [ ] Force a fresh public Result bundle after the source-panel removal and verify the public route serves the compact disclaimer instead
+- [x] Force a fresh public Result bundle after the source-panel removal and verify the public route serves the compact disclaimer instead
+
+- [x] Visually verify the live public homepage after the final publish, confirming separate material objects and rotating energy rings; refresh the homepage bundle if stale
+
+- [x] Create a transparent-background Enercyra logo asset from the supplied bilingual logo concept without changing the mark or wordmarks
+
+- [x] Replace the current center mark with the Enercyra logo treatment inside the interactive hero
+- [x] Animate the logo with subtle rotation, glow pulse, and orbit integration while preserving reduced-motion and responsive behavior
+- [x] Verify and publish the animated logo hero in English, Arabic RTL, light/dark, and mobile views
+
+- [ ] Save a new checkpoint to publish the animated logo-centered hero
+- [ ] Verify the published homepage hero in English and Arabic RTL, light and dark modes, desktop and mobile

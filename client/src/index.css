@@ -185,3 +185,17 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .material-object { filter: drop-shadow(0 15px 18px rgba(17,59,70,.2)); }
 @media (max-width: 900px) { .material-bottle { right: 19%; transform: scale(.82) rotate(13deg); }.material-can { left: 6%; transform: scale(.8) rotate(-18deg); }.material-glass { right: 3%; transform: scale(.78) rotate(17deg); }.material-cardboard { left: 12%; transform: scale(.76) rotate(13deg) skewX(-13deg); }.material-organic { right: 11%; transform: scale(.76); }.energy-trail { transform: scale(.84) rotate(22deg); } }
 @media (prefers-reduced-motion: reduce) { .material-object, .energy-trail { animation: none !important; } }
+
+/* Logo-centered hero motion: the Enercyra mark is the energy source, not a static badge. */
+.hero-center-mark.hero-logo-lockup { width: 112px; height: 112px; border: 0; background: radial-gradient(circle, rgba(193,244,91,.16), rgba(3,21,34,.72) 58%, transparent 72%); box-shadow: 0 0 42px rgba(68,217,238,.18), inset 0 0 26px rgba(193,244,91,.12); }
+.hero-center-mark.hero-logo-lockup .brand-mark { transform: scale(1.72); animation: logoMarkSpin 14s linear infinite; }
+.hero-center-mark.hero-logo-lockup .brand-mark span { animation: logoArcBreath 3.8s ease-in-out infinite; }
+.hero-center-mark.hero-logo-lockup .brand-mark span:nth-child(2) { animation-delay: -.9s; }
+.hero-center-mark.hero-logo-lockup .brand-mark span:nth-child(3) { animation-delay: -1.8s; }
+.hero-center-mark.hero-logo-lockup .brand-mark b { animation: logoCorePulse 2.4s ease-in-out infinite; }
+.hero-center strong { text-shadow: 0 0 18px rgba(193,244,91,.22); }
+@keyframes logoMarkSpin { to { transform: scale(1.72) rotate(360deg); } }
+@keyframes logoArcBreath { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.35); } }
+@keyframes logoCorePulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 18px rgba(193,244,91,.55); } 50% { transform: scale(1.16); box-shadow: 0 0 30px rgba(68,217,238,.78); } }
+@media (prefers-reduced-motion: reduce) { .hero-center-mark.hero-logo-lockup .brand-mark, .hero-center-mark.hero-logo-lockup .brand-mark span, .hero-center-mark.hero-logo-lockup .brand-mark b { animation: none; } }
+@media (max-width: 780px) { .hero-center-mark.hero-logo-lockup { width: 96px; height: 96px; } .hero-center-mark.hero-logo-lockup .brand-mark { transform: scale(1.45); } }

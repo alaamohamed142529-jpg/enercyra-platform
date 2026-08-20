@@ -203,7 +203,7 @@ function InteractiveHeroVisual({ lang }: { lang: Lang }) {
     <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
     <div className="hero-orbit orbit-outer" aria-hidden="true" /><div className="hero-orbit orbit-middle" aria-hidden="true" /><div className="hero-orbit orbit-inner" aria-hidden="true" />
     <div className="energy-trail trail-one" aria-hidden="true" /><div className="energy-trail trail-two" aria-hidden="true" /><div className="energy-trail trail-three" aria-hidden="true" />
-    <div className="hero-center"><div className="hero-center-mark"><BrandMark /></div><strong>Enercyra</strong><small>{lang === "ar" ? "ذكاء المواد" : "MATERIAL INTELLIGENCE"}</small><span className="hero-center-pulse" aria-hidden="true" /></div>
+    <div className="hero-center"><div className="hero-center-mark hero-logo-lockup"><BrandMark /></div><strong>Enercyra</strong><small>{lang === "ar" ? "ذكاء المواد" : "MATERIAL INTELLIGENCE"}</small><span className="hero-center-pulse" aria-hidden="true" /></div>
     <div className="material-object material-bottle" aria-label={lang === "ar" ? "زجاجة بلاستيكية" : "Plastic bottle"}><span className="object-neck" /><span className="object-body" /></div>
     <div className="material-object material-can" aria-label={lang === "ar" ? "علبة صفيح" : "Tin can"}><span className="can-rim" /><span className="can-body" /></div>
     <div className="material-object material-glass" aria-label={lang === "ar" ? "زجاجة زجاجية" : "Glass bottle"}><span className="glass-neck" /><span className="glass-body" /></div>

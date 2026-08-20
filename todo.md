@@ -68,4 +68,4 @@
 
 - [x] Redesign the homepage hero visual to match the supplied waste-orbit reference more closely
 - [x] Verify the redesigned hero in English, Arabic RTL, desktop, and mobile layouts
-- [ ] Publish the hero update and provide the live public URL
+- [x] Publish the hero update and provide the live public URL

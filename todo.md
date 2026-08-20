@@ -201,3 +201,7 @@
 - [x] Save a checkpoint to publish the exact circular logo and interactive material hero
 - [x] Verify the published homepage in English and Arabic RTL, light/dark, desktop, and mobile views
 - [x] Force-refresh the public bundle after the public host still served the previous image-led hero instead of the interactive material orbit
+
+- [x] Replace stylized hero material icons with more realistic transparent bottle, can, glass, cardboard, and organic-waste objects while preserving the existing orbit animation
+- [x] Verify the refined realistic hero in English, Arabic RTL, light/dark, desktop, mobile, and reduced-motion modes
+- [x] Publish the refined hero and provide the updated public URL

@@ -201,7 +201,7 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
 }
 
 function InteractiveHeroVisual({ lang }: { lang: Lang }) {
-  return <div className="hero-visual hero-composed" data-hero-version="optimized-glass-transparent-core-v1" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية حول مركز الطاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste around an energy center"}>
+  return <div className="hero-visual hero-composed" data-hero-version="transparent-core-live-v3" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية حول مركز الطاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste around an energy center"}>
     <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
     <div className="interactive-material-orbit" role="img" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية تتحرك حول مركز طاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste moving around an energy core"}>
       <span className="energy-ring energy-ring-outer" /><span className="energy-ring energy-ring-middle" /><span className="energy-ring energy-ring-inner" />

@@ -211,3 +211,7 @@
 - [x] Remove the dark circular background behind the centered Enercyra logo while preserving its glow and motion
 - [x] Verify the refined hero in English, Arabic RTL, light/dark, desktop, mobile, and reduced-motion modes
 - [x] Publish the optimized hero refinement and provide the updated public URL
+
+- [ ] Reproduce why the public hero still appears unchanged after the optimized-glass-transparent-core checkpoint
+- [ ] Make the glass bottle visibly transparent and the center logo background-free in a cache-busted public bundle
+- [ ] Verify the corrected appearance on the public domain and publish the final fix

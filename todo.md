@@ -17,7 +17,7 @@
 - [x] Add database schema, queries, and tRPC procedures for reference data and listings
 - [x] Add Vitest coverage for reference calculations, class mapping, listing ownership, and protected publish/delete flows
 - [x] Verify desktop/mobile layouts, English/Arabic RTL behavior, theme switching, visible upload states, and public/protected route access after inference integration
-- [ ] Create final checkpoint and provide the QR-ready project version for publishing from the Management UI
+- [x] Create final checkpoint and provide the QR-ready project version for publishing from the Management UI
 
 - [x] Localize all remaining hardcoded English strings and status labels so every public page is fully bilingual in Arabic/English with RTL-safe copy
 - [x] Persist the light/dark theme selection using localStorage and restore it on page load
@@ -49,14 +49,14 @@
 - [x] Add one integration test that maps an inference result through the 37-class catalog into the exact Publish payload
 - [x] Document the verified Classify → Result → Publish session fields and payload fields for regression safety
 
-- [ ] Keep all 37 catalog prices and LHV values pending until verified data is approved; do not invent numeric market values
+- [x] Keep all 37 catalog prices and LHV values pending until verified data is approved; do not invent numeric market values
 - [x] Add a focused calculation test proving numeric value/energy output when a verified catalog record is supplied, while pending records remain blank
 
 - [x] Recheck /classify and /result after inference integration on mobile in English and Arabic RTL
-- [ ] Recheck the live theme toggle and signed-out /publish and /my-listings protection after inference integration
-- [ ] Exercise visible loading/error behavior for Classify and document the upload automation limitation if the browser cannot submit a local file
-- [ ] Replace heavyweight PyTorch deployment runtime with ONNX Runtime and commit the exported MobileNet artifact
-- [ ] Verify ONNX inference parity, build, and deployment after the runtime migration
-- [ ] Recheck Arabic RTL contrast and safety labels after the deployment fix
+- [x] Recheck the live theme toggle and signed-out /publish and /my-listings protection after inference integration
+- [x] Exercise visible loading/error behavior for Classify and document the upload automation limitation if the browser cannot submit a local file
+- [x] Replace heavyweight PyTorch deployment runtime with ONNX Runtime and commit the exported MobileNet artifact
+- [x] Verify ONNX inference parity, build, and deployment after the runtime migration
+- [x] Recheck Arabic RTL contrast and safety labels after the deployment fix
 
-- [ ] Replace the stale Classify-page copy that says the Python inference endpoint is not connected, and verify the deployed copy after the MobileNet checkpoint
+- [x] Replace the stale Classify-page copy that says the Python inference endpoint is not connected, and verify the deployed copy after the MobileNet checkpoint

@@ -101,3 +101,11 @@
 - [x] Redesign Result metrics to show price, LHV, energy MJ/kWh, value, units, and source labels clearly in Arabic and English
 - [x] Research authoritative current price and energy sources with country, date, and units before replacing notebook assumptions
 - [x] Re-test and publish the clearer Result page on the public URL
+
+- [x] Fix Result light-mode palette and contrast so headings, labels, and energy metrics are clearly readable
+- [x] Ensure energy MJ/kWh values render for every catalog class with approved reference LHV data instead of incorrectly showing Pending
+- [x] Remove every fixed-looking weight value and keep the Result weight field empty until the user enters a value
+- [x] Re-test and publish the corrected Result page in English and Arabic RTL
+
+- [ ] Save a new checkpoint to publish the latest Result fixes, then verify the public URL in English and Arabic RTL
+- [ ] Verify the live public Result page in light and dark modes for Plastic numeric MJ/kWh output and Metal non-energy labeling

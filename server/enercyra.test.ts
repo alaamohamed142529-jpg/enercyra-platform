@@ -66,6 +66,9 @@ describe("Enercyra reference estimates", () => {
     expect(mobileNetReferenceCatalog.find((item) => item.id === "plastic")?.status).toBe("reference");
     expect(mobileNetReferenceCatalog.find((item) => item.id === "plastic")?.sourceNote).toContain("Plastic_Products");
     expect(mobileNetReferenceCatalog.some((item) => item.status === "pending")).toBe(true);
+    expect(mobileNetReferenceCatalog.find((item) => item.id === "metal")?.priceEgpPerKg).toBe(8);
+    expect(mobileNetReferenceCatalog.find((item) => item.id === "metal")?.lhvMjPerKg).toBeNull();
+    expect(mobileNetReferenceCatalog.find((item) => item.id === "metal")?.combustible).toBe(false);
   });
 
   it("maps plastic to the notebook reference scenario and calculates 10 kg outputs", () => {

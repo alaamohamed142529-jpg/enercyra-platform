@@ -124,3 +124,9 @@
 - [ ] Verify the live public Result page in English and Arabic RTL shows non-numeric placeholder/help text and still recalculates after entering a real weight
 
 - [ ] Force a fresh public Result bundle after the placeholder update and verify the live domain no longer serves “e.g. 2.5”
+
+- [x] Replace the gray light-mode background and surfaces with a warmer premium palette and stronger visual hierarchy
+- [x] Verify the refined palette in light mode, dark mode, and Arabic RTL, then publish it
+
+- [ ] Save a checkpoint to publish the warmer light-mode palette update
+- [ ] Verify the published homepage and Result page in light mode, dark mode, and Arabic RTL with readable contrast and warm ivory surfaces

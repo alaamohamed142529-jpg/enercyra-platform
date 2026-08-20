@@ -9,9 +9,15 @@ button, input, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
 .app-shell { min-height: 100vh; background: var(--bg); color: var(--text); transition: background .2s ease, color .2s ease; --bg: #031522; --panel: #071e2e; --panel2: #0a2536; --text: #f4fbfa; --muted: #9eb3ba; --line: rgba(159, 202, 205, .18); --lime: #c1f45b; --green: #61d79c; --cyan: #44d9ee; --danger: #ff9d75; }
-.app-shell.theme-light { --bg: #f0f6f4; --panel: #ffffff; --panel2: #e6f1ed; --text: #0b2530; --muted: #5c7278; --line: rgba(4, 54, 67, .15); }
+.app-shell.theme-light { --bg: #fffaf1; --panel: #ffffff; --panel2: #f4eee3; --text: #102d3a; --muted: #526b70; --line: rgba(16, 45, 58, .14); --lime: #a7dc42; --green: #3da979; --cyan: #159eb1; }
 .app-shell.theme-light .site-header { background: rgba(255,255,255,.84); }
-.app-shell.theme-light .hero-visual, .app-shell.theme-light .waste-orbit { background: radial-gradient(circle at center, rgba(95,214,156,.22), transparent 60%); }
+.app-shell.theme-light .hero-visual, .app-shell.theme-light .waste-orbit { background: radial-gradient(circle at center, rgba(167,220,66,.18), rgba(61,169,121,.08) 38%, transparent 68%); }
+.app-shell.theme-light .feature-card, .app-shell.theme-light .recent-card, .app-shell.theme-light .how-preview, .app-shell.theme-light .flow-card, .app-shell.theme-light .principles-card, .app-shell.theme-light .about-panel, .app-shell.theme-light .auth-card, .app-shell.theme-light .market-tools, .app-shell.theme-light .listing-card { background: #ffffff; color: #102d3a; border-color: rgba(16, 45, 58, .12); box-shadow: 0 14px 36px rgba(67, 48, 25, .07); }
+.app-shell.theme-light .feature-card p, .app-shell.theme-light .recent-card small, .app-shell.theme-light .how-preview p, .app-shell.theme-light .flow-card p, .app-shell.theme-light .principles-card p, .app-shell.theme-light .about-panel p, .app-shell.theme-light .listing-meta { color: #526b70; }
+.app-shell.theme-light .feature-card h3, .app-shell.theme-light .recent-card strong, .app-shell.theme-light .flow-card h2, .app-shell.theme-light .principles-card h3, .app-shell.theme-light .about-panel h1, .app-shell.theme-light .about-panel h3 { color: #102d3a; }
+.app-shell.theme-light .step-line, .app-shell.theme-light .trust-row { color: #526b70; }
+.app-shell.theme-light .hero-copy > p { color: #526b70; }
+.app-shell.theme-light .hero-grid { opacity: .32; }
 .app-shell.theme-light .result-card, .app-shell.theme-light .calculation-panel { color: #f4fbfa; }
 .app-shell.theme-light .result-card .muted, .app-shell.theme-light .calculation-panel .muted { color: #b8cdd1; }
 .app-shell.theme-light .result-card .detail-row small, .app-shell.theme-light .result-card .notice, .app-shell.theme-light .calculation-panel label, .app-shell.theme-light .calculation-panel .calc-intro p, .app-shell.theme-light .calculation-panel .metric small { color: #bfd0d3; }

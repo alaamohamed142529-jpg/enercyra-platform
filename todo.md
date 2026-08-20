@@ -73,5 +73,5 @@
 - [x] Fix Result weight input so changing the default value is accepted and recalculates immediately
 - [x] Explain missing reference price and energy data separately from weight-entry behavior in English and Arabic
 - [x] Add regression tests for arbitrary weight updates and pending catalog calculations
-- [ ] Publish and verify the Result fix on the public domain
-- [ ] Force a fresh Result bundle deployment if the public route continues serving the previous input implementation
+- [x] Publish and verify the Result fix on the public domain
+- [x] Force a fresh Result bundle deployment if the public route continues serving the previous input implementation

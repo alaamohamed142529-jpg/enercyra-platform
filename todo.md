@@ -92,3 +92,7 @@
 - [x] Make weight-to-price and weight-to-energy calculations visibly update on Result with units and reference-source labeling
 - [x] Remove the framed/image-like treatment from the homepage hero and simplify the composition without losing responsive motion
 - [x] Re-test and publish the calculation and visual cleanup changes on the public URL
+
+- [x] Diagnose why the public Result bundle still shows Pending while the local catalog contains EcoSyncAI reference values
+- [x] Force a fresh public Result bundle and verify the live numeric outputs in English and Arabic
+- [x] Confirm arbitrary weight changes update the public calculation before closing the bug

@@ -77,6 +77,7 @@
 - [x] Force a fresh Result bundle deployment if the public route continues serving the previous input implementation
 
 - [x] Review the friend-provided notebook and extract energy/price tables, formulas, units, relationships, and provenance limitations without importing values
+- [x] Re-review the newly attached EcoSyncAI notebook and identify useful price, energy, LHV, and calculation data for safe Enercyra integration
 
 - [x] Rebuild the homepage to match the supplied premium dark reference layout, typography, logo, navigation, hero, cards, and Recent Analysis panel
 - [x] Add tasteful responsive motion for the hero visual, image, and cards with prefers-reduced-motion support

@@ -81,6 +81,7 @@
 - [x] Study the supplied reference site’s motion patterns and redesign Enercyra’s hero as layered HTML/CSS rather than a single animated image
 - [x] Verify the interactive hero in English, Arabic RTL, desktop, mobile, and reduced-motion mode
 - [ ] Publish the interactive hero redesign and provide the public URL
+- [ ] Force and verify a fresh public bundle if the live domain still serves the previous image-led hero
 
 - [x] Rebuild the homepage to match the supplied premium dark reference layout, typography, logo, navigation, hero, cards, and Recent Analysis panel
 - [x] Add tasteful responsive motion for the hero visual, image, and cards with prefers-reduced-motion support

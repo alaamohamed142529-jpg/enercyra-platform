@@ -199,7 +199,7 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
 }
 
 function InteractiveHeroVisual({ lang }: { lang: Lang }) {
-  return <div className="hero-visual hero-composed" aria-label={lang === "ar" ? "تصميم تفاعلي يوضح تصنيف المواد وحساب القيمة والطاقة" : "Interactive material intelligence visual showing classification, value, and energy"}>
+  return <div className="hero-visual hero-composed" data-hero-version="interactive-html-v2" aria-label={lang === "ar" ? "تصميم تفاعلي يوضح تصنيف المواد وحساب القيمة والطاقة" : "Interactive material intelligence visual showing classification, value, and energy"}>
     <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
     <div className="hero-orbit orbit-outer" aria-hidden="true" /><div className="hero-orbit orbit-middle" aria-hidden="true" /><div className="hero-orbit orbit-inner" aria-hidden="true" />
     <div className="hero-center"><div className="hero-center-mark"><BrandMark /></div><strong>Enercyra</strong><small>{lang === "ar" ? "ذكاء المواد" : "MATERIAL INTELLIGENCE"}</small><span className="hero-center-pulse" aria-hidden="true" /></div>

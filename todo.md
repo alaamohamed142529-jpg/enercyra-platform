@@ -143,3 +143,5 @@
 - [ ] Publish the dynamic hero and source-panel removal, then verify the public homepage and Result page
 
 - [x] Capture explicit local post-change hero checks in dark and light mode on desktop and mobile before publishing
+
+- [ ] Force a fresh public Result bundle after the source-panel removal and verify the public route serves the compact disclaimer instead

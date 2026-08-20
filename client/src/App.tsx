@@ -199,7 +199,7 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
 }
 
 function InteractiveHeroVisual({ lang }: { lang: Lang }) {
-  return <div className="hero-visual hero-composed" data-hero-version="realistic-material-art-v2" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية حول مركز الطاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste around an energy center"}>
+  return <div className="hero-visual hero-composed" data-hero-version="realistic-material-art-v3" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية حول مركز الطاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste around an energy center"}>
     <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
     <img className="hero-material-art" src="/manus-storage/enercyra-realistic-waste-hero_0d4908a3.png" alt={lang === "ar" ? "مواد نفايات واقعية تدور حول مركز طاقة من Enercyra" : "Realistic waste materials orbiting an Enercyra energy center"} />
     <div className="hero-scan-line" aria-hidden="true" /><div className="hero-corner corner-tl" aria-hidden="true" /><div className="hero-corner corner-br" aria-hidden="true" />

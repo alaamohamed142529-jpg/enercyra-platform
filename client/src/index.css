@@ -304,3 +304,8 @@ h1, h2, h3, p { margin: 0; }
 .material-organic { width: 112px; height: 112px; }
 .app-shell.theme-light .material-object img { filter: saturate(1.02) contrast(1.04) drop-shadow(0 14px 13px rgba(17,59,70,.2)); }
 @media (max-width: 860px) { .material-bottle { width: 98px; height: 98px; } .material-can { width: 76px; height: 76px; } .material-glass { width: 92px; height: 92px; } .material-cardboard { width: 106px; height: 106px; } .material-organic { width: 88px; height: 88px; } }
+
+/* Transparent center logo treatment: retain energy presence without the dark disc. */
+.energy-core { background: transparent; border-color: transparent; box-shadow: 0 0 34px rgba(193,244,91,.22), 0 0 72px rgba(68,217,238,.16); }
+.energy-core::after { border-color: rgba(68,217,238,.28); }
+.energy-core .brand-mark { filter: drop-shadow(0 0 10px rgba(68,217,238,.5)) drop-shadow(0 0 16px rgba(193,244,91,.35)); }

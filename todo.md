@@ -205,3 +205,9 @@
 - [x] Replace stylized hero material icons with more realistic transparent bottle, can, glass, cardboard, and organic-waste objects while preserving the existing orbit animation
 - [x] Verify the refined realistic hero in English, Arabic RTL, light/dark, desktop, mobile, and reduced-motion modes
 - [x] Publish the refined hero and provide the updated public URL
+
+- [x] Optimize hero material asset loading so the page loads faster without changing the visual composition
+- [x] Replace the green bottle asset with a visibly transparent glass bottle
+- [x] Remove the dark circular background behind the centered Enercyra logo while preserving its glow and motion
+- [x] Verify the refined hero in English, Arabic RTL, light/dark, desktop, mobile, and reduced-motion modes
+- [x] Publish the optimized hero refinement and provide the updated public URL

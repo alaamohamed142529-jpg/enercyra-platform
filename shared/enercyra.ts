@@ -25,6 +25,16 @@ export type EstimateResult = {
 export const referenceDisclaimer =
   "Reference Estimate only. Values may vary by market, material quality, and local handling conditions.";
 
+export function parseWeightInput(value: string): number {
+  const westernized = value
+    .replace(/[٠-٩]/g, (digit) => String("٠١٢٣٤٥٦٧٨٩".indexOf(digit)))
+    .replace(/٫/g, ".")
+    .replace(/,/g, ".")
+    .trim();
+  const parsed = Number(westernized);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+}
+
 export function calculateEstimate(weightKg: number, reference: Pick<WasteReference, "priceEgpPerKg" | "lhvMjPerKg" | "status">): EstimateResult {
   const safeWeight = Number.isFinite(weightKg) && weightKg >= 0 ? weightKg : 0;
   const valueEgp = reference.priceEgpPerKg === null ? null : safeWeight * reference.priceEgpPerKg;

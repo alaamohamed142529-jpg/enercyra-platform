@@ -69,3 +69,8 @@
 - [x] Redesign the homepage hero visual to match the supplied waste-orbit reference more closely
 - [x] Verify the redesigned hero in English, Arabic RTL, desktop, and mobile layouts
 - [x] Publish the hero update and provide the live public URL
+
+- [x] Fix Result weight input so changing the default value is accepted and recalculates immediately
+- [x] Explain missing reference price and energy data separately from weight-entry behavior in English and Arabic
+- [x] Add regression tests for arbitrary weight updates and pending catalog calculations
+- [ ] Publish and verify the Result fix on the public domain

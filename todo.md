@@ -107,5 +107,18 @@
 - [x] Remove every fixed-looking weight value and keep the Result weight field empty until the user enters a value
 - [x] Re-test and publish the corrected Result page in English and Arabic RTL
 
-- [ ] Save a new checkpoint to publish the latest Result fixes, then verify the public URL in English and Arabic RTL
-- [ ] Verify the live public Result page in light and dark modes for Plastic numeric MJ/kWh output and Metal non-energy labeling
+- [x] Save a new checkpoint to publish the latest Result fixes, then verify the public URL in English and Arabic RTL
+- [x] Verify the live public Result page in light and dark modes for Plastic numeric MJ/kWh output and Metal non-energy labeling
+
+- [x] Verify the public Result page with a Plastic classification by entering a weight and confirm numeric Total energy (MJ) and Energy equivalent (kWh)
+- [x] Verify the public Result bundle contains Metal non-energy/not-applicable labels; the exact Metal rendering was also verified locally in English and Arabic
+- [x] Re-check the public Result page in both light and dark modes after the live validations
+
+- [x] Verify the published Metal Result behavior in English and Arabic using the exact deployed bundle; local rendered fixture confirms LHV/MJ/kWh explicitly not applicable
+- [x] Re-check the live Result page in both dark and light modes after the successful Plastic validation and published Metal-bundle validation
+
+- [x] Replace the numeric weight placeholder 2.5 with explicit bilingual instruction text so the empty field cannot look pre-filled
+- [x] Verify the clarified empty field still recalculates correctly after entering a real weight, then publish the fix
+
+- [ ] Save a new checkpoint to publish the placeholder clarification fix
+- [ ] Verify the live public Result page in English and Arabic RTL shows non-numeric placeholder/help text and still recalculates after entering a real weight

@@ -1,0 +1,34 @@
+# Project TODO
+
+- [x] Establish Enercyra branding, dark navy/emerald/lime design tokens, and responsive mobile-first layout
+- [x] Add bilingual English/Arabic support with full RTL layout switching across every page
+- [x] Add light/dark mode toggle and persist the selected preference
+- [x] Build public Home landing page with See Waste. See Value. messaging and QR-ready responsive URL
+- [x] Build public Classify page with drag-and-drop, file upload, and camera capture affordances
+- [ ] Add MobileNetV3-Large inference integration using best_mobilenetv3.pth, class_mapping.json, and the documented 224px preprocessing
+- [x] Add safe 37-class reference data mapping with Arabic/English display names, category, reference/pending status, price, LHV, and disclaimer metadata
+- [x] Build AI Result page with confidence ring, material details, weight input, reference value, reference energy, and explicit disclaimer
+- [x] Implement value = weight × price_egp_per_kg and energy_mj = weight × lhv_mj_per_kg; energy_kwh = energy_mj ÷ 3.6
+- [x] Build public Marketplace page with search, material-type filter, location filter, reference/pending price labels, and Contact seller CTA
+- [x] Add Manus OAuth authentication gate for Publish and My Listings only
+- [x] Add authenticated Publish Waste flow from Result page with category, weight, location, condition, notes, and image metadata
+- [x] Add authenticated My Listings page with ownership filtering and delete action
+- [x] Add How It Works / About page explaining Classify → Calculate → Connect
+- [x] Add database schema, queries, and tRPC procedures for reference data and listings
+- [x] Add Vitest coverage for reference calculations, class mapping, listing ownership, and protected publish/delete flows
+- [ ] Verify desktop and mobile layouts, English and Arabic RTL behavior, theme switching, upload states, empty/error states, and public/protected route access
+- [ ] Create final checkpoint and provide the QR-ready project version for publishing from the Management UI
+
+- [x] Localize all remaining hardcoded English strings and status labels so every public page is fully bilingual in Arabic/English with RTL-safe copy
+- [x] Persist the light/dark theme selection using localStorage and restore it on page load
+- [x] Add a real Marketplace location filter control and wire it into listing filtering logic
+- [ ] Wire the Result page to real inference/reference data inputs instead of example/mock content, and surface actual reference value/energy outputs when data exists
+- [ ] Add Vitest tests for marketplace ownership restrictions and protected create/remove procedures
+- [x] Localize remaining Marketplace filter labels/options and any other public-page strings so Arabic mode is fully translated and RTL-safe
+- [ ] Wire the Publish form to actual Result/inference data instead of hardcoded Plastic, and pass class and image metadata through the publish mutation
+- [x] Extend the listing schema and mutation to persist image metadata or a documented image reference field
+- [x] Audit Arabic mode across public routes and localize remaining fixed UI copy while keeping the brand name/tagline as intentional brand assets if retained
+- [x] Add explicit disclaimer metadata to each 37-class reference record and wire the catalog into the runtime reference source
+- [x] Localize remaining seeded public listing locations and verify every public route in Arabic and English
+- [x] Use the 37-class catalog through the shared runtime source rather than leaving it unused beside the UI data
+- [x] Verify all public routes (/ , /classify, /result, /marketplace, /how-it-works, /about) in both English and Arabic/RTL and record the result

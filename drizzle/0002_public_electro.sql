@@ -1,0 +1,1 @@
+ALTER TABLE `waste_listings` ADD `imageMetadata` text;

@@ -75,3 +75,10 @@
 - [x] Add regression tests for arbitrary weight updates and pending catalog calculations
 - [x] Publish and verify the Result fix on the public domain
 - [x] Force a fresh Result bundle deployment if the public route continues serving the previous input implementation
+
+- [ ] Review the friend-provided notebook and extract energy/price tables, formulas, units, relationships, and provenance limitations without importing values
+
+- [x] Rebuild the homepage to match the supplied premium dark reference layout, typography, logo, navigation, hero, cards, and Recent Analysis panel
+- [x] Add tasteful responsive motion for the hero visual, image, and cards with prefers-reduced-motion support
+- [x] Verify the redesigned homepage in English, Arabic RTL, desktop, light/dark, and mobile views
+- [ ] Publish the homepage redesign and provide the live public URL

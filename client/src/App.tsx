@@ -185,7 +185,8 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
     <section className="hero container">
       <div className="hero-copy">
         <span className="eyebrow"><Sparkles size={15} /> {lang === "ar" ? "ذكاء النفايات للأعمال" : "Waste intelligence for business"}</span>
-        <h1>{text.heroTitle}</h1>
+        <h1><span>{lang === "ar" ? "شوف النفايات." : "See Waste."}</span><span>{lang === "ar" ? "شوف قيمتها." : "See Value."}</span></h1>
+        <span className="hero-rule" aria-hidden="true" />
         <p>{text.heroSub}</p>
         <div className="hero-actions"><Link href="/classify" className="btn btn-primary"><Sparkles size={18} />{text.classify}<ArrowRight size={17} /></Link><Link href="/marketplace" className="btn btn-secondary"><PackageSearch size={18} />{text.marketplace}<ArrowRight size={17} /></Link></div>
         <div className="trust-row"><ShieldCheck size={17} /><span>{lang === "ar" ? "التقديرات مرجعية وواضحة المصدر" : "Estimates are labeled and transparent"}</span><span className="dot-separator" /> <span>{lang === "ar" ? "عربي / English" : "Arabic / English"}</span></div>

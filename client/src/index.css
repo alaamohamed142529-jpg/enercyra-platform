@@ -388,3 +388,7 @@ h1, h2, h3, p { margin: 0; }
 .label-connect { right: 5%; bottom: 20%; }
 .label-connect::before { display: none; }
 @media (max-width: 780px) { .label-connect { right: 4%; bottom: 14%; } }
+
+/* Clear the legacy left anchor so CONNECT uses only its right-side placement and keeps intrinsic width. */
+.label-connect { left: auto !important; right: 5% !important; width: max-content; }
+@media (max-width: 780px) { .label-connect { left: auto !important; right: 4% !important; width: max-content; } }

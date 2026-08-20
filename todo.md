@@ -87,3 +87,8 @@
 - [x] Add tasteful responsive motion for the hero visual, image, and cards with prefers-reduced-motion support
 - [x] Verify the redesigned homepage in English, Arabic RTL, desktop, light/dark, and mobile views
 - [x] Publish the homepage redesign and provide the live public URL
+
+- [x] Approve and wire explicitly labeled notebook-derived reference price and LHV values for the supported result class
+- [x] Make weight-to-price and weight-to-energy calculations visibly update on Result with units and reference-source labeling
+- [x] Remove the framed/image-like treatment from the homepage hero and simplify the composition without losing responsive motion
+- [ ] Re-test and publish the calculation and visual cleanup changes on the public URL

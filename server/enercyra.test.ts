@@ -60,18 +60,23 @@ describe("Enercyra reference estimates", () => {
     expect(normalizeClassId(36)).toBe("36");
   });
 
-  it("contains the exact 37 MobileNet classes with safe pending defaults", () => {
+  it("contains the exact 37 MobileNet classes and explicit notebook-reference coverage", () => {
     expect(mobileNetReferenceCatalog).toHaveLength(37);
     expect(mobileNetReferenceCatalog.find((item) => item.id === "plastic")?.displayNameAr).toBe("بلاستيك");
-    expect(mobileNetReferenceCatalog.every((item) => item.status === "pending")).toBe(true);
-    expect(mobileNetReferenceCatalog.every((item) => item.priceEgpPerKg === null)).toBe(true);
+    expect(mobileNetReferenceCatalog.find((item) => item.id === "plastic")?.status).toBe("reference");
+    expect(mobileNetReferenceCatalog.find((item) => item.id === "plastic")?.sourceNote).toContain("Plastic_Products");
+    expect(mobileNetReferenceCatalog.some((item) => item.status === "pending")).toBe(true);
   });
 
-  it("marks plastic as potential energy-recovery material without inventing figures", () => {
+  it("maps plastic to the notebook reference scenario and calculates 10 kg outputs", () => {
     const plastic = mobileNetReferenceCatalog.find((item) => item.id === "plastic");
     expect(plastic?.combustible).toBe(true);
-    expect(plastic?.priceEgpPerKg).toBeNull();
-    expect(plastic?.lhvMjPerKg).toBeNull();
+    expect(plastic?.priceEgpPerKg).toBe(4);
+    expect(plastic?.lhvMjPerKg).toBe(35);
+    const result = calculateEstimate(10, { priceEgpPerKg: plastic!.priceEgpPerKg, lhvMjPerKg: plastic!.lhvMjPerKg, status: plastic!.status });
+    expect(result.valueEgp).toBe(40);
+    expect(result.energyMj).toBe(350);
+    expect(result.energyKwh).toBeCloseTo(97.222, 3);
   });
 
   it("keeps pending estimate labels meaningful after weight entry", () => {

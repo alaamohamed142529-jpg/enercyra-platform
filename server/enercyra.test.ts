@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { calculateEstimate, normalizeClassId, parseWeightInput } from "../shared/enercyra";
 import { canManageListing } from "../shared/listing-security";
 import { mobileNetReferenceCatalog } from "../shared/model-classes";
-import { energyRecoveryLabel, pendingDataNotice, pendingMetricLabel, pendingMetricStatus } from "../shared/result-copy";
+import { energyRecoveryLabel, notebookReferenceNotice, pendingDataNotice, pendingMetricLabel, pendingMetricStatus } from "../shared/result-copy";
 
 describe("Enercyra reference estimates", () => {
   it("calculates reference value and energy in MJ and kWh", () => {
@@ -93,6 +93,9 @@ describe("Enercyra reference estimates", () => {
     expect(pendingMetricStatus("ar")).toBe("بانتظار التحقق");
     expect(pendingDataNotice("en")).toContain("pending verification");
     expect(pendingDataNotice("ar")).toContain("قيد التحقق");
+    expect(notebookReferenceNotice("en")).toContain("LHV");
+    expect(notebookReferenceNotice("en")).toContain("dividing MJ by 3.6");
+    expect(notebookReferenceNotice("ar")).toContain("القيمة الحرارية الدنيا");
   });
 
   it("allows only the listing owner to manage a listing", () => {

@@ -96,3 +96,8 @@
 - [x] Diagnose why the public Result bundle still shows Pending while the local catalog contains EcoSyncAI reference values
 - [x] Force a fresh public Result bundle and verify the live numeric outputs in English and Arabic
 - [x] Confirm arbitrary weight changes update the public calculation before closing the bug
+
+- [x] Remove the confusing fixed-looking default weight and make the Result weight field clearly editable/optional
+- [x] Redesign Result metrics to show price, LHV, energy MJ/kWh, value, units, and source labels clearly in Arabic and English
+- [x] Research authoritative current price and energy sources with country, date, and units before replacing notebook assumptions
+- [x] Re-test and publish the clearer Result page on the public URL

@@ -21,6 +21,6 @@ export function pendingDataNotice(lang: ResultLanguage): string {
 
 export function notebookReferenceNotice(lang: ResultLanguage): string {
   return lang === "ar"
-    ? "الأرقام المعروضة تقدير مرجعي مستخرج من نوت بوك EcoSyncAI: السعر إرشادي بالجنيه/كجم، والقيمة الحرارية تقدير أدبي بالميجا جول/كجم، وليست سعر سوق حاليًا أو قياسًا معمليًا."
-    : "These are notebook-derived Reference Estimates from EcoSyncAI: indicative EGP/kg pricing and literature-based MJ/kg energy, not a live market quote or laboratory measurement.";
+    ? "المصدر: نوت بوك EcoSyncAI المرفق. السعر إرشادي بالجنيه/كجم، وLHV هي القيمة الحرارية الدنيا للمادة بالـMJ/kg؛ نحسب الطاقة الكلية بالـMJ ثم نحوّلها إلى kWh بقسمة الـMJ على 3.6. هذه ليست قراءة معملية ولا سعر سوق مباشر، ويجب تأكيد الدولة والدرجة والتاريخ قبل الاستخدام التجاري."
+    : "Source: the attached EcoSyncAI notebook. Price is an indicative EGP/kg reference; LHV is the material’s lower heating value in MJ/kg. Total energy is calculated in MJ, then converted to kWh by dividing MJ by 3.6. This is not a laboratory measurement or live market quote; confirm country, grade, and date before commercial use.";
 }

@@ -199,21 +199,9 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
 }
 
 function InteractiveHeroVisual({ lang }: { lang: Lang }) {
-  return <div className="hero-visual hero-composed" data-hero-version="interactive-material-orbit-v3" aria-label={lang === "ar" ? "مواد نفايات منفصلة تدور حول مركز الطاقة" : "Separate waste materials orbiting an energy center"}>
+  return <div className="hero-visual hero-composed" data-hero-version="realistic-material-art-v1" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية حول مركز الطاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste around an energy center"}>
     <div className="hero-grid" aria-hidden="true" /><div className="hero-glow hero-glow-one" aria-hidden="true" /><div className="hero-glow hero-glow-two" aria-hidden="true" />
-    <div className="hero-orbit orbit-outer" aria-hidden="true" /><div className="hero-orbit orbit-middle" aria-hidden="true" /><div className="hero-orbit orbit-inner" aria-hidden="true" />
-    <div className="energy-trail trail-one" aria-hidden="true" /><div className="energy-trail trail-two" aria-hidden="true" /><div className="energy-trail trail-three" aria-hidden="true" />
-    <div className="hero-center"><div className="hero-center-mark hero-logo-lockup"><BrandMark /></div><strong>Enercyra</strong><small>{lang === "ar" ? "ذكاء المواد" : "MATERIAL INTELLIGENCE"}</small><span className="hero-center-pulse" aria-hidden="true" /></div>
-    <div className="material-object material-bottle" aria-label={lang === "ar" ? "زجاجة بلاستيكية" : "Plastic bottle"}><span className="object-neck" /><span className="object-body" /></div>
-    <div className="material-object material-can" aria-label={lang === "ar" ? "علبة صفيح" : "Tin can"}><span className="can-rim" /><span className="can-body" /></div>
-    <div className="material-object material-glass" aria-label={lang === "ar" ? "زجاجة زجاجية" : "Glass bottle"}><span className="glass-neck" /><span className="glass-body" /></div>
-    <div className="material-object material-cardboard" aria-label={lang === "ar" ? "كرتون" : "Cardboard"}><span /><span /><span /></div>
-    <div className="material-object material-organic" aria-label={lang === "ar" ? "مخلفات عضوية" : "Organic waste"}><span>✦</span><span>◒</span><span>✿</span></div>
-    <div className="material-chip chip-plastic"><span className="chip-icon"><PackageSearch size={17} /></span><span><b>{lang === "ar" ? "بلاستيك" : "Plastic"}</b><small>96.8%</small></span></div>
-    <div className="material-chip chip-metal"><span className="chip-icon"><Zap size={17} /></span><span><b>{lang === "ar" ? "معدن" : "Metal"}</b><small>{lang === "ar" ? "قابل للتدوير" : "Recyclable"}</small></span></div>
-    <div className="material-chip chip-organic"><span className="chip-icon"><Leaf size={17} /></span><span><b>{lang === "ar" ? "عضوي" : "Organic"}</b><small>{lang === "ar" ? "استرداد طاقي" : "Energy potential"}</small></span></div>
-    <div className="hero-insight insight-value"><Tag size={15} /><span>{lang === "ar" ? "القيمة المرجعية" : "Reference value"}<strong>{lang === "ar" ? "قيد التحقق" : "Pending"}</strong></span></div>
-    <div className="hero-insight insight-energy"><BarChart3 size={15} /><span>{lang === "ar" ? "إمكانات الطاقة" : "Energy potential"}<strong>{lang === "ar" ? "تقدير مرجعي" : "Reference estimate"}</strong></span></div>
+    <img className="hero-material-art" src="/manus-storage/enercyra-realistic-waste-hero_0d4908a3.png" alt={lang === "ar" ? "مواد نفايات واقعية تدور حول مركز طاقة من Enercyra" : "Realistic waste materials orbiting an Enercyra energy center"} />
     <div className="hero-scan-line" aria-hidden="true" /><div className="hero-corner corner-tl" aria-hidden="true" /><div className="hero-corner corner-br" aria-hidden="true" />
   </div>;
 }

@@ -154,5 +154,16 @@
 - [x] Animate the logo with subtle rotation, glow pulse, and orbit integration while preserving reduced-motion and responsive behavior
 - [x] Verify and publish the animated logo hero in English, Arabic RTL, light/dark, and mobile views
 
-- [ ] Save a new checkpoint to publish the animated logo-centered hero
-- [ ] Verify the published homepage hero in English and Arabic RTL, light and dark modes, desktop and mobile
+- [x] Save a new checkpoint to publish the animated logo-centered hero
+- [x] Verify the published homepage hero in English and Arabic RTL, light and dark modes, desktop and mobile
+
+- [x] Visually confirm the published hero in English desktop and Arabic RTL desktop with the logo-centered orbit composition
+- [x] Confirm the published hero switches correctly between dark and light themes
+- [x] Confirm the matching published commit remains responsive on mobile using the verified mobile preview at the same release
+
+- [x] Generate a high-quality realistic waste-orbit hero asset with plastic bottle, tin can, glass bottle, cardboard, and organic waste; preserve a text-safe left side and no baked UI labels
+- [x] Replace the CSS placeholder material objects with the generated visual asset while preserving responsive and reduced-motion behavior
+- [x] Verify and publish the improved hero in English, Arabic RTL, light/dark, and mobile views
+
+- [ ] Save a checkpoint to publish the realistic-material hero asset and removal of old icon overlays
+- [ ] Verify the published homepage in English and Arabic RTL, light/dark, and at least one mobile viewport

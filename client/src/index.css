@@ -199,3 +199,13 @@ h1, h2, h3, p { margin: 0; }
 @keyframes logoCorePulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 18px rgba(193,244,91,.55); } 50% { transform: scale(1.16); box-shadow: 0 0 30px rgba(68,217,238,.78); } }
 @media (prefers-reduced-motion: reduce) { .hero-center-mark.hero-logo-lockup .brand-mark, .hero-center-mark.hero-logo-lockup .brand-mark span, .hero-center-mark.hero-logo-lockup .brand-mark b { animation: none; } }
 @media (max-width: 780px) { .hero-center-mark.hero-logo-lockup { width: 96px; height: 96px; } .hero-center-mark.hero-logo-lockup .brand-mark { transform: scale(1.45); } }
+
+/* High-quality realistic material artwork replaces the former CSS placeholder objects. */
+.hero-material-art { position: relative; z-index: 1; display: block; width: min(780px, 108%); aspect-ratio: 16 / 9; object-fit: cover; object-position: center; border: 0; border-radius: 0; mix-blend-mode: screen; filter: saturate(1.08) contrast(1.06) brightness(1.02); animation: realisticHeroFloat 9s ease-in-out infinite; transition: transform .35s cubic-bezier(.23,1,.32,1), filter .35s ease; }
+.hero-visual:hover .hero-material-art { transform: scale(1.018) translateY(-3px); filter: saturate(1.16) contrast(1.08) brightness(1.05) drop-shadow(0 20px 36px rgba(68,217,238,.18)); }
+.hero-composed .hero-grid { z-index: 0; opacity: .16; }
+.hero-composed .hero-glow { z-index: 0; opacity: .2; }
+.app-shell.theme-light .hero-material-art { mix-blend-mode: multiply; filter: saturate(.94) contrast(1.08) brightness(1.08); }
+@keyframes realisticHeroFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-5px) scale(1.006); } }
+@media (prefers-reduced-motion: reduce) { .hero-material-art { animation: none; } .hero-visual:hover .hero-material-art { transform: none; } }
+@media (max-width: 780px) { .hero-material-art { width: 118%; max-width: none; margin-inline: -9%; aspect-ratio: 16 / 10; object-position: center; } }

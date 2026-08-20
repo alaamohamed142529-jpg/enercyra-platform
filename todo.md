@@ -237,6 +237,6 @@
 - [x] Remove the remaining vertical scan line near CALCULATE and verify the callout icons remain clean
 - [x] Recheck Light, Dark, Arabic RTL, mobile, reduced motion, tests, and publish the correction
 
-- [ ] Diagnose why the public callout correction still appears unchanged or visually incorrect
+- [x] Diagnose why the public callout correction still appears unchanged or visually incorrect
 - [ ] Make CONNECT clearly separate from the organic material and remove all remaining line layers near CALCULATE
 - [ ] Verify the corrected public bundle in English, Arabic RTL, Light, Dark, and mobile before publishing

@@ -10,6 +10,9 @@ import "./index.css";
 
 const queryClient = new QueryClient();
 
+// Deployment probe: lets public verification distinguish the current entry bundle from a stale cached shell.
+document.documentElement.dataset.enercyraBuild = "callout-cleanup-live-v4";
+
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;
   if (typeof window === "undefined") return;

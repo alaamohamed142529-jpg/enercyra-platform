@@ -200,3 +200,4 @@
 
 - [ ] Save a checkpoint to publish the exact circular logo and interactive material hero
 - [ ] Verify the published homepage in English and Arabic RTL, light/dark, desktop, and mobile views
+- [ ] Force-refresh the public bundle after the public host still served the previous image-led hero instead of the interactive material orbit

@@ -225,3 +225,7 @@
 - [x] Update the global navigation and visual style to match the supplied compact reference header while preserving existing routes
 - [x] Verify Businesses content, Arabic RTL, English, responsive layouts, themes, and regression tests
 - [x] Publish the Businesses page and updated navigation with the verified public URL
+
+- [x] Reposition CLASSIFY, CALCULATE, and CONNECT around the hero orbit to match the supplied reference composition
+- [x] Restyle their icons and connector accents for clear contrast in Light, Dark, and Arabic RTL layouts
+- [x] Verify the revised hero labels on desktop/mobile and publish the update

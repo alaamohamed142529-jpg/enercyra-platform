@@ -359,3 +359,21 @@ h1, h2, h3, p { margin: 0; }
 .business-disclaimer svg { flex: 0 0 auto; color: var(--cyan); margin-top: 2px; }
 .app-shell.theme-light .business-card { box-shadow: 0 18px 42px rgba(17,59,70,.08); }
 @media (max-width: 860px) { .site-header { border-radius: 20px; } .business-tools { grid-template-columns: 1fr; } .business-grid { grid-template-columns: 1fr; } .businesses-heading h1 { font-size: 58px; } }
+
+/* Reference-aligned orbit callouts: classify upper-left, calculate upper-right, connect lower-right. */
+.hero-function-label { z-index: 7; gap: 6px; min-height: 18px; padding: 2px 4px; color: var(--lime); text-shadow: 0 0 12px rgba(193,244,91,.42); }
+.hero-function-label::before { content: ""; position: absolute; width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 8px rgba(68,217,238,.8); }
+.hero-function-label::after { width: 42px; height: 1px; border-top: 1px dashed currentColor; background: transparent; opacity: .7; }
+.hero-function-label svg { width: 14px; height: 14px; color: var(--cyan); stroke-width: 1.8; }
+.label-classify { left: 17%; top: 25%; }
+.label-classify::before { right: -9px; bottom: -8px; }
+.label-classify::after { left: 100%; top: 75%; transform: rotate(30deg); transform-origin: left center; }
+.label-calculate { right: 13%; top: 25%; color: var(--cyan); }
+.label-calculate::before { left: -9px; bottom: -8px; }
+.label-calculate::after { right: 100%; top: 75%; transform: rotate(-30deg); transform-origin: right center; }
+.label-connect { right: 28%; bottom: 8%; color: var(--cyan); }
+.label-connect::before { left: -9px; top: -8px; }
+.label-connect::after { left: 50%; bottom: 100%; width: 1px; height: 32px; border-top: 0; border-left: 1px dashed currentColor; transform: none; }
+.app-shell.theme-light .hero-function-label { text-shadow: 0 0 10px rgba(17,104,118,.18); }
+.app-shell.theme-light .hero-function-label::before { box-shadow: 0 0 7px rgba(68,160,170,.6); }
+@media (max-width: 780px) { .hero-function-label { font-size: 8px; transform: scale(.9); } .label-classify { left: 7%; top: 53%; } .label-calculate { right: 3%; top: 52%; } .label-connect { right: 25%; bottom: 5%; } }

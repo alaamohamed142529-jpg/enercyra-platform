@@ -167,3 +167,5 @@
 
 - [ ] Save a checkpoint to publish the realistic-material hero asset and removal of old icon overlays
 - [ ] Verify the published homepage in English and Arabic RTL, light/dark, and at least one mobile viewport
+
+- [ ] Force-refresh the public homepage bundle after realistic hero integration so the live domain no longer serves the old CSS material icons

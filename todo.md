@@ -198,6 +198,6 @@
 - [x] Remove the static/image-like right-side hero treatment and rebuild it as separate interactive material objects with animated energy rings
 - [x] Verify the new header and interactive hero in English, Arabic RTL, light/dark, desktop, mobile, and reduced-motion modes, then publish
 
-- [ ] Save a checkpoint to publish the exact circular logo and interactive material hero
-- [ ] Verify the published homepage in English and Arabic RTL, light/dark, desktop, and mobile views
-- [ ] Force-refresh the public bundle after the public host still served the previous image-led hero instead of the interactive material orbit
+- [x] Save a checkpoint to publish the exact circular logo and interactive material hero
+- [x] Verify the published homepage in English and Arabic RTL, light/dark, desktop, and mobile views
+- [x] Force-refresh the public bundle after the public host still served the previous image-led hero instead of the interactive material orbit

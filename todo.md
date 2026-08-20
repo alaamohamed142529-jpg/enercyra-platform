@@ -232,3 +232,7 @@
 
 - [x] Remove the thin light beam emerging from the center logo without changing the energy rings or material animation
 - [x] Verify the beam removal in Light, Dark, Arabic RTL, mobile, and reduced-motion modes, then publish
+
+- [x] Move CONNECT away from the organic material into clear orbit space
+- [x] Remove the remaining vertical scan line near CALCULATE and verify the callout icons remain clean
+- [x] Recheck Light, Dark, Arabic RTL, mobile, reduced motion, tests, and publish the correction

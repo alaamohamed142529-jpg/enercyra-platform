@@ -375,3 +375,10 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .hero-function-label { text-shadow: 0 0 10px rgba(17,104,118,.18); }
 .app-shell.theme-light .hero-function-label::before { box-shadow: 0 0 7px rgba(68,160,170,.6); }
 @media (max-width: 780px) { .hero-function-label { font-size: 8px; transform: scale(.9); } .label-classify { left: 7%; top: 53%; } .label-calculate { right: 3%; top: 52%; } .label-connect { right: 25%; bottom: 5%; } }
+
+/* Final callout cleanup: CONNECT clears the organic object; the scan-line layer is disabled. */
+.hero-scan-line { display: none !important; }
+.label-connect { right: 23%; bottom: 16%; color: var(--cyan); }
+.label-connect::before { left: -9px; top: -8px; }
+.label-connect::after { left: 50%; bottom: 100%; height: 22px; border-left: 1px dashed currentColor; }
+@media (max-width: 780px) { .label-connect { right: 18%; bottom: 10%; } }

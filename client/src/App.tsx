@@ -228,7 +228,7 @@ function InteractiveHeroVisual({ lang }: { lang: Lang }) {
       <span className="energy-core"><BrandMark /><span className="core-pulse" /></span>
     </div>
     <div className="hero-function-label label-classify"><Sparkles size={13} /><span>{lang === "ar" ? "تصنيف" : "CLASSIFY"}</span></div><div className="hero-function-label label-calculate"><BarChart3 size={13} /><span>{lang === "ar" ? "حساب" : "CALCULATE"}</span></div><div className="hero-function-label label-connect"><UsersRound size={13} /><span>{lang === "ar" ? "تواصل" : "CONNECT"}</span></div>
-    <div className="hero-scan-line" aria-hidden="true" /><div className="hero-corner corner-tl" aria-hidden="true" /><div className="hero-corner corner-br" aria-hidden="true" />
+    <div className="hero-corner corner-tl" aria-hidden="true" /><div className="hero-corner corner-br" aria-hidden="true" />
   </div>;
 }
 

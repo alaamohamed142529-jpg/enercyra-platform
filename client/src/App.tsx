@@ -5,6 +5,7 @@ import {
   ArrowRight,
   BarChart3,
   Bell,
+  Building2,
   Camera,
   Check,
   ChevronDown,
@@ -17,9 +18,12 @@ import {
   Lightbulb,
   ListFilter,
   LogIn,
+  Mail,
+  MapPin,
   Menu,
   Moon,
   PackageSearch,
+  Recycle,
   Search,
   ShieldCheck,
   Sparkles,
@@ -28,6 +32,8 @@ import {
   Trash2,
   Upload,
   UserRound,
+  Phone,
+  ExternalLink,
   UsersRound,
   X,
   Zap,
@@ -45,6 +51,16 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import "./index.css";
 
 const referenceData = mobileNetReferenceCatalog.map((item) => ({ id: item.id, en: item.displayNameEn, ar: item.displayNameAr, category: item.category, status: item.status, price: item.priceEgpPerKg, lhv: item.lhvMjPerKg, combustible: item.combustible, sourceNote: item.sourceNote, disclaimer: item.disclaimer }));
+
+const egyptianBusinesses = [
+  { id: "bekia", name: "Bekia", arName: "بيكيا", type: "Collection & recycling platform", arType: "منصة جمع وإعادة تدوير", city: "Giza", arCity: "الجيزة", address: "42 El-Madina El-Monawwara, Doqi, Dokki, Giza Governorate", arAddress: "42 شارع المدينة المنورة، الدقي، محافظة الجيزة", phone: ["01125428292", "01008366291"], email: "hello@bekia-egypt.com", website: "https://bekia-egypt.com/", materials: ["Plastic", "Paper", "Metal", "Electronics"], arMaterials: ["بلاستيك", "ورق", "معادن", "إلكترونيات"], source: "Official Bekia website" },
+  { id: "eerc", name: "Egyptian Electronics Recycling Co. (EERC)", arName: "الشركة المصرية لإعادة تدوير الإلكترونيات", type: "E-waste recycling", arType: "إعادة تدوير المخلفات الإلكترونية", city: "6th of October", arCity: "السادس من أكتوبر", address: "787, Industrial Zone, 6th of October, Egypt", arAddress: "787، المنطقة الصناعية، السادس من أكتوبر، مصر", phone: ["01062218955", "01116604831"], email: "info@eerc-group.com", website: "https://eerc-group.com/contact-us/", materials: ["Computers", "Phones", "Cables", "Screens"], arMaterials: ["أجهزة كمبيوتر", "هواتف", "كابلات", "شاشات"], source: "Official EERC contact page" },
+  { id: "geocycle", name: "Geocycle Egypt", arName: "جيوسايكل مصر", type: "Industrial waste management", arType: "إدارة المخلفات الصناعية", city: "New Cairo / Suez", arCity: "القاهرة الجديدة / السويس", address: "Summit 15, El Teseen St., Sector One, 5th Settlement, Cairo", arAddress: "سَمِت 15، شارع التسعين، القطاع الأول، التجمع الخامس، القاهرة", phone: [], email: "INFO-EGYPT@GEOCYCLE.COM", website: "https://www.geocycle.com/geocycle-egypt", materials: ["Industrial waste", "Plastic", "Paper", "Tires"], arMaterials: ["مخلفات صناعية", "بلاستيك", "ورق", "إطارات"], source: "Official Geocycle Egypt page" },
+  { id: "ecaru", name: "ECARU", arName: "إيكارو", type: "Solid waste management & MRF", arType: "إدارة المخلفات الصلبة ومرافق الفرز", city: "El Obour", arCity: "العبور", address: "El Obour City, First Industrial Zone, Block No. 12013", arAddress: "مدينة العبور، المنطقة الصناعية الأولى، قطعة رقم 12013", phone: ["+20244891061", "+20244891062", "+20244891164"], email: "info@ecaru.net", website: "https://ecaru.net/en/Contact", materials: ["Municipal solid waste", "Compost", "Alternative solid fuel"], arMaterials: ["مخلفات صلبة بلدية", "سماد عضوي", "وقود بديل"], source: "Official ECARU contact page" },
+  { id: "altawheed", name: "Al-Tawhid Environmental Services / I Recycle", arName: "التوحيد للخدمات البيئية / آي ريسايكل", type: "Collection, sorting & waste purchasing", arType: "جمع وفرز وشراء المخلفات", city: "6th of October", arCity: "السادس من أكتوبر", address: "Extension of Sixth Industrial Zone, Plot 53, 6th of October City, Giza", arAddress: "امتداد المنطقة الصناعية السادسة، قطعة 53، مدينة السادس من أكتوبر، الجيزة", phone: ["01157570643", "+20238295280"], email: "info@altawheed.co", website: "https://irecycle-eg.com/index-en.html", materials: ["Glass", "Wood", "Paper", "Cardboard", "Metals", "Plastic"], arMaterials: ["زجاج", "أخشاب", "ورق", "كرتون", "معادن", "بلاستيك"], source: "Official I Recycle / Al-Tawhid page" },
+  { id: "banlastic", name: "Banlastic Egypt", arName: "بانلاستيك مصر", type: "Plastic pollution & recycling initiatives", arType: "مبادرات البلاستيك وإعادة التدوير", city: "Alexandria", arCity: "الإسكندرية", address: "23 El Nasr St., El Mansheya, Alexandria, Egypt", arAddress: "23 شارع النصر، المنشية، الإسكندرية، مصر", phone: ["+201003042404"], email: "info@banlasticegypt.com", website: "https://banlasticegypt.com/", materials: ["Single-use plastics", "Plastic", "Metals"], arMaterials: ["بلاستيك أحادي الاستخدام", "بلاستيك", "معادن"], source: "Official Banlastic Egypt website" },
+  { id: "elshams", name: "El Shams Recycling", arName: "الشمس لإعادة التدوير", type: "Alternative fuel & organic fertilizer", arType: "وقود بديل وسماد عضوي", city: "Egypt", arCity: "مصر", address: "Not listed publicly on the reviewed official page", arAddress: "لم يُذكر العنوان علنًا في الصفحة الرسمية التي تمت مراجعتها", phone: ["+201208020202"], email: "info@elshamsrecycling.com", website: "https://elshamsrecycling.com/", materials: ["Agricultural waste", "Plastic", "Solid waste"], arMaterials: ["مخلفات زراعية", "بلاستيك", "مخلفات صلبة"], source: "Official El Shams Recycling website" },
+] as const;
 
 const listings = [
   { id: 1, name: "Plastic Bottles", ar: "زجاجات بلاستيكية", weight: "250 kg", locationEn: "Riyadh, Saudi Arabia", locationAr: "الرياض، السعودية", status: "Reference listing", color: "lime", icon: "plastic" },
@@ -79,7 +95,7 @@ type Copy = {
 
 const copy: Record<Lang, Copy> = {
   en: {
-    nav: { dashboard: "Dashboard", classify: "Classify", marketplace: "Marketplace", how: "How It Works", about: "About" },
+    nav: { dashboard: "Dashboard", classify: "Classify", marketplace: "Marketplace", businesses: "Businesses", how: "How It Works", about: "About" },
     heroTitle: "See Waste. See Value.",
     heroSub: "AI-powered waste classification, reference value estimation, energy insights, and business connections.",
     classify: "Classify Waste",
@@ -98,7 +114,7 @@ const copy: Record<Lang, Copy> = {
     pending: "Price pending",
   },
   ar: {
-    nav: { dashboard: "لوحة التحكم", classify: "التصنيف", marketplace: "السوق", how: "كيف تعمل المنصة", about: "من نحن" },
+    nav: { dashboard: "لوحة التحكم", classify: "التصنيف", marketplace: "السوق", businesses: "الشركات", how: "كيف تعمل المنصة", about: "من نحن" },
     heroTitle: "شوف النفايات. شوف قيمتها.",
     heroSub: "منصة ذكية لتصنيف النفايات وتقدير قيمتها ومحتواها الطاقي وربطها بفرص الأعمال.",
     classify: "صنّف نفاياتك",
@@ -135,6 +151,7 @@ function App() {
             <Route path="/classify" component={() => <Classify text={text} lang={lang} />} />
             <Route path="/result" component={() => <Result text={text} lang={lang} />} />
             <Route path="/marketplace" component={() => <Marketplace text={text} lang={lang} />} />
+            <Route path="/businesses" component={() => <Businesses lang={lang} />} />
             <Route path="/how-it-works" component={() => <HowItWorks text={text} lang={lang} />} />
             <Route path="/about" component={() => <About text={text} lang={lang} />} />
             <Route path="/my-listings" component={() => <MyListings text={text} lang={lang} />} />
@@ -156,6 +173,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
     ["/", "Dashboard", "لوحة التحكم", Grid2X2],
     ["/classify", "Classify", "التصنيف", Sparkles],
     ["/marketplace", "Marketplace", "السوق", PackageSearch],
+    ["/businesses", "Businesses", "الشركات", Building2],
     ["/how-it-works", "How It Works", "كيف تعمل المنصة", CircleHelp],
     ["/about", "About", "من نحن", UserRound],
   ] as const;
@@ -166,7 +184,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
         <span className="brand-copy"><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات. اكتشف قيمتها." : "See Waste. See Value."}</small></span>
       </Link>
       <nav className={`desktop-nav ${menuOpen ? "is-open" : ""}`}>
-        {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "How It Works" ? "how" : "about"]}</Link>)}
+        {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "How It Works" ? "how" : "about"]}</Link>)}
       </nav>
       <div className="header-actions">
         <button className="icon-button" aria-label="Switch language" onClick={() => setLang(lang === "en" ? "ar" : "en")}><Globe2 size={17} /><span>{lang === "en" ? "العربية" : "English"}</span></button>
@@ -283,6 +301,25 @@ function Marketplace({ text, lang }: { text: Copy; lang: Lang }) {
 }
 function ListingCard({ item, lang, text }: { item: typeof listings[number]; lang: Lang; text: Copy }) { return <article className="listing-card"><div className={`listing-art ${item.color}`}><span>{item.icon === "plastic" ? "PET" : item.icon === "cardboard" ? "CARDBOARD" : item.icon.toUpperCase()}</span></div><div className="listing-content"><div className="listing-title"><div><h3>{lang === "ar" ? item.ar : item.name}</h3><small>{item.status === "Price pending" ? text.pending : text.reference}</small></div><Tag size={17} /></div><div className="listing-meta"><span><PackageSearch size={15} />{item.weight}</span><span><Globe2 size={15} />{lang === "ar" ? item.locationAr : item.locationEn}</span></div><div className="listing-bottom"><strong>{item.status === "Price pending" ? (lang === "ar" ? "السعر قيد التجهيز" : "Price pending") : (lang === "ar" ? "قيمة مرجعية" : "Reference value")}</strong><button onClick={() => toast.info(lang === "ar" ? "ستحتاج هذه الخطوة إلى تسجيل الدخول لاحقًا." : "Sign in will be required for contact messaging.")}><UsersRound size={15} />{lang === "ar" ? "تواصل" : "Contact seller"}</button></div></div></article>; }
 
+function Businesses({ lang }: { lang: Lang }) {
+  const [query, setQuery] = useState("");
+  const [city, setCity] = useState("all");
+  const [focus, setFocus] = useState("all");
+  const isAr = lang === "ar";
+  const cities = Array.from(new Set(egyptianBusinesses.map((business) => business.city)));
+  const filtered = egyptianBusinesses.filter((business) => {
+    const haystack = [business.name, business.arName, business.type, business.arType, business.city, business.arCity, ...business.materials, ...business.arMaterials].join(" ").toLowerCase();
+    const matchesQuery = !query.trim() || haystack.includes(query.trim().toLowerCase());
+    const matchesCity = city === "all" || business.city === city;
+    const matchesFocus = focus === "all" || business.materials.some((material) => material.toLowerCase().includes(focus.toLowerCase()));
+    return matchesQuery && matchesCity && matchesFocus;
+  });
+  return <div className="page container content-page businesses-page">
+    <div className="page-heading businesses-heading"><span className="eyebrow"><Building2 size={15} />{isAr ? "دليل الأعمال البيئية" : "Verified business directory"}</span><h1>{isAr ? "الشركات" : "Businesses"}</h1><p>{isAr ? "شركات مصرية تعمل في جمع المخلفات أو إعادة تدويرها أو تحويلها إلى موارد. البيانات مأخوذة من المواقع الرسمية للشركات." : "Egyptian companies involved in collecting, recycling, recovering, or managing waste. Details are taken from official company websites."}</p><div className="business-stats"><span><strong>{egyptianBusinesses.length}</strong>{isAr ? " جهات مدرجة" : " verified listings"}</span><span><strong>{cities.length}</strong>{isAr ? " مناطق" : " areas"}</span><span><ShieldCheck size={15} />{isAr ? "بيانات منشورة علنًا" : "Publicly published data"}</span></div></div>
+    <div className="business-tools"><label className="search-field"><Search size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={isAr ? "ابحث باسم الشركة أو نوع المخلفات" : "Search company or material"} /></label><select value={city} onChange={(event) => setCity(event.target.value)} aria-label={isAr ? "تصفية حسب المنطقة" : "Filter by area"}><option value="all">{isAr ? "كل المناطق" : "All areas"}</option>{cities.map((item) => <option key={item} value={item}>{isAr ? egyptianBusinesses.find((business) => business.city === item)?.arCity : item}</option>)}</select><select value={focus} onChange={(event) => setFocus(event.target.value)} aria-label={isAr ? "تصفية حسب المادة" : "Filter by material"}><option value="all">{isAr ? "كل المواد" : "All materials"}</option><option value="plastic">{isAr ? "بلاستيك" : "Plastic"}</option><option value="electronics">{isAr ? "إلكترونيات" : "Electronics"}</option><option value="paper">{isAr ? "ورق وكرتون" : "Paper & cardboard"}</option><option value="metal">{isAr ? "معادن" : "Metals"}</option></select></div>
+    <div className="business-grid">{filtered.map((business) => <article className="business-card" key={business.id}><div className="business-card-top"><div className="business-logo"><Recycle size={22} /></div><div><span className="business-city"><MapPin size={13} />{isAr ? business.arCity : business.city}</span><h2>{isAr ? business.arName : business.name}</h2><p>{isAr ? business.arType : business.type}</p></div></div><div className="business-materials">{(isAr ? business.arMaterials : business.materials).map((material) => <span key={material}>{material}</span>)}</div><div className="business-contact"><span><MapPin size={15} />{isAr ? business.arAddress : business.address}</span>{business.phone.length > 0 ? <span><Phone size={15} />{business.phone.join(" · ")}</span> : <span><Phone size={15} />{isAr ? "الهاتف غير منشور" : "Phone not publicly listed"}</span>}<span><Mail size={15} />{business.email}</span></div><div className="business-actions"><a className="btn btn-primary" href={business.website} target="_blank" rel="noreferrer"><ExternalLink size={15} />{isAr ? "الموقع الرسمي" : "Official website"}</a>{business.phone[0] && <a className="btn btn-secondary" href={`tel:${business.phone[0]}`}><Phone size={15} />{isAr ? "اتصال" : "Call"}</a>}</div><small className="business-source"><ShieldCheck size={13} />{isAr ? "المصدر: " : "Source: "}<a href={business.website} target="_blank" rel="noreferrer">{business.source}</a></small></article>)}</div>{filtered.length === 0 && <div className="empty-state"><Search size={35} /><h3>{isAr ? "لا توجد نتائج" : "No businesses found"}</h3><p>{isAr ? "جربي تغيير البحث أو الفلاتر." : "Try another search or filter."}</p></div>}<div className="business-disclaimer"><ShieldCheck size={18} /><p>{isAr ? "تنبيه: الإدراج لا يعني اعتمادًا أو ضمانًا للخدمة. تحققي من الأسعار، نطاق الاستلام، والتراخيص مباشرة مع الشركة قبل تسليم أي مخلفات أو توقيع اتفاق." : "Directory note: listing does not constitute endorsement or guarantee. Verify pricing, pickup coverage, and licensing directly with each company before handing over waste or signing an agreement."}</p></div>
+  </div>;
+}
 function HowItWorks({ lang }: { text: Copy; lang: Lang }) { return <div className="page container content-page"><div className="page-heading"><span className="eyebrow"><Zap size={15} />{lang === "ar" ? "كيف تعمل إنِرسيرا" : "How Enercyra works"}</span><h1>{lang === "ar" ? "من الصورة إلى فرصة عمل." : "From image to business opportunity."}</h1><p>{lang === "ar" ? "ثلاث خطوات تجعل المادة أوضح وأسهل في الوصول إلى الاتصال المناسب." : "Three clear steps make a material easier to understand and easier to connect."}</p></div><div className="flow-grid"><FlowCard n="01" icon={<Sparkles />} title={lang === "ar" ? "صنّف" : "Classify"} copy={lang === "ar" ? "ارفع صورة. يحدد MobileNet نوع المادة من بين 37 فئة." : "Upload an image. MobileNet identifies the material across 37 categories."} /><FlowCard n="02" icon={<BarChart3 />} title={lang === "ar" ? "احسب" : "Calculate"} copy={lang === "ar" ? "أدخل الوزن وشاهد القيمة والطاقة كتقديرات مرجعية واضحة." : "Add weight and see clearly labeled reference value and energy estimates."} /><FlowCard n="03" icon={<UsersRound />} title={lang === "ar" ? "تواصل" : "Connect"} copy={lang === "ar" ? "انشر المادة واعثر على مشترين محتملين عبر السوق." : "Publish the material and find potential buyers through the marketplace."} /></div><div className="principles-card"><div><ShieldCheck size={23} /><h3>{lang === "ar" ? "مصمم بوضوح" : "Designed for clarity"}</h3></div><p>{lang === "ar" ? "نفرّق دائمًا بين نتيجة النموذج وبين التقديرات المرجعية. لا يوجد سعر مخفي أو رقم معروض كحقيقة سوقية دون وسم." : "We keep model output separate from reference estimates. No hidden price or number is presented as a market fact without a label."}</p></div></div>; }
 function FlowCard({ n, icon, title, copy: description }: { n: string; icon: React.ReactNode; title: string; copy: string }) { return <div className="flow-card"><span className="flow-number">{n}</span><div className="feature-icon">{icon}</div><h2>{title}</h2><p>{description}</p><ArrowRight className="feature-arrow" size={19} /></div>; }
 function About({ lang }: { text: Copy; lang: Lang }) { return <div className="page container content-page"><div className="about-panel"><div><span className="eyebrow"><Leaf size={15} />Enercyra</span><h1>{lang === "ar" ? "رؤية أوضح للنفايات. فرصة أفضل للأعمال." : "A clearer view of waste. A better business opportunity."}</h1><p>{lang === "ar" ? "إنِرسيرا منصة ذكاء نفايات تساعد المستخدمين والشركات على فهم المادة قبل اتخاذ الخطوة التالية." : "Enercyra is a waste intelligence platform that helps people and businesses understand a material before taking the next step."}</p></div><div className="about-mark"><BrandMark /><span>{lang === "ar" ? <>اكتشف النفايات.<br />اكتشف قيمتها.</> : <>See Waste.<br />See Value.</>}</span></div></div><div className="about-grid"><div><h3>{lang === "ar" ? "ما الذي نبنيه؟" : "What we are building"}</h3><p>{lang === "ar" ? "تجربة عملية تبدأ بالصورة وتنتهي بمعلومة أوضح واتصال تجاري محتمل." : "A practical experience that starts with a photo and ends with a clearer signal and a potential business connection."}</p></div><div><h3>{lang === "ar" ? "لمن؟" : "For whom?"}</h3><p>{lang === "ar" ? "للأفراد، جامعي النفايات، الشركات، والمشترين الذين يحتاجون إلى نقطة بداية واضحة." : "For individuals, collectors, companies, and buyers who need a clearer starting point."}</p></div></div></div>; }

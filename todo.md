@@ -219,3 +219,9 @@
 - [x] Add a restrained energy pulse from the center logo through the orbit rings without visual overload
 - [x] Verify the energy-light motion in English, Arabic RTL, light/dark, mobile, and reduced-motion modes
 - [x] Publish the energy-light refinement and provide the updated public URL
+
+- [x] Research real Egyptian recycling and waste-management businesses with publicly verifiable names, activities, addresses, phone numbers, websites, and source URLs
+- [x] Add a bilingual Businesses page with verified company cards, search/filter affordances, contact actions, and source attribution
+- [x] Update the global navigation and visual style to match the supplied compact reference header while preserving existing routes
+- [x] Verify Businesses content, Arabic RTL, English, responsive layouts, themes, and regression tests
+- [x] Publish the Businesses page and updated navigation with the verified public URL

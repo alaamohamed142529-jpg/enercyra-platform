@@ -215,3 +215,7 @@
 - [x] Reproduce why the public hero still appears unchanged after the optimized-glass-transparent-core checkpoint
 - [x] Make the glass bottle visibly transparent and the center logo background-free in a cache-busted public bundle
 - [x] Verify the corrected appearance on the public domain and publish the final fix
+
+- [x] Add a restrained energy pulse from the center logo through the orbit rings without visual overload
+- [x] Verify the energy-light motion in English, Arabic RTL, light/dark, mobile, and reduced-motion modes
+- [x] Publish the energy-light refinement and provide the updated public URL

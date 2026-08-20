@@ -60,3 +60,8 @@
 - [x] Recheck Arabic RTL contrast and safety labels after the deployment fix
 
 - [x] Replace the stale Classify-page copy that says the Python inference endpoint is not connected, and verify the deployed copy after the MobileNet checkpoint
+
+- [x] Fix combustible classification semantics so recyclable plastic is not presented as non-combustible when its reference record supports energy recovery
+- [x] Make pending price and LHV data explicit on Result instead of showing unexplained dashes after weight entry
+- [x] Audit missing MVP capabilities and identify the next highest-value implementation items
+- [x] Add regression tests for combustible semantics and pending calculation messaging

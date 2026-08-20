@@ -55,3 +55,8 @@
 - [x] Recheck /classify and /result after inference integration on mobile in English and Arabic RTL
 - [ ] Recheck the live theme toggle and signed-out /publish and /my-listings protection after inference integration
 - [ ] Exercise visible loading/error behavior for Classify and document the upload automation limitation if the browser cannot submit a local file
+- [ ] Replace heavyweight PyTorch deployment runtime with ONNX Runtime and commit the exported MobileNet artifact
+- [ ] Verify ONNX inference parity, build, and deployment after the runtime migration
+- [ ] Recheck Arabic RTL contrast and safety labels after the deployment fix
+
+- [ ] Replace the stale Classify-page copy that says the Python inference endpoint is not connected, and verify the deployed copy after the MobileNet checkpoint

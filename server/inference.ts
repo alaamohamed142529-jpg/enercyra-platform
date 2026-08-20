@@ -28,7 +28,7 @@ export async function runMobileNetInference(dataUrl: string): Promise<InferenceR
   const imagePath = join(workspace, `${randomUUID()}.${extension}`);
   await writeFile(imagePath, bytes);
   try {
-    const scriptPath = resolve(process.cwd(), "scripts/infer_mobilenet.py");
+    const scriptPath = resolve(process.cwd(), "scripts/infer_mobilenet_onnx.py");
     return await new Promise<InferenceResult>((resolveResult, reject) => {
       const child = spawn("python3", [scriptPath, imagePath], { stdio: ["ignore", "pipe", "pipe"] });
       let stdout = "";

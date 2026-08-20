@@ -122,3 +122,5 @@
 
 - [ ] Save a new checkpoint to publish the placeholder clarification fix
 - [ ] Verify the live public Result page in English and Arabic RTL shows non-numeric placeholder/help text and still recalculates after entering a real weight
+
+- [ ] Force a fresh public Result bundle after the placeholder update and verify the live domain no longer serves “e.g. 2.5”

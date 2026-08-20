@@ -17,7 +17,7 @@
 - [x] Add database schema, queries, and tRPC procedures for reference data and listings
 - [x] Add Vitest coverage for reference calculations, class mapping, listing ownership, and protected publish/delete flows
 - [x] Verify desktop and mobile layouts, English and Arabic RTL behavior, theme switching, upload states, empty/error states, and public/protected route access
-- [ ] Create final checkpoint and provide the QR-ready project version for publishing from the Management UI
+- [x] Create final checkpoint and provide the QR-ready project version for publishing from the Management UI
 
 - [x] Localize all remaining hardcoded English strings and status labels so every public page is fully bilingual in Arabic/English with RTL-safe copy
 - [x] Persist the light/dark theme selection using localStorage and restore it on page load
@@ -40,3 +40,9 @@
 - [x] Add explicit Preview wording to the Publish page while the real inference endpoint is not connected
 - [x] Verify visible upload controls and protected-route states in-browser; document the hidden file-input automation limitation
 - [x] Verify protected-route behavior while signed out for Publish and My Listings and document the results
+
+- [x] Compare the deployed Light/Dark palettes and logo rendering against the approved visual concept
+- [x] Diagnose why the Home hero visual assets around the logo are not appearing as expected
+- [x] Fix and verify the Home hero logo/visual assets without breaking mobile, Arabic RTL, or Light/Dark modes
+- [x] Verify the repaired Home hero in desktop/mobile, English/Arabic RTL, and both Light/Dark modes after the logo/hero change
+- [x] Decide and document whether the hero uses inline vector visuals or uploaded concept assets; keep the selected approach consistent with the approved concept

@@ -31,6 +31,7 @@ import {
   UsersRound,
   X,
   Zap,
+  Recycle,
 } from "lucide-react";
 import { Toaster, toast } from "sonner";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -116,8 +117,9 @@ const copy: Record<Lang, Copy> = {
 };
 
 function App() {
-  const [lang, setLang] = useState<Lang>(() => new URLSearchParams(window.location.search).get("lang") === "ar" ? "ar" : "en");
-  const [dark, setDark] = useState(() => window.localStorage.getItem("enercyra-theme") !== "light");
+  const previewParams = new URLSearchParams(window.location.search);
+  const [lang, setLang] = useState<Lang>(() => previewParams.get("lang") === "ar" ? "ar" : "en");
+  const [dark, setDark] = useState(() => previewParams.get("theme") === "light" ? false : window.localStorage.getItem("enercyra-theme") !== "light");
   useEffect(() => { window.localStorage.setItem("enercyra-theme", dark ? "dark" : "light"); }, [dark]);
   const dir = lang === "ar" ? "rtl" : "ltr";
   const text = copy[lang];
@@ -196,7 +198,7 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
 
 function FeatureCard({ icon, title, copy: description }: { icon: React.ReactNode; title: string; copy: string }) { return <div className="feature-card"><div className="feature-icon">{icon}</div><h3>{title}</h3><p>{description}</p><ArrowRight className="feature-arrow" size={18} /></div>; }
 function Step({ n, title }: { n: string; title: string }) { return <div className="step"><span>{n}</span><strong>{title}</strong></div>; }
-function WasteOrbit() { return <div className="waste-orbit"><div className="orbit-ring ring-one" /><div className="orbit-ring ring-two" /><div className="orbit-ring ring-three" /><div className="orbit-core"><BrandMark /></div><div className="waste-object bottle">♢</div><div className="waste-object can">◒</div><div className="waste-object cardboard">▤</div><div className="waste-object glass">◉</div><div className="waste-object organic">✦</div></div>; }
+function WasteOrbit() { return <div className="waste-orbit"><div className="orbit-ring ring-one" /><div className="orbit-ring ring-two" /><div className="orbit-ring ring-three" /><div className="orbit-core"><BrandMark /></div><div className="waste-object bottle" aria-label="Plastic material"><PackageSearch size={25} /></div><div className="waste-object can" aria-label="Metal material"><Recycle size={25} /></div><div className="waste-object cardboard" aria-label="Paper material"><PackageSearch size={25} /></div><div className="waste-object glass" aria-label="Glass material"><Leaf size={25} /></div><div className="waste-object organic" aria-label="Organic material"><Zap size={25} /></div></div>; }
 function RecentAnalysis({ lang }: { lang: Lang }) { return <div className="recent-card"><div className="recent-header"><span><BarChart3 size={17} />{lang === "ar" ? "أحدث تحليل" : "Recent Analysis"}</span><Link href="/result">{lang === "ar" ? "عرض" : "View"}<ArrowRight size={15} /></Link></div><div className="recent-row"><div className="mini-material">PET</div><div><strong>{lang === "ar" ? "زجاجة بلاستيكية" : "Plastic Bottle"}</strong><small>{lang === "ar" ? "ثقة عالية" : "High confidence"}</small></div><div className="recent-stat"><small>{lang === "ar" ? "القيمة المرجعية" : "Reference value"}</small><strong>—</strong></div><div className="recent-stat"><small>{lang === "ar" ? "الطاقة التقديرية" : "Estimated energy"}</small><strong>—</strong></div></div></div>; }
 
 function Classify({ text, lang }: { text: Copy; lang: Lang }) {

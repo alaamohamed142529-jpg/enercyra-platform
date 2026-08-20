@@ -15,3 +15,7 @@ The live theme toggle successfully switches the page from the dark navy system t
 Signed-out protection checks: `/publish` shows “Sign in to publish” and no form fields; `/my-listings` shows “Sign in to access your listings” and no private listing data. Both routes expose only the authentication CTA while public navigation remains available.
 
 The deployed `/publish` and `/my-listings` routes were verified while signed out: both show authentication gates and no private content. The Classify upload control is present, but automated file attachment could not locate the hidden input in the deployed browser session; this is a tooling limitation for the hidden input, not a confirmed product error. The page still exposes both Choose Image and Use Camera controls and a clear Preview note.
+
+Post-fix visual verification: the Home hero now shows the Enercyra mark in the orbit center and five clear vector material icons around it instead of the earlier text glyph placeholders. Desktop and 390px mobile captures were checked in English and Arabic RTL, with light-theme preview states included. The visual stays within the approved navy/emerald/lime/cyan direction; the mobile layout stacks the hero cleanly and preserves the Arabic RTL order.
+
+Asset decision: keep the hero as inline vector visuals rather than external PNG mockup assets. The supplied concept image is a design reference sheet, not a production-ready transparent asset; inline vectors avoid broken image URLs and scale better across themes and devices.

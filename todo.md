@@ -23,7 +23,7 @@
 - [x] Persist the light/dark theme selection using localStorage and restore it on page load
 - [x] Add a real Marketplace location filter control and wire it into listing filtering logic
 - [ ] Wire the Result page to real inference/reference data inputs instead of example/mock content, and surface actual reference value/energy outputs when data exists
-- [ ] Add Vitest tests for marketplace ownership restrictions and protected create/remove procedures
+- [x] Add Vitest tests for marketplace ownership restrictions and protected create/remove procedures
 - [x] Localize remaining Marketplace filter labels/options and any other public-page strings so Arabic mode is fully translated and RTL-safe
 - [ ] Wire the Publish form to actual Result/inference data instead of hardcoded Plastic, and pass class and image metadata through the publish mutation
 - [x] Extend the listing schema and mutation to persist image metadata or a documented image reference field

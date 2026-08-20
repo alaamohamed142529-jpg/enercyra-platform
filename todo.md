@@ -120,13 +120,26 @@
 - [x] Replace the numeric weight placeholder 2.5 with explicit bilingual instruction text so the empty field cannot look pre-filled
 - [x] Verify the clarified empty field still recalculates correctly after entering a real weight, then publish the fix
 
-- [ ] Save a new checkpoint to publish the placeholder clarification fix
-- [ ] Verify the live public Result page in English and Arabic RTL shows non-numeric placeholder/help text and still recalculates after entering a real weight
+- [x] Save a new checkpoint to publish the placeholder clarification fix
+- [x] Verify the live public Result page in English and Arabic RTL shows non-numeric placeholder/help text and still recalculates after entering a real weight
 
-- [ ] Force a fresh public Result bundle after the placeholder update and verify the live domain no longer serves “e.g. 2.5”
+- [x] Force a fresh public Result bundle after the placeholder update and verify the live domain no longer serves “e.g. 2.5”
 
 - [x] Replace the gray light-mode background and surfaces with a warmer premium palette and stronger visual hierarchy
 - [x] Verify the refined palette in light mode, dark mode, and Arabic RTL, then publish it
 
-- [ ] Save a checkpoint to publish the warmer light-mode palette update
-- [ ] Verify the published homepage and Result page in light mode, dark mode, and Arabic RTL with readable contrast and warm ivory surfaces
+- [x] Save a checkpoint to publish the warmer light-mode palette update
+- [x] Verify the published homepage and Result page in light mode, dark mode, and Arabic RTL with readable contrast and warm ivory surfaces
+
+- [x] Visually verify the live public homepage in light mode and Arabic RTL: warm ivory background, white surfaces, and navy text
+- [x] Visually verify the live public Result page in light and dark modes: refined palette and readable contrast
+
+- [x] Remove the visible EcoSyncAI source notice from the Result calculation panel while preserving essential calculation disclaimers elsewhere
+- [x] Refine the homepage hero into a dynamic HTML/CSS waste orbit with separate bottle, can, glass, cardboard, and organic material elements
+- [x] Add rotating energy rings and material motion with reduced-motion support, then verify English, Arabic RTL, light/dark, and mobile layouts
+
+- [x] Add a compact calculation disclaimer without naming the notebook or showing a source section: indicative price, LHV meaning, MJ-to-kWh conversion, and market/date/grade confirmation
+- [x] Verify the new hero locally in light mode, dark mode, Arabic RTL, and mobile viewport after the material-orbit implementation
+- [ ] Publish the dynamic hero and source-panel removal, then verify the public homepage and Result page
+
+- [x] Capture explicit local post-change hero checks in dark and light mode on desktop and mobile before publishing

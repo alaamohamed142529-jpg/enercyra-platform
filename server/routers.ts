@@ -4,6 +4,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { createListing, listActiveListings, listListingsForOwner, listReferenceData, removeListing } from "./db";
+import { runMobileNetInference } from "./inference";
 
 export const appRouter = router({
   system: systemRouter,
@@ -17,6 +18,15 @@ export const appRouter = router({
   }),
   reference: router({
     list: publicProcedure.query(() => listReferenceData()),
+  }),
+  inference: router({
+    classify: publicProcedure.input(z.object({ imageDataUrl: z.string().max(11_000_000) })).mutation(async ({ input }) => {
+      try {
+        return await runMobileNetInference(input.imageDataUrl);
+      } catch (error) {
+        throw new Error(error instanceof Error ? error.message : "Inference failed.");
+      }
+    }),
   }),
   marketplace: router({
     list: publicProcedure.query(() => listActiveListings()),

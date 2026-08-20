@@ -1,0 +1,19 @@
+{
+    "architecture": "MobileNetV3-Large",
+    "num_classes": 37,
+    "input_size": 224,
+    "normalize_mean": [
+        0.485,
+        0.456,
+        0.406
+    ],
+    "normalize_std": [
+        0.229,
+        0.224,
+        0.225
+    ],
+    "accuracy": 99.08312958435208,
+    "precision_macro": 99.22271753469106,
+    "recall_macro": 99.42013842342661,
+    "f1_macro": 99.3173557819104
+}

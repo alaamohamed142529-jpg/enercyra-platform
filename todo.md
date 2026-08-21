@@ -281,3 +281,6 @@
 - [x] Convert the reference-inspired orbit into independent interactive HTML/CSS rings and energy layers while preserving the current homepage structure
 - [x] Match the reference material positions and proportions with separate animated image elements
 - [x] Preserve readable labels, Arabic RTL, reduced-motion accessibility, responsiveness, tests, and production build
+- [x] Bring the existing orbit visuals closer to the supplied reference through richer ring and energy treatment
+- [x] Add restrained hover, focus, and touch interaction to materials and orbit labels without disrupting navigation
+- [x] Preserve RTL, reduced motion, responsiveness, tests, and production build after the enhancement

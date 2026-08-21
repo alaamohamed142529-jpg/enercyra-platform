@@ -448,3 +448,23 @@ h1, h2, h3, p { margin: 0; }
 .interactive-material-orbit::after { content: ""; position: absolute; inset: 22%; border-radius: 50%; border: 1px solid rgba(68,217,238,.16); box-shadow: 0 0 28px rgba(68,217,238,.1), inset 0 0 24px rgba(193,244,91,.08); pointer-events: none; animation: haloBreath 5.5s ease-in-out infinite; }
 @keyframes haloBreath { 0%,100% { transform: scale(.96); opacity: .55; } 50% { transform: scale(1.04); opacity: .95; } }
 @media (prefers-reduced-motion: reduce) { .interactive-material-orbit::after { animation: none; opacity: .7; } }
+
+/* Interaction polish: hover/focus lifts materials and gently energizes the orbit. */
+.material-object { cursor: default; transition: filter .28s cubic-bezier(.23,1,.32,1), z-index 0s; }
+.material-object img { transition: transform .32s cubic-bezier(.23,1,.32,1), filter .32s ease; }
+.material-object:hover, .material-object:focus-visible { z-index: 8; filter: drop-shadow(0 22px 22px rgba(0,0,0,.4)); outline: none; }
+.material-object:hover img, .material-object:focus-visible img { transform: scale(1.12) rotate(2deg); filter: saturate(1.3) contrast(1.1) brightness(1.08) drop-shadow(0 0 18px rgba(68,217,238,.3)); }
+.material-can:hover img, .material-can:focus-visible img { transform: scale(1.12) rotate(-2deg); }
+.material-glass:hover img, .material-glass:focus-visible img { transform: scale(1.12) rotate(-2deg); }
+.material-cardboard:hover img, .material-cardboard:focus-visible img { transform: scale(1.1) rotate(-2deg); }
+.material-organic:hover img, .material-organic:focus-visible img { transform: scale(1.12) rotate(-2deg); }
+.material-object:focus-visible { outline: 2px solid var(--lime); outline-offset: 5px; border-radius: 18px; }
+.interactive-material-orbit:has(.material-object:hover) .energy-ring-middle, .interactive-material-orbit:has(.material-object:focus-visible) .energy-ring-middle { box-shadow: 0 0 25px rgba(193,244,91,.28); }
+.interactive-material-orbit:has(.material-object:hover) .energy-core, .interactive-material-orbit:has(.material-object:focus-visible) .energy-core { box-shadow: 0 0 48px rgba(193,244,91,.42), 0 0 96px rgba(68,217,238,.22); }
+.hero-function-label { transition: color .2s ease, transform .2s cubic-bezier(.23,1,.32,1), text-shadow .2s ease; }
+.hero-function-label:hover, .hero-function-label:focus-visible { color: var(--lime); text-shadow: 0 0 16px rgba(193,244,91,.75); transform: scale(1.08); }
+.label-connect:focus-visible { outline: 2px solid var(--lime); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  .material-object, .material-object img, .hero-function-label { transition: none; }
+  .material-object:hover img, .material-object:focus-visible img, .hero-function-label:hover, .hero-function-label:focus-visible { transform: none; }
+}

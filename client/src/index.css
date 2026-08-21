@@ -555,3 +555,43 @@ h1, h2, h3, p { margin: 0; }
   .material-cardboard { left: 6%; bottom: 7%; }
   .material-organic { right: 13%; bottom: 6%; }
 }
+
+/* Premium Hero refinement: one shared environment, protected content zones, quiet coordinated motion. */
+.interactive-material-orbit { perspective: 900px; }
+.material-object { transform-style: preserve-3d; backface-visibility: hidden; will-change: transform; filter: drop-shadow(0 18px 20px rgba(0,0,0,.34)); }
+.material-object img { object-fit: contain; transform-origin: center; filter: saturate(1.08) contrast(1.06) brightness(1.02) drop-shadow(0 12px 13px rgba(0,0,0,.3)); mix-blend-mode: normal; }
+.material-bottle, .material-can, .material-glass, .material-cardboard, .material-organic { width: 150px; height: 150px; }
+.material-bottle { top: 1%; right: 31%; --tilt: 13deg; animation-duration: 15s; animation-delay: 0s; }
+.material-can { top: 32%; left: 3%; --tilt: -18deg; animation-duration: 14.4s; animation-delay: -2.7s; }
+.material-glass { right: 5%; bottom: 30%; --tilt: 16deg; animation-duration: 15.6s; animation-delay: -5.4s; }
+.material-cardboard { left: 9%; bottom: 9%; --tilt: 6deg; animation-duration: 14.8s; animation-delay: -8.1s; }
+.material-organic { right: 16%; bottom: 8%; --tilt: -6deg; animation-duration: 15.2s; animation-delay: -10.8s; }
+.material-bottle img { transform: scale(1); }
+.material-can img { transform: scale(.84); }
+.material-glass img { transform: scale(.94); }
+.material-cardboard img { transform: scale(.92); }
+.material-organic img { transform: scale(.92); }
+.energy-ring { opacity: .72; box-shadow: 0 0 18px rgba(68,217,238,.1), inset 0 0 14px rgba(193,244,91,.05); }
+.energy-ring-middle { opacity: .64; }
+.energy-ring-inner { opacity: .58; }
+.energy-wave { opacity: .7; }
+.energy-core { animation: coreCalm 8s ease-in-out infinite; z-index: 6; }
+@keyframes coreCalm { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-2px) scale(1.015); } }
+.hero-function-label { z-index: 10; }
+.label-classify { left: 14%; top: 23%; }
+.label-calculate { right: 11%; top: 23%; }
+.label-connect { bottom: 5% !important; }
+@media (max-width: 860px) {
+  .material-bottle, .material-can, .material-glass, .material-cardboard, .material-organic { width: 116px; height: 116px; }
+  .material-bottle { right: 27%; top: 1%; }
+  .material-can { left: 2%; top: 31%; }
+  .material-glass { right: 2%; bottom: 30%; }
+  .material-cardboard { left: 6%; bottom: 8%; }
+  .material-organic { right: 13%; bottom: 7%; }
+  .label-classify { left: 8%; top: 23%; }
+  .label-calculate { right: 4%; top: 23%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .energy-core { animation: none; }
+  .material-object img { filter: saturate(1.08) contrast(1.06) brightness(1.02) drop-shadow(0 12px 13px rgba(0,0,0,.3)); }
+}

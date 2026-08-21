@@ -294,3 +294,7 @@
 - [x] Correct the five hero material positions so the lower elements are not clipped and the orbit spacing is balanced
 - [x] Correct optical sizes so the can does not dominate and the bottle, glass, cardboard, and organic materials read clearly
 - [x] Re-test the corrected composition on desktop, mobile, Arabic RTL, themes, motion, tests, and production build
+- [x] Unify waste-element visual scale, perspective, lighting, and depth while preserving the existing Hero identity
+- [x] Rebalance orbit positions and protect the central AI logo and CLASSIFY/CALCULATE/CONNECT labels from collisions
+- [x] Coordinate smooth premium motion with subtle per-element phase differences and restrained orbit rings
+- [x] Validate desktop/mobile, Arabic RTL, reduced motion, tests, TypeScript, and production build

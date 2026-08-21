@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, Route, Switch, useLocation } from "wouter";
 import {
   ArrowLeft,
+  BadgeDollarSign,
   ArrowRight,
   BarChart3,
   Bell,
@@ -14,6 +15,7 @@ import {
   Filter,
   Globe2,
   Grid2X2,
+  Handshake,
   Leaf,
   Lightbulb,
   ListFilter,
@@ -25,6 +27,7 @@ import {
   PackageSearch,
   Recycle,
   Search,
+  ScanSearch,
   ShieldCheck,
   Sparkles,
   Sun,
@@ -102,10 +105,10 @@ const copy: Record<Lang, Copy> = {
     marketplace: "Explore Marketplace",
     featureTitle: "Turn a photo into a business signal.",
     featureCopy: "Enercyra helps you identify materials, understand reference estimates, and find the next useful connection.",
-    valueTitle: "Reference value",
-    valueCopy: "Clear estimates, always labeled and easy to verify.",
-    connectTitle: "Business connections",
-    connectCopy: "Move from a classified material to a potential buyer.",
+    valueTitle: "Reference estimates",
+    valueCopy: "Review price status, LHV, MJ, and kWh when catalog data is available.",
+    connectTitle: "Buyer discovery",
+    connectCopy: "Find relevant businesses and recycling partners for the classified material.",
     uploadTitle: "Drag & drop your image here",
     uploadSub: "or browse from your device",
     choose: "Choose Image",
@@ -121,10 +124,10 @@ const copy: Record<Lang, Copy> = {
     marketplace: "استكشف السوق",
     featureTitle: "حوّل الصورة إلى إشارة تجارية.",
     featureCopy: "تساعدك إنِرسيرا على معرفة نوع المادة وفهم التقديرات المرجعية والوصول إلى الاتصال المناسب.",
-    valueTitle: "قيمة مرجعية",
-    valueCopy: "تقديرات واضحة وموسومة دائمًا ليسهل التحقق منها.",
-    connectTitle: "روابط الأعمال",
-    connectCopy: "انتقل من مادة مصنّفة إلى مشترٍ محتمل.",
+    valueTitle: "تقديرات مرجعية",
+    valueCopy: "راجع حالة السعر وLHV وMJ وkWh عند توافر بيانات الكتالوج.",
+    connectTitle: "اكتشف المشترين",
+    connectCopy: "اعثر على شركات وشركاء إعادة تدوير مناسبين للمادة المصنّفة.",
     uploadTitle: "اسحب الصورة وأفلتها هنا",
     uploadSub: "أو اخترها من جهازك",
     choose: "اختر صورة",
@@ -211,7 +214,7 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
       </div>
       <InteractiveHeroVisual lang={lang} />
     </section>
-    <section className="feature-strip container"><FeatureCard icon={<Sparkles />} title={lang === "ar" ? "تصنيف بالذكاء الاصطناعي" : "AI Classification"} copy={lang === "ar" ? "تعرّف على نوع المادة من صورة واحدة." : "Identify a material from a single image."} /><FeatureCard icon={<BarChart3 />} title={text.valueTitle} copy={text.valueCopy} /><FeatureCard icon={<UsersRound />} title={text.connectTitle} copy={text.connectCopy} /><RecentAnalysis lang={lang} /></section>
+    <section className="feature-strip container"><FeatureCard icon={<ScanSearch />} title={lang === "ar" ? "تعرّف على المادة" : "Material identification"} copy={lang === "ar" ? "ارفع صورة ليحدد النموذج فئة المادة ودرجة الثقة." : "Upload one image to identify its material class and confidence."} /><FeatureCard icon={<BadgeDollarSign />} title={text.valueTitle} copy={text.valueCopy} /><FeatureCard icon={<Handshake />} title={text.connectTitle} copy={text.connectCopy} /><RecentAnalysis lang={lang} /></section>
     <section className="how-preview container"><div><span className="eyebrow"><Zap size={15} /> {lang === "ar" ? "ثلاث خطوات واضحة" : "A simple three-step flow"}</span><h2>{text.featureTitle}</h2><p>{text.featureCopy}</p></div><div className="step-line"><Step n="01" title={lang === "ar" ? "صنّف" : "Classify"} /><Step n="02" title={lang === "ar" ? "احسب" : "Calculate"} /><Step n="03" title={lang === "ar" ? "تواصل" : "Connect"} /></div></section>
   </div>;
 }
@@ -233,7 +236,29 @@ function InteractiveHeroVisual({ lang }: { lang: Lang }) {
 function FeatureCard({ icon, title, copy: description }: { icon: React.ReactNode; title: string; copy: string }) { return <div className="feature-card"><div className="feature-icon">{icon}</div><h3>{title}</h3><p>{description}</p><ArrowRight className="feature-arrow" size={18} /></div>; }
 function Step({ n, title }: { n: string; title: string }) { return <div className="step"><span>{n}</span><strong>{title}</strong></div>; }
 function WasteOrbit() { return <div className="waste-orbit"><div className="orbit-ring ring-one" /><div className="orbit-ring ring-two" /><div className="orbit-ring ring-three" /><div className="orbit-core"><BrandMark /></div><div className="waste-object bottle">♢</div><div className="waste-object can">◒</div><div className="waste-object cardboard">▤</div><div className="waste-object glass">◉</div><div className="waste-object organic">✦</div></div>; }
-function RecentAnalysis({ lang }: { lang: Lang }) { return <div className="recent-card"><div className="recent-header"><span><BarChart3 size={17} />{lang === "ar" ? "أحدث تحليل" : "Recent Analysis"}</span><Link href="/result">{lang === "ar" ? "عرض" : "View"}<ArrowRight size={15} /></Link></div><div className="recent-row"><div className="mini-material">PET</div><div><strong>{lang === "ar" ? "زجاجة بلاستيكية" : "Plastic Bottle"}</strong><small>{lang === "ar" ? "ثقة عالية" : "High confidence"}</small></div><div className="recent-stat"><small>{lang === "ar" ? "القيمة المرجعية" : "Reference value"}</small><strong>—</strong></div><div className="recent-stat"><small>{lang === "ar" ? "الطاقة التقديرية" : "Estimated energy"}</small><strong>—</strong></div></div></div>; }
+function readRecentClassification(): StoredClassification | null {
+  try {
+    const raw = window.sessionStorage.getItem("enercyra-classification");
+    return raw ? JSON.parse(raw) as StoredClassification : null;
+  } catch {
+    return null;
+  }
+}
+
+function RecentAnalysis({ lang }: { lang: Lang }) {
+  const [classification, setClassification] = useState<StoredClassification | null>(() => readRecentClassification());
+  useEffect(() => {
+    const refresh = () => setClassification(readRecentClassification());
+    window.addEventListener("focus", refresh);
+    window.addEventListener("pageshow", refresh);
+    return () => { window.removeEventListener("focus", refresh); window.removeEventListener("pageshow", refresh); };
+  }, []);
+  const item = classification ? referenceData.find((entry) => entry.id === classification.classId) : null;
+  const name = classification ? (lang === "ar" ? classification.displayNameAr : classification.displayNameEn) : "";
+  const confidence = classification?.confidence != null ? `${(classification.confidence * 100).toFixed(1)}%` : "";
+  const confidenceLabel = classification?.confidence != null ? (classification.confidence >= 0.8 ? (lang === "ar" ? "ثقة عالية" : "High confidence") : classification.confidence >= 0.5 ? (lang === "ar" ? "ثقة متوسطة" : "Medium confidence") : (lang === "ar" ? "ثقة منخفضة" : "Low confidence")) : "";
+  return <div className="recent-card"><div className="recent-header"><span><BarChart3 size={17} />{lang === "ar" ? "أحدث تحليل" : "Recent Analysis"}</span><Link href={classification ? "/result" : "/classify"}>{classification ? (lang === "ar" ? "عرض" : "View") : (lang === "ar" ? "ابدأ" : "Start")}<ArrowRight size={15} /></Link></div>{classification && item ? <div className="recent-row"><div className="mini-material">{item.id.slice(0, 4).toUpperCase()}</div><div><strong>{name}</strong><small>{confidenceLabel} · {confidence}</small></div><div className="recent-stat"><small>{lang === "ar" ? "حالة القيمة" : "Value status"}</small><strong>{item.price !== null ? (lang === "ar" ? "متاح" : "Available") : "—"}</strong></div><div className="recent-stat"><small>{lang === "ar" ? "حالة الطاقة" : "Energy status"}</small><strong>{item.lhv !== null ? (lang === "ar" ? "متاح" : "Available") : "—"}</strong></div></div> : <div className="recent-empty"><strong>{lang === "ar" ? "لا توجد تحليلات بعد" : "No analyses yet"}</strong><small>{lang === "ar" ? "ارفع صورة لتظهر أحدث نتيجة هنا." : "Upload an image to show your latest result here."}</small></div>}</div>;
+}
 
 async function imageFileToDataUrl(file: File): Promise<string> {
   const source = await new Promise<HTMLImageElement>((resolve, reject) => {

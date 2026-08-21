@@ -247,3 +247,7 @@
 - [x] Remove the WASTE INTELLIGENCE FOR BUSINESS eyebrow from the homepage hero
 - [x] Remove the Estimates are labeled and transparent row and Arabic / English labels from the homepage hero
 - [x] Rebalance and verify the homepage in English, Arabic RTL, Light/Dark, mobile, and public deployment
+
+- [x] Replace the static Recent Analysis example with the latest actual saved classification or an honest empty state
+- [x] Refine the three homepage feature cards with distinct accurate icons and non-repetitive bilingual copy
+- [x] Verify the focused homepage changes in English, Arabic RTL, Light/Dark, mobile, tests, and public deployment

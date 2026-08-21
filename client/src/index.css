@@ -770,3 +770,20 @@ h1, h2, h3, p { margin: 0; }
   .hero-function-label small { font-size: 5px; }
 }
 @media (prefers-reduced-motion: reduce) { .hero-function-label { animation: none; } .hero-function-label::after { animation: none; } }
+
+/* Final callout correction: keep the corner frame, give CLASSIFY breathing room, and synchronize CONNECT explicitly. */
+.hero-function-label { animation-name: calloutFloat; animation-duration: 5.6s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-fill-mode: both; }
+.label-classify { left: 13%; top: 12%; animation: calloutFloat 5.6s ease-in-out infinite; }
+.label-calculate { right: 8%; top: 12%; animation: calloutFloat 5.6s ease-in-out infinite; }
+.label-connect { left: 50%; bottom: 2.5% !important; animation: calloutFloat 5.6s ease-in-out infinite; }
+.label-classify::after, .label-calculate::after, .label-connect::after { width: 34px; border-top: 1px dotted currentColor; opacity: .48; animation: calloutLinePulse 3.8s ease-in-out infinite; }
+.label-connect::after { left: 50%; bottom: 100%; transform: rotate(-30deg); transform-origin: left center; }
+@media (max-width: 860px) {
+  .label-classify { left: 10%; top: 12%; }
+  .label-calculate { right: 4%; top: 12%; }
+  .label-connect { bottom: 2% !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-function-label, .label-classify, .label-calculate, .label-connect { animation: none; }
+  .label-classify::after, .label-calculate::after, .label-connect::after { animation: none; }
+}

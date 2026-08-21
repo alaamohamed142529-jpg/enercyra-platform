@@ -326,3 +326,6 @@
 - [x] Make CONNECT use the same callout animation style, timing, opacity, glow, and motion as CLASSIFY/CALCULATE
 - [x] Move CLASSIFY away from the aluminum can and separate food waste from the green glass bottle
 - [x] Rebalance all five objects, unify callout typography/connectors, preserve raised Hero spacing, and validate all responsive/test/build checks
+- [x] Make CONNECT motion exactly match CLASSIFY and CALCULATE without changing the callout system
+- [x] Move CLASSIFY farther from the decorative corner frame while preserving the frame
+- [x] Re-test callout alignment, spacing, responsive behavior, RTL, themes, tests, TypeScript, and production build

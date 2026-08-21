@@ -365,3 +365,6 @@
 - [x] Match CONNECT’s dotted arrow connector to the supplied reference image
 - [x] Preserve the simplified shared callout movement while adjusting only the connector
 - [x] Verify connector placement and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Replace the inappropriate CONNECT arrow with the short subtle dotted leader shown in the reference
+- [x] Match CONNECT connector length, angle, opacity, and timing to the other callouts
+- [x] Verify the corrected connector and project integrity across desktop/mobile, RTL, themes, tests, and production build

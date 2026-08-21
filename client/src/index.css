@@ -1029,3 +1029,19 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .label-connect::after { animation: none !important; }
 }
+
+/* Reference correction: CONNECT uses a short, quiet dotted leader like the upper callouts. */
+.label-connect::after {
+  left: auto !important;
+  right: 100% !important;
+  top: 50% !important;
+  bottom: auto !important;
+  width: 28px !important;
+  height: 0 !important;
+  border: 0 !important;
+  border-top: 1px dotted currentColor !important;
+  opacity: .42 !important;
+  transform: rotate(-18deg) !important;
+  transform-origin: right center !important;
+  animation: calloutLinePulse 3.8s ease-in-out infinite !important;
+}

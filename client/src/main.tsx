@@ -11,7 +11,7 @@ import "./index.css";
 const queryClient = new QueryClient();
 
 // Deployment probe: lets public verification distinguish the current entry bundle from a stale cached shell.
-document.documentElement.dataset.enercyraBuild = "visible-connect-live-v1";
+document.documentElement.dataset.enercyraBuild = "homepage-truthful-live-v1";
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;

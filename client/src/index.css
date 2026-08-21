@@ -665,3 +665,45 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 560px) { .currency-control { order: 2; } .currency-control select { font-size: 10px; } }
 
 @media (max-width: 560px) { .currency-control { display: none; } }
+
+/* Reference alignment pass: live layers only, no static image replacement. */
+.interactive-material-orbit { width: min(590px, 98%); aspect-ratio: 1 / 1; }
+.material-bottle { top: 0%; right: 34%; width: 132px; height: 132px; z-index: 12; }
+.material-can { top: 25%; left: 3%; width: 104px; height: 104px; z-index: 12; }
+.material-glass { right: 3%; bottom: 27%; width: 128px; height: 128px; z-index: 12; }
+.material-cardboard { left: 7%; bottom: 4%; width: 142px; height: 142px; z-index: 12; }
+.material-organic { right: 12%; bottom: 3%; width: 128px; height: 128px; z-index: 12; }
+.energy-ring-outer { opacity: .58; border-color: rgba(68,217,238,.62); }
+.energy-ring-middle { opacity: .78; }
+.energy-ring-inner { opacity: .68; }
+.energy-core { z-index: 18; }
+.hero-function-label { z-index: 24; text-shadow: 0 1px 10px rgba(3,24,34,.7); }
+.label-classify { left: 11%; top: 17%; }
+.label-calculate { right: 8%; top: 17%; }
+.label-connect { left: 50%; bottom: -1% !important; transform: translateX(-50%); background: transparent; border: 0; box-shadow: none; padding: 3px 5px; }
+.label-classify::after { width: 34px; transform: rotate(31deg); }
+.label-calculate::after { width: 34px; transform: rotate(-31deg); }
+.label-connect::after { height: 26px; opacity: .5; }
+@media (max-width: 860px) {
+  .interactive-material-orbit { width: min(540px, 100%); }
+  .material-bottle { width: 108px; height: 108px; right: 31%; }
+  .material-can { width: 84px; height: 84px; left: 2%; top: 25%; }
+  .material-glass { width: 100px; height: 100px; right: 2%; bottom: 28%; }
+  .material-cardboard { width: 112px; height: 112px; left: 6%; bottom: 5%; }
+  .material-organic { width: 98px; height: 98px; right: 10%; bottom: 4%; }
+  .label-classify { left: 7%; top: 17%; }
+  .label-calculate { right: 3%; top: 17%; }
+}
+@media (max-width: 560px) {
+  .label-connect { bottom: -2% !important; }
+}
+
+/* Final reference proportion correction: compact the live orbit and restore the can's visual weight. */
+.interactive-material-orbit { width: min(540px, 96%); }
+.material-can { width: 116px; height: 116px; }
+.material-can img { transform: scale(.94); }
+@media (max-width: 860px) {
+  .interactive-material-orbit { width: min(520px, 100%); }
+  .material-can { width: 92px; height: 92px; }
+  .material-can img { transform: scale(.9); }
+}

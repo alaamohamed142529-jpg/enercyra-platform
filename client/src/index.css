@@ -468,3 +468,17 @@ h1, h2, h3, p { margin: 0; }
   .material-object, .material-object img, .hero-function-label { transition: none; }
   .material-object:hover img, .material-object:focus-visible img, .hero-function-label:hover, .hero-function-label:focus-visible { transform: none; }
 }
+
+/* Restrained scale-up: larger materials with preserved orbit breathing room. */
+.material-bottle { top: 1%; right: 31%; width: 136px; height: 136px; }
+.material-can { top: 29%; left: 5%; width: 97px; height: 97px; }
+.material-glass { right: 5%; bottom: 27%; width: 119px; height: 119px; }
+.material-cardboard { left: 10%; bottom: 4%; width: 139px; height: 139px; }
+.material-organic { right: 16%; bottom: 0; width: 112px; height: 112px; }
+@media (max-width: 860px) {
+  .material-bottle { width: 108px; height: 108px; right: 28%; }
+  .material-can { width: 82px; height: 82px; left: 4%; }
+  .material-glass { width: 99px; height: 99px; right: 2%; }
+  .material-cardboard { width: 116px; height: 116px; left: 7%; }
+  .material-organic { width: 93px; height: 93px; right: 13%; }
+}

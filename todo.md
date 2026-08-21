@@ -284,3 +284,5 @@
 - [x] Bring the existing orbit visuals closer to the supplied reference through richer ring and energy treatment
 - [x] Add restrained hover, focus, and touch interaction to materials and orbit labels without disrupting navigation
 - [x] Preserve RTL, reduced motion, responsiveness, tests, and production build after the enhancement
+- [x] Slightly enlarge the five hero material images while preserving balanced spacing and clear labels
+- [x] Re-test the enlarged material composition on desktop, mobile, Arabic RTL, themes, tests, and production build

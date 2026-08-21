@@ -268,3 +268,6 @@
 - [x] Fix homepage feature-card arrows so each card reliably navigates to its referenced page
 - [x] Restore and verify visible Connect / تواصل in Recent Analysis when a real classification exists
 - [x] Re-test navigation and Recent Analysis in English, Arabic RTL, light/dark, and production build
+- [x] Move Connect / تواصل into the central hero energy orbit below the core, matching the supplied reference composition
+- [x] Remove Connect / تواصل from Recent Analysis while preserving the truthful result metadata and image
+- [x] Re-test the hero and Recent Analysis in English, Arabic RTL, light/dark, responsive layouts, tests, and production build

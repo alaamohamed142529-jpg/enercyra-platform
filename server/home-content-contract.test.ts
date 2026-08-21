@@ -23,10 +23,12 @@ describe("homepage content contract", () => {
     expect(appSource).toContain('href="/classify"');
     expect(appSource).toContain('href="/result"');
     expect(appSource).toContain('href="/businesses"');
-    expect(appSource).toContain("recent-connect");
+    expect(appSource).toContain('className="hero-function-label label-connect"');
+    expect(appSource).toContain('href="/businesses" aria-label={lang === "ar" ? "تواصل مع المشترين" : "Connect with buyers"}');
+    expect(appSource).toContain("{lang === \"ar\" ? \"تواصل\" : \"CONNECT\"}");
     expect(appSource).toContain("return <div className=\"recent-card\">");
     expect(appSource).toContain("{classification ? <div className=\"recent-result\">");
-    expect(appSource).toContain("lang === \"ar\" ? \"تواصل\" : \"Connect\"");
+    expect(appSource).not.toContain("recent-connect");
   });
 });
 

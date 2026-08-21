@@ -251,3 +251,8 @@
 - [x] Replace the static Recent Analysis example with the latest actual saved classification or an honest empty state
 - [x] Refine the three homepage feature cards with distinct accurate icons and non-repetitive bilingual copy
 - [x] Verify the focused homepage changes in English, Arabic RTL, Light/Dark, mobile, tests, and public deployment
+
+- [x] Remove the homepage three-step section labeled A simple three-step flow / ثلاث خطوات واضحة
+- [x] Remove the footer phrase Reference estimates / التقديرات مرجعية
+- [x] Remove the misplaced CONNECT / تواصل label from the referenced visual area without altering the main layout
+- [ ] Validate the final cleanup in English, Arabic RTL, Light/Dark, mobile, tests, and confirm the exact latest public bundle

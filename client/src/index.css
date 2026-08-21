@@ -647,3 +647,21 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .material-glass, .material-organic { animation-name: none; }
 }
+
+/* Reference-inspired concept captions: concise, readable, and subordinate to the AI core. */
+.hero-function-label { display: grid; grid-template-columns: auto auto; align-items: center; column-gap: 5px; row-gap: 1px; }
+.hero-function-label small { grid-column: 2; font-size: 6px; line-height: 1; letter-spacing: .12em; color: rgba(164,211,218,.72); font-weight: 600; white-space: nowrap; }
+.hero-function-label span { white-space: nowrap; }
+.hero-function-label::after { display: block !important; opacity: .42; border-top-style: dotted; }
+.label-classify::after { width: 30px; transform: rotate(28deg); }
+.label-calculate::after { width: 30px; transform: rotate(-28deg); }
+.label-connect::after { display: block !important; width: 1px; height: 22px; border-top: 0; border-left: 1px dotted currentColor; left: 50%; bottom: 100%; transform: none; }
+@media (max-width: 560px) { .hero-function-label small { font-size: 5px; letter-spacing: .08em; } }
+
+.currency-control { display: inline-flex; align-items: center; gap: 5px; color: var(--muted-foreground); font-size: 10px; letter-spacing: .04em; white-space: nowrap; }
+.currency-control select { appearance: none; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--foreground); padding: 5px 8px; font: inherit; font-weight: 700; cursor: pointer; }
+.currency-control select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@media (max-width: 860px) { .currency-control span { display: none; } .currency-control select { padding: 5px 6px; } }
+@media (max-width: 560px) { .currency-control { order: 2; } .currency-control select { font-size: 10px; } }
+
+@media (max-width: 560px) { .currency-control { display: none; } }

@@ -26,6 +26,9 @@ describe("homepage content contract", () => {
     expect(appSource).toContain('className="hero-function-label label-connect"');
     expect(appSource).toContain('href="/businesses" aria-label={lang === "ar" ? "تواصل مع المشترين" : "Connect with buyers"}');
     expect(appSource).toContain("{lang === \"ar\" ? \"تواصل\" : \"CONNECT\"}");
+    expect(appSource).toContain("MobileNet AI");
+    expect(appSource).toContain("VALUE + ENERGY");
+    expect(appSource).toContain("MARKETPLACE");
     expect(appSource).toContain("return <div className=\"recent-card\">");
     expect(appSource).toContain("{classification ? <div className=\"recent-result\">");
     expect(appSource).not.toContain("recent-connect");

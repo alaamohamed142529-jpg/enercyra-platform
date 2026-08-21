@@ -307,3 +307,7 @@
 - [x] Enforce a larger static gap between the green glass bottle and food waste
 - [x] Constrain their animation paths so the gap remains clear at every phase
 - [x] Verify multiple motion states and rerun desktop/mobile, RTL, reduced motion, tests, and production build checks
+- [x] Preserve and verify existing pages and functionality while refining the Home Hero toward the supplied EcoSyncAI reference
+- [x] Preserve truthful MobileNet classification/confidence separation from reference value and energy calculations
+- [x] Verify dark/light mode, Arabic/English, EGP/SAR/USD/EUR, user-friendly waste names, marketplace, Egyptian businesses, and dashboard flows
+- [x] Validate responsive premium UI, accessibility, tests, TypeScript, and production build

@@ -291,3 +291,6 @@
 - [x] Increase the five material images relative to the orbit while keeping their perceived sizes balanced
 - [x] Replace disparate vertical drift timing with coordinated orbital motion and restrained phase offsets
 - [x] Re-test the coordinated orbit in desktop, mobile, Arabic RTL, themes, reduced motion, tests, and production build
+- [x] Correct the five hero material positions so the lower elements are not clipped and the orbit spacing is balanced
+- [x] Correct optical sizes so the can does not dominate and the bottle, glass, cardboard, and organic materials read clearly
+- [x] Re-test the corrected composition on desktop, mobile, Arabic RTL, themes, motion, tests, and production build

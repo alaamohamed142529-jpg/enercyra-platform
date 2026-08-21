@@ -20,7 +20,12 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("<ScanSearch />");
     expect(appSource).toContain("<BadgeDollarSign />");
     expect(appSource).toContain("<Handshake />");
+    expect(appSource).toContain('href="/classify"');
+    expect(appSource).toContain('href="/result"');
+    expect(appSource).toContain('href="/businesses"');
     expect(appSource).toContain("recent-connect");
+    expect(appSource).toContain("return <div className=\"recent-card\">");
+    expect(appSource).toContain("{classification ? <div className=\"recent-result\">");
     expect(appSource).toContain("lang === \"ar\" ? \"تواصل\" : \"Connect\"");
   });
 });

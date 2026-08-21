@@ -265,3 +265,6 @@
 - [x] Make the three homepage feature cards clickable to Classify, Result/estimates, and Businesses
 - [x] Restore a visible contextual Connect / تواصل action and verify it is not hidden or clipped
 - [x] Validate the fixes in English, Arabic RTL, Light/Dark, mobile, tests, and the latest public deployment
+- [x] Fix homepage feature-card arrows so each card reliably navigates to its referenced page
+- [x] Restore and verify visible Connect / تواصل in Recent Analysis when a real classification exists
+- [x] Re-test navigation and Recent Analysis in English, Arabic RTL, light/dark, and production build

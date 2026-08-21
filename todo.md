@@ -240,3 +240,6 @@
 - [x] Diagnose why the public callout correction still appears unchanged or visually incorrect
 - [ ] Make CONNECT clearly separate from the organic material and remove all remaining line layers near CALCULATE
 - [ ] Verify the corrected public bundle in English, Arabic RTL, Light, Dark, and mobile before publishing
+
+- [ ] Place CONNECT / تواصل in a clear visible area like the reference, fully outside material images and without clipping
+- [ ] Verify the new CONNECT placement in Light, Dark, Arabic RTL, mobile, and the public deployment

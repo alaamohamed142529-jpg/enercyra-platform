@@ -298,3 +298,6 @@
 - [x] Rebalance orbit positions and protect the central AI logo and CLASSIFY/CALCULATE/CONNECT labels from collisions
 - [x] Coordinate smooth premium motion with subtle per-element phase differences and restrained orbit rings
 - [x] Validate desktop/mobile, Arabic RTL, reduced motion, tests, TypeScript, and production build
+- [x] Reduce the plastic bottle by 10–15% while preserving its current position and orbit role
+- [x] Enlarge and refine the food-waste silhouette, add cardboard depth, and soften the outer orbit ring
+- [x] Preserve the AI focus and synchronized slow motion, then validate responsive, RTL, tests, and production build

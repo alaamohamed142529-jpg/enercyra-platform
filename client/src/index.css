@@ -595,3 +595,21 @@ h1, h2, h3, p { margin: 0; }
   .energy-core { animation: none; }
   .material-object img { filter: saturate(1.08) contrast(1.06) brightness(1.02) drop-shadow(0 12px 13px rgba(0,0,0,.3)); }
 }
+
+/* Final constrained refinement pass — composition and positions intentionally preserved. */
+.material-bottle { width: 132px; height: 132px; }
+.material-organic { width: 162px; height: 162px; }
+.material-bottle img { transform: scale(1); filter: saturate(1.06) contrast(1.05) brightness(1.02) drop-shadow(0 11px 13px rgba(0,0,0,.28)); }
+.material-organic img { transform: scale(1.06); filter: saturate(1.14) contrast(1.08) brightness(1.04) drop-shadow(0 16px 16px rgba(0,0,0,.34)); }
+.material-cardboard { perspective: 700px; filter: drop-shadow(0 17px 15px rgba(0,0,0,.36)); }
+.material-cardboard img { transform: scale(.94) rotateX(7deg) rotateY(-7deg); transform-style: preserve-3d; filter: saturate(1.08) contrast(1.1) brightness(.98) drop-shadow(0 10px 8px rgba(42,20,8,.38)); }
+.energy-ring-outer { opacity: .34; box-shadow: 0 0 12px rgba(68,217,238,.06); }
+.energy-ring-outer::after { opacity: .45; }
+.energy-core { z-index: 8; box-shadow: 0 0 42px rgba(193,244,91,.36), 0 0 88px rgba(68,217,238,.2); }
+@media (max-width: 860px) {
+  .material-bottle { width: 102px; height: 102px; }
+  .material-organic { width: 122px; height: 122px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .material-cardboard img { transform: scale(.94) rotateX(7deg) rotateY(-7deg); }
+}

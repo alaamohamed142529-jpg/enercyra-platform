@@ -796,3 +796,14 @@ h1, h2, h3, p { margin: 0; }
 .hero-function-label, .label-classify, .label-calculate, .label-connect { animation: calloutFloat 5.6s ease-in-out infinite; }
 @keyframes calloutDotPulse { 0%,100% { opacity: .62; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.12); } }
 @media (prefers-reduced-motion: reduce) { .hero-function-label::before { animation: none; } }
+
+/* Visible parity correction: use the same lower-edge anchor relationship for all callout dots. */
+.hero-function-label::before { z-index: 4; display: block !important; width: 6px; height: 6px; opacity: 1; background: #44d9ee; box-shadow: 0 0 9px 2px rgba(68,217,238,.72); animation: calloutDotPulse 3.8s ease-in-out infinite; }
+.label-classify::before { right: -10px; bottom: -9px; left: auto; top: auto; }
+.label-calculate::before { left: -10px; bottom: -9px; right: auto; top: auto; }
+.label-connect::before { right: -10px; bottom: -9px; left: auto; top: auto; }
+.hero-function-label, .label-classify, .label-calculate, .label-connect { animation: calloutFloat 5.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .hero-function-label::before { animation: none; opacity: .9; } }
+
+/* CONNECT’s orbit-facing dot belongs above-left of the bottom callout, not below the viewport edge. */
+.label-connect::before { left: -10px; top: -9px; right: auto; bottom: auto; display: block !important; width: 6px; height: 6px; opacity: 1; background: #44d9ee; box-shadow: 0 0 9px 2px rgba(68,217,238,.72); animation: calloutDotPulse 3.8s ease-in-out infinite; }

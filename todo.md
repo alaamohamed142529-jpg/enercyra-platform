@@ -335,3 +335,5 @@
 - [x] Diagnose why the CONNECT dot and motion difference is not visible in the current published bundle
 - [x] Apply a clearly visible shared blue dot and animation treatment to CONNECT
 - [x] Validate the visible correction on desktop/mobile, RTL, themes, TypeScript, tests, and production build
+- [x] Make CONNECT’s visible transform movement match CLASSIFY and CALCULATE while preserving its lower position
+- [x] Validate the unified motion on desktop/mobile, RTL, themes, TypeScript, tests, and production build

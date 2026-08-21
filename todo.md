@@ -243,3 +243,7 @@
 
 - [ ] Place CONNECT / تواصل in a clear visible area like the reference, fully outside material images and without clipping
 - [ ] Verify the new CONNECT placement in Light, Dark, Arabic RTL, mobile, and the public deployment
+
+- [x] Remove the WASTE INTELLIGENCE FOR BUSINESS eyebrow from the homepage hero
+- [x] Remove the Estimates are labeled and transparent row and Arabic / English labels from the homepage hero
+- [x] Rebalance and verify the homepage in English, Arabic RTL, Light/Dark, mobile, and public deployment

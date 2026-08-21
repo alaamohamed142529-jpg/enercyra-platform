@@ -362,3 +362,6 @@
 - [x] Remove CONNECT-specific React hover state and special motion overrides
 - [x] Apply exactly the shared CLASSIFY/CALCULATE hover behavior to CONNECT
 - [x] Verify the simplified parity and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Match CONNECT’s dotted arrow connector to the supplied reference image
+- [x] Preserve the simplified shared callout movement while adjusting only the connector
+- [x] Verify connector placement and project integrity across desktop/mobile, RTL, themes, tests, and production build

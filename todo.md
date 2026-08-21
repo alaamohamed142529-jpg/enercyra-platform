@@ -356,3 +356,6 @@
 - [x] Make the full CONNECT callout hit area trigger hover movement
 - [x] Match CONNECT hover response to the upper callouts without changing layout
 - [x] Verify hover behavior and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Instrument and reproduce the live CONNECT hover event in the browser
+- [x] Replace the ineffective CONNECT interaction path with a reliable visible hover implementation
+- [x] Validate the real hover behavior and project integrity before delivery

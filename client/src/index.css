@@ -980,3 +980,10 @@ h1, h2, h3, p { margin: 0; }
 .label-connect:active .connect-callout-content {
   transform: translateY(8px) scale(.985) !important;
 }
+
+/* Explicit event-backed state: guarantees the visible motion when the live mouse event fires. */
+.label-connect[data-hovered="true"] .connect-callout-content {
+  transform: translateY(12px) scale(1.08) !important;
+  color: var(--lime);
+  filter: brightness(1.12);
+}

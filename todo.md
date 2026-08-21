@@ -337,3 +337,5 @@
 - [x] Validate the visible correction on desktop/mobile, RTL, themes, TypeScript, tests, and production build
 - [x] Make CONNECT’s visible transform movement match CLASSIFY and CALCULATE while preserving its lower position
 - [x] Validate the unified motion on desktop/mobile, RTL, themes, TypeScript, tests, and production build
+- [x] Keep CONNECT horizontally centered during hover, focus, and press while matching the other callout feedback
+- [x] Validate CONNECT interaction on desktop/mobile, RTL, themes, TypeScript, tests, and production build

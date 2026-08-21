@@ -341,3 +341,6 @@
 - [x] Validate CONNECT interaction on desktop/mobile, RTL, themes, TypeScript, tests, and production build
 - [x] Remove CONNECT’s remaining horizontal hover shift and match the vertical-only motion of the other labels
 - [x] Validate actual hover behavior on desktop/mobile, RTL, themes, TypeScript, tests, and production build
+- [x] Match CLASSIFY base color to CALCULATE and CONNECT
+- [x] Add the same hover/focus color, glow, and interaction feedback to CLASSIFY
+- [x] Validate three-callout color parity on desktop/mobile, RTL, themes, TypeScript, tests, and production build

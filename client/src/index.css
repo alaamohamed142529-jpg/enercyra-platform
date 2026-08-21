@@ -842,3 +842,18 @@ h1, h2, h3, p { margin: 0; }
 .label-connect:hover,
 .label-connect:focus-visible { filter: brightness(1.14); }
 .label-connect:active { filter: brightness(1.06); }
+
+/* Three-callout color parity: the labels share a cyan base and lime interactive state. */
+.hero-function-label,
+.label-classify,
+.label-calculate,
+.label-connect { color: var(--cyan); transition: color 180ms ease, filter 180ms ease, text-shadow 180ms ease; }
+.hero-function-label:hover,
+.hero-function-label:focus-visible,
+.label-classify:hover,
+.label-classify:focus-visible,
+.label-calculate:hover,
+.label-calculate:focus-visible,
+.label-connect:hover,
+.label-connect:focus-visible { color: var(--lime); text-shadow: 0 0 14px rgba(193,244,91,.56); filter: brightness(1.12); }
+.hero-function-label svg { color: currentColor; }

@@ -827,3 +827,18 @@ h1, h2, h3, p { margin: 0; }
   .label-connect:focus-visible,
   .label-connect:active { transform: translateX(-50%); }
 }
+
+/* Final hover correction: CONNECT keeps the same horizontal anchor and only lifts vertically. */
+.label-connect,
+.label-connect:hover,
+.label-connect:focus,
+.label-connect:focus-visible,
+.label-connect:active {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  transform-origin: center;
+}
+.label-connect:hover,
+.label-connect:focus-visible { filter: brightness(1.14); }
+.label-connect:active { filter: brightness(1.06); }

@@ -433,3 +433,18 @@ h1, h2, h3, p { margin: 0; }
   .material-cardboard { width: 108px; height: 108px; left: 9%; }
   .material-organic { width: 86px; height: 86px; right: 14%; }
 }
+
+/* Interactive reference treatment: layered rings and small energy accents remain live HTML/CSS. */
+.energy-ring { background: transparent; }
+.energy-ring-outer { border-width: 1px; border-color: rgba(68,217,238,.62); box-shadow: 0 0 18px rgba(68,217,238,.12); }
+.energy-ring-middle { border-width: 1px; border-top-color: rgba(193,244,91,.95); border-right-color: rgba(193,244,91,.45); border-bottom-color: rgba(68,217,238,.28); box-shadow: 0 0 16px rgba(193,244,91,.12); }
+.energy-ring-inner { border-width: 1px; border-color: rgba(68,217,238,.72); box-shadow: inset 0 0 18px rgba(68,217,238,.1); }
+.energy-ring-outer::after, .energy-ring-middle::after, .energy-ring-inner::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 1px solid transparent; pointer-events: none; }
+.energy-ring-outer::after { border-top-color: rgba(193,244,91,.72); border-right-color: rgba(193,244,91,.3); transform: rotate(42deg); }
+.energy-ring-middle::after { border-left-color: rgba(68,217,238,.84); border-bottom-color: rgba(68,217,238,.28); transform: rotate(-28deg); }
+.energy-ring-inner::after { border-top-color: rgba(193,244,91,.75); transform: rotate(118deg); }
+.particle-e { top: 27%; right: 31%; animation-delay: -2.4s; width: 6px; height: 6px; background: var(--lime); box-shadow: 0 0 13px 3px rgba(193,244,91,.5); }
+.particle-f { bottom: 31%; left: 31%; animation-delay: -4.8s; width: 5px; height: 5px; }
+.interactive-material-orbit::after { content: ""; position: absolute; inset: 22%; border-radius: 50%; border: 1px solid rgba(68,217,238,.16); box-shadow: 0 0 28px rgba(68,217,238,.1), inset 0 0 24px rgba(193,244,91,.08); pointer-events: none; animation: haloBreath 5.5s ease-in-out infinite; }
+@keyframes haloBreath { 0%,100% { transform: scale(.96); opacity: .55; } 50% { transform: scale(1.04); opacity: .95; } }
+@media (prefers-reduced-motion: reduce) { .interactive-material-orbit::after { animation: none; opacity: .7; } }

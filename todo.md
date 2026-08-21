@@ -278,3 +278,6 @@
 - [x] Balance orbit image scale, positions, and spacing against the supplied reference without changing the homepage structure
 - [x] Refine CLASSIFY, CALCULATE, and CONNECT label size, spacing, and placement around the orbit
 - [x] Re-test the refined orbit in desktop/mobile, Arabic RTL, themes, tests, and production build
+- [x] Convert the reference-inspired orbit into independent interactive HTML/CSS rings and energy layers while preserving the current homepage structure
+- [x] Match the reference material positions and proportions with separate animated image elements
+- [x] Preserve readable labels, Arabic RTL, reduced-motion accessibility, responsiveness, tests, and production build

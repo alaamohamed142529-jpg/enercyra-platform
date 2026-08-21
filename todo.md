@@ -311,3 +311,6 @@
 - [x] Preserve truthful MobileNet classification/confidence separation from reference value and energy calculations
 - [x] Verify dark/light mode, Arabic/English, EGP/SAR/USD/EUR, user-friendly waste names, marketplace, Egyptian businesses, and dashboard flows
 - [x] Validate responsive premium UI, accessibility, tests, TypeScript, and production build
+- [x] Protect CONNECT from orbiting waste elements with a dedicated clear zone and stable stacking
+- [x] Adjust only the conflicting lower-orbit motion bounds while preserving the existing composition
+- [x] Verify CONNECT protection on desktop, mobile, Arabic RTL, reduced motion, tests, and production build

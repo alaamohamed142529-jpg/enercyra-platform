@@ -665,3 +665,9 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 560px) { .currency-control { order: 2; } .currency-control select { font-size: 10px; } }
 
 @media (max-width: 560px) { .currency-control { display: none; } }
+
+/* CONNECT safe zone: keep the callout readable above the orbit and clear of the lower materials. */
+.label-connect { z-index: 60; isolation: isolate; padding: 5px 9px; border: 1px solid rgba(104,225,226,.22); border-radius: 999px; background: rgba(3, 24, 34, .72); box-shadow: 0 6px 18px rgba(0,0,0,.16); }
+.label-connect::before { content: ""; position: absolute; inset: -13px -24px; z-index: -1; border-radius: 999px; background: radial-gradient(ellipse, rgba(3,24,34,.42) 0%, rgba(3,24,34,0) 72%); pointer-events: none; }
+.material-organic { right: 34%; bottom: 6%; z-index: 12; }
+@media (max-width: 860px) { .material-organic { right: 27%; bottom: 5%; } }

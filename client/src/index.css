@@ -482,3 +482,31 @@ h1, h2, h3, p { margin: 0; }
   .material-cardboard { width: 116px; height: 116px; left: 7%; }
   .material-organic { width: 93px; height: 93px; right: 13%; }
 }
+
+/* Five-material parity pass: equal outer footprints with small optical corrections for each silhouette. */
+.material-bottle, .material-can, .material-glass, .material-cardboard, .material-organic { width: 148px; height: 148px; }
+.material-bottle { top: 0; right: 29%; }
+.material-can { top: 28%; left: 4%; }
+.material-glass { right: 4%; bottom: 25%; }
+.material-cardboard { left: 9%; bottom: 3%; }
+.material-organic { right: 15%; bottom: -1%; }
+.material-bottle img { transform: scale(1.02); }
+.material-can img { transform: scale(1.08); }
+.material-glass img { transform: scale(1.06); }
+.material-cardboard img { transform: scale(.98); }
+.material-organic img { transform: scale(1.08); }
+@media (max-width: 860px) {
+  .material-bottle, .material-can, .material-glass, .material-cardboard, .material-organic { width: 112px; height: 112px; }
+  .material-bottle { right: 27%; }
+  .material-can { left: 3%; top: 28%; }
+  .material-glass { right: 1%; bottom: 26%; }
+  .material-cardboard { left: 7%; bottom: 2%; }
+  .material-organic { right: 12%; bottom: -1%; }
+}
+
+/* Optical correction after preview: normalize visible subject area, not only wrapper size. */
+.material-bottle img { transform: scale(.98); }
+.material-can img { transform: scale(.88); }
+.material-glass img { transform: scale(.96); }
+.material-cardboard img { transform: scale(.92); }
+.material-organic img { transform: scale(.96); }

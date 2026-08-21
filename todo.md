@@ -347,3 +347,6 @@
 - [x] Make CONNECT use the same horizontal label/icon arrangement as CLASSIFY and CALCULATE
 - [x] Make CONNECT hover movement and connector treatment match the two upper callouts
 - [x] Recheck CONNECT visual parity against the provided recording
+- [x] Analyze the new CONNECT movement recording against current hover transforms
+- [x] Match CONNECT’s hover movement path to the reference without changing its visual layout
+- [x] Verify the movement fix on desktop/mobile, RTL, themes, tests, and production build

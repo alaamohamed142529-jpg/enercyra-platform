@@ -899,3 +899,28 @@ h1, h2, h3, p { margin: 0; }
   .label-connect:focus-visible,
   .label-connect:active { transform: translateX(-50%) !important; }
 }
+
+/* New recording match: CONNECT expands away from the orbit with a pure downward hover path. */
+.label-connect,
+.label-connect:hover,
+.label-connect:focus,
+.label-connect:focus-visible,
+.label-connect:active {
+  transform-origin: 50% 0% !important;
+}
+.label-connect:hover,
+.label-connect:focus-visible {
+  transform: translateX(-50%) translateY(12px) scale(1.08) !important;
+}
+.label-connect:active {
+  transform: translateX(-50%) translateY(8px) scale(.985) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .label-connect,
+  .label-connect:hover,
+  .label-connect:focus,
+  .label-connect:focus-visible,
+  .label-connect:active {
+    transform: translateX(-50%) !important;
+  }
+}

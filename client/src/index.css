@@ -510,3 +510,27 @@ h1, h2, h3, p { margin: 0; }
 .material-glass img { transform: scale(.96); }
 .material-cardboard img { transform: scale(.92); }
 .material-organic img { transform: scale(.96); }
+
+/* Coordinated orbit pass: one shared rhythm, restrained phase offsets, larger visual presence. */
+.material-object { animation-name: materialOrbit; animation-duration: 14s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+.material-bottle { --tilt: 16deg; animation-delay: 0s; }
+.material-can { --tilt: -22deg; animation-delay: -2.8s; }
+.material-glass { --tilt: 18deg; animation-delay: -5.6s; }
+.material-cardboard { --tilt: 8deg; animation-delay: -8.4s; }
+.material-organic { --tilt: -8deg; animation-delay: -11.2s; }
+.material-bottle, .material-can, .material-glass, .material-cardboard, .material-organic { width: 164px; height: 164px; }
+.material-bottle img { transform: scale(1.02); }
+.material-can img { transform: scale(.92); }
+.material-glass img { transform: scale(1); }
+.material-cardboard img { transform: scale(.96); }
+.material-organic img { transform: scale(1); }
+@keyframes materialOrbit {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--tilt)); }
+  25% { transform: translate3d(7px, -5px, 0) rotate(calc(var(--tilt) + 2deg)); }
+  50% { transform: translate3d(0, -10px, 0) rotate(var(--tilt)); }
+  75% { transform: translate3d(-7px, -5px, 0) rotate(calc(var(--tilt) - 2deg)); }
+}
+@media (max-width: 860px) {
+  .material-bottle, .material-can, .material-glass, .material-cardboard, .material-organic { width: 124px; height: 124px; }
+}
+@media (prefers-reduced-motion: reduce) { .material-object { animation-name: none; } }

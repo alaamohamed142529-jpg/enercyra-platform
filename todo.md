@@ -288,3 +288,6 @@
 - [x] Re-test the enlarged material composition on desktop, mobile, Arabic RTL, themes, tests, and production build
 - [x] Enlarge the five hero material images with visually balanced, near-equal perceived scale based on the supplied reference
 - [x] Rebalance the five image positions and verify desktop, mobile, Arabic RTL, themes, tests, and production build
+- [x] Increase the five material images relative to the orbit while keeping their perceived sizes balanced
+- [x] Replace disparate vertical drift timing with coordinated orbital motion and restrained phase offsets
+- [x] Re-test the coordinated orbit in desktop, mobile, Arabic RTL, themes, reduced motion, tests, and production build

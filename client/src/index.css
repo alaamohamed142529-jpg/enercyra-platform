@@ -413,3 +413,23 @@ h1, h2, h3, p { margin: 0; }
   .label-classify { left: 10%; top: 23%; }
   .label-calculate { right: 5%; top: 23%; }
 }
+
+/* Final balance pass against the supplied orbit reference. */
+.material-bottle { top: 2%; right: 32%; width: 124px; height: 124px; }
+.material-can { top: 30%; left: 6%; width: 88px; height: 88px; }
+.material-glass { right: 6%; bottom: 27%; width: 108px; height: 108px; }
+.material-cardboard { left: 12%; bottom: 5%; width: 126px; height: 126px; }
+.material-organic { right: 18%; bottom: 1%; width: 102px; height: 102px; }
+.material-object img { filter: saturate(1.14) contrast(1.08) drop-shadow(0 16px 15px rgba(0,0,0,.32)); }
+.hero-function-label { font-size: 9px; min-height: 20px; gap: 5px; padding: 3px 5px; }
+.hero-function-label svg { width: 13px; height: 13px; }
+.label-classify { left: 16%; top: 25%; }
+.label-calculate { right: 12%; top: 25%; }
+.label-connect { bottom: 2% !important; }
+@media (max-width: 860px) {
+  .material-bottle { width: 100px; height: 100px; right: 29%; }
+  .material-can { width: 76px; height: 76px; left: 5%; }
+  .material-glass { width: 92px; height: 92px; right: 3%; }
+  .material-cardboard { width: 108px; height: 108px; left: 9%; }
+  .material-organic { width: 86px; height: 86px; right: 14%; }
+}

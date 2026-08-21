@@ -275,3 +275,6 @@
 - [x] Add a bilingual View all action to Recent Analysis and preserve truthful result content
 - [x] Improve orbit material spacing, image scale, and visual balance across responsive and RTL layouts
 - [x] Re-test the incremental visual refinement in English, Arabic RTL, themes, tests, and production build
+- [x] Balance orbit image scale, positions, and spacing against the supplied reference without changing the homepage structure
+- [x] Refine CLASSIFY, CALCULATE, and CONNECT label size, spacing, and placement around the orbit
+- [x] Re-test the refined orbit in desktop/mobile, Arabic RTL, themes, tests, and production build

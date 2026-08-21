@@ -350,3 +350,6 @@
 - [x] Analyze the new CONNECT movement recording against current hover transforms
 - [x] Match CONNECT’s hover movement path to the reference without changing its visual layout
 - [x] Verify the movement fix on desktop/mobile, RTL, themes, tests, and production build
+- [x] Diagnose why CONNECT hover/focus movement is not visible
+- [x] Restore a clearly visible CONNECT interaction without horizontal drift
+- [x] Verify CONNECT movement and project integrity across desktop/mobile, RTL, themes, tests, and production build

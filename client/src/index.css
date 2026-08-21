@@ -924,3 +924,40 @@ h1, h2, h3, p { margin: 0; }
     transform: translateX(-50%) !important;
   }
 }
+
+/* Robust CONNECT interaction: animate the visible content, not the centered anchor box. */
+.label-connect .connect-callout-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 4px 5px;
+  transform: translateY(0) scale(1);
+  transform-origin: 50% 0%;
+  transition: transform 220ms cubic-bezier(.23,1,.32,1), color 180ms ease, filter 180ms ease;
+}
+.label-connect .connect-callout-content small {
+  grid-column: 2;
+  font-size: 6px;
+  line-height: 1;
+  letter-spacing: .1em;
+  opacity: .78;
+  white-space: nowrap;
+}
+.label-connect:hover .connect-callout-content,
+.label-connect:focus-visible .connect-callout-content {
+  transform: translateY(12px) scale(1.08);
+  color: var(--lime);
+  filter: brightness(1.12);
+}
+.label-connect:active .connect-callout-content {
+  transform: translateY(8px) scale(.985);
+}
+@media (max-width: 780px) {
+  .label-connect .connect-callout-content small { font-size: 5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .label-connect .connect-callout-content,
+  .label-connect:hover .connect-callout-content,
+  .label-connect:focus-visible .connect-callout-content,
+  .label-connect:active .connect-callout-content { transform: none; transition: none; }
+}

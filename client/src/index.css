@@ -707,3 +707,18 @@ h1, h2, h3, p { margin: 0; }
   .material-can { width: 92px; height: 92px; }
   .material-can img { transform: scale(.9); }
 }
+
+/* Small vertical alignment refinement: move the live Hero visual as one intact group. */
+.interactive-material-orbit { transform: translateY(-24px); }
+@media (max-width: 860px) { .interactive-material-orbit { transform: translateY(-12px); } }
+@media (prefers-reduced-motion: reduce) { .interactive-material-orbit { transform: translateY(-24px); } }
+
+/* Final alignment: CONNECT sits outside the orbit like the reference callouts. */
+.interactive-material-orbit { transform: translateY(-24px); }
+.label-connect { left: 50%; bottom: -8% !important; transform: translateX(-50%); background: transparent; border: 0; box-shadow: none; padding: 3px 5px; }
+.label-connect::after { display: block !important; width: 1px; height: 28px; border: 0; border-left: 1px dotted currentColor; left: 50%; bottom: 100%; opacity: .42; transform: none; }
+@media (max-width: 860px) {
+  .interactive-material-orbit { transform: translateY(-12px); }
+  .label-connect { bottom: -7% !important; }
+}
+@media (prefers-reduced-motion: reduce) { .interactive-material-orbit { transform: translateY(-24px); } }

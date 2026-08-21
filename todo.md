@@ -311,3 +311,9 @@
 - [x] Preserve truthful MobileNet classification/confidence separation from reference value and energy calculations
 - [x] Verify dark/light mode, Arabic/English, EGP/SAR/USD/EUR, user-friendly waste names, marketplace, Egyptian businesses, and dashboard flows
 - [x] Validate responsive premium UI, accessibility, tests, TypeScript, and production build
+- [x] Raise the existing Hero visual group slightly without changing the text/actions or internal orbit composition
+- [x] Preserve responsive, RTL, theme, interaction, and accessibility behavior after the vertical alignment adjustment
+- [x] Re-run tests, TypeScript, production build, and desktop/mobile visual verification
+- [x] Move CONNECT outside the orbit with a minimal dotted connector matching the other callouts
+- [x] Raise the complete Hero visual group slightly while preserving its internal geometry
+- [x] Re-run desktop/mobile, RTL, theme, interaction, tests, TypeScript, and production verification

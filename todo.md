@@ -353,3 +353,6 @@
 - [x] Diagnose why CONNECT hover/focus movement is not visible
 - [x] Restore a clearly visible CONNECT interaction without horizontal drift
 - [x] Verify CONNECT movement and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Make the full CONNECT callout hit area trigger hover movement
+- [x] Match CONNECT hover response to the upper callouts without changing layout
+- [x] Verify hover behavior and project integrity across desktop/mobile, RTL, themes, tests, and production build

@@ -961,3 +961,22 @@ h1, h2, h3, p { margin: 0; }
   .label-connect:focus-visible .connect-callout-content,
   .label-connect:active .connect-callout-content { transform: none; transition: none; }
 }
+
+/* Hover-target correction: the whole CONNECT callout responds, not only its text glyphs. */
+.label-connect {
+  pointer-events: auto !important;
+  z-index: 50 !important;
+  padding: 8px 12px !important;
+  isolation: isolate;
+}
+.label-connect::before,
+.label-connect::after,
+.label-connect .connect-callout-content,
+.label-connect .connect-callout-content * { pointer-events: none; }
+.label-connect:hover .connect-callout-content,
+.label-connect:focus-visible .connect-callout-content {
+  transform: translateY(12px) scale(1.08) !important;
+}
+.label-connect:active .connect-callout-content {
+  transform: translateY(8px) scale(.985) !important;
+}

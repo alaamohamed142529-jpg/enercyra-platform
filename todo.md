@@ -304,3 +304,6 @@
 - [x] Move food waste slightly down-left while preserving the green glass bottle and all other elements
 - [x] Add enough motion-phase and translation separation to prevent glass/food collisions throughout animation
 - [x] Re-test the isolated pair on desktop, mobile, Arabic RTL, reduced motion, tests, and production build
+- [x] Enforce a larger static gap between the green glass bottle and food waste
+- [x] Constrain their animation paths so the gap remains clear at every phase
+- [x] Verify multiple motion states and rerun desktop/mobile, RTL, reduced motion, tests, and production build checks

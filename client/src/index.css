@@ -613,3 +613,14 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .material-cardboard img { transform: scale(.94) rotateX(7deg) rotateY(-7deg); }
 }
+
+/* Glass/food separation: preserve the shared orbit while keeping a deliberate visual buffer. */
+.material-organic { right: 22%; bottom: 3%; animation-name: foodWasteOrbit; animation-duration: 15.2s; animation-delay: -10.8s; }
+@keyframes foodWasteOrbit {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--tilt)); }
+  25% { transform: translate3d(-5px, 4px, 0) rotate(calc(var(--tilt) - 1deg)); }
+  50% { transform: translate3d(-3px, 9px, 0) rotate(var(--tilt)); }
+  75% { transform: translate3d(4px, 5px, 0) rotate(calc(var(--tilt) + 1deg)); }
+}
+@media (max-width: 860px) { .material-organic { right: 17%; bottom: 3%; } }
+@media (prefers-reduced-motion: reduce) { .material-organic { animation-name: none; } }

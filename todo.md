@@ -301,3 +301,6 @@
 - [x] Reduce the plastic bottle by 10–15% while preserving its current position and orbit role
 - [x] Enlarge and refine the food-waste silhouette, add cardboard depth, and soften the outer orbit ring
 - [x] Preserve the AI focus and synchronized slow motion, then validate responsive, RTL, tests, and production build
+- [x] Move food waste slightly down-left while preserving the green glass bottle and all other elements
+- [x] Add enough motion-phase and translation separation to prevent glass/food collisions throughout animation
+- [x] Re-test the isolated pair on desktop, mobile, Arabic RTL, reduced motion, tests, and production build

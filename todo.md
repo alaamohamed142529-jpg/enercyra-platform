@@ -271,3 +271,7 @@
 - [x] Move Connect / تواصل into the central hero energy orbit below the core, matching the supplied reference composition
 - [x] Remove Connect / تواصل from Recent Analysis while preserving the truthful result metadata and image
 - [x] Re-test the hero and Recent Analysis in English, Arabic RTL, light/dark, responsive layouts, tests, and production build
+- [x] Refine the hero orbit wording into three clear functional labels without rebuilding the homepage
+- [x] Add a bilingual View all action to Recent Analysis and preserve truthful result content
+- [x] Improve orbit material spacing, image scale, and visual balance across responsive and RTL layouts
+- [x] Re-test the incremental visual refinement in English, Arabic RTL, themes, tests, and production build

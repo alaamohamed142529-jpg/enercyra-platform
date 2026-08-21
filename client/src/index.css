@@ -722,3 +722,9 @@ h1, h2, h3, p { margin: 0; }
   .label-connect { bottom: -7% !important; }
 }
 @media (prefers-reduced-motion: reduce) { .interactive-material-orbit { transform: translateY(-24px); } }
+
+/* CONNECT callout parity: same visual rhythm as the two upper labels, with an angled dotted leader. */
+.label-connect { bottom: -4% !important; gap: 5px; min-height: 20px; padding: 3px 5px; letter-spacing: .1em; }
+.label-connect::after { display: block !important; width: 34px; height: 0; border: 0; border-top: 1px dotted currentColor; left: 50%; bottom: 100%; opacity: .42; transform: rotate(-28deg); transform-origin: left center; }
+@media (max-width: 860px) { .label-connect { bottom: -4% !important; } }
+@media (prefers-reduced-motion: reduce) { .label-connect::after { opacity: .34; } }

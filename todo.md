@@ -317,3 +317,6 @@
 - [x] Move CONNECT outside the orbit with a minimal dotted connector matching the other callouts
 - [x] Raise the complete Hero visual group slightly while preserving its internal geometry
 - [x] Re-run desktop/mobile, RTL, theme, interaction, tests, TypeScript, and production verification
+- [x] Normalize CONNECT spacing and motion timing to match CLASSIFY and CALCULATE
+- [x] Replace the vertical CONNECT connector with a matching subtle angled dotted connector
+- [x] Re-test callout alignment on desktop/mobile, RTL, themes, tests, TypeScript, and production build

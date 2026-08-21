@@ -260,3 +260,8 @@
 - [x] Show the actual classified image in Recent Analysis with its saved material name, confidence, value status, and energy status
 - [x] Add a contextual Connect action inside Recent Analysis only when a real classification exists
 - [x] Validate actual and empty Recent Analysis states in English, Arabic RTL, Light/Dark, mobile, tests, and public deployment
+
+- [x] Fix Recent Analysis to render the actual classified image instead of an abbreviated text placeholder
+- [x] Make the three homepage feature cards clickable to Classify, Result/estimates, and Businesses
+- [x] Restore a visible contextual Connect / تواصل action and verify it is not hidden or clipped
+- [x] Validate the fixes in English, Arabic RTL, Light/Dark, mobile, tests, and the latest public deployment

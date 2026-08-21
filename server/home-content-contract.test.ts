@@ -21,7 +21,7 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("<BadgeDollarSign />");
     expect(appSource).toContain("<Handshake />");
     expect(appSource).toContain("recent-connect");
-    expect(appSource).toContain("Connect with buyers");
+    expect(appSource).toContain("lang === \"ar\" ? \"تواصل\" : \"Connect\"");
   });
 });
 

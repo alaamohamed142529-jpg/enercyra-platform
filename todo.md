@@ -323,3 +323,6 @@
 - [x] Raise and center the existing Hero visual while preserving intentional space before Recent Analysis
 - [x] Rebalance five waste objects and unify CLASSIFY/CALCULATE/CONNECT labels, subtitles, and core-directed connectors
 - [x] Preserve subtle continuous motion and validate desktop/mobile, RTL, themes, tests, TypeScript, and production build
+- [x] Make CONNECT use the same callout animation style, timing, opacity, glow, and motion as CLASSIFY/CALCULATE
+- [x] Move CLASSIFY away from the aluminum can and separate food waste from the green glass bottle
+- [x] Rebalance all five objects, unify callout typography/connectors, preserve raised Hero spacing, and validate all responsive/test/build checks

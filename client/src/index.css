@@ -748,3 +748,25 @@ h1, h2, h3, p { margin: 0; }
   .label-connect { bottom: 2% !important; }
 }
 @media (prefers-reduced-motion: reduce) { .hero-function-label::after { animation: none; opacity: .42; } }
+
+/* Final unified-system pass: identical callout rhythm, safer object spacing, same raised Hero. */
+.hero-function-label { animation: calloutFloat 5.6s ease-in-out infinite; opacity: .92; text-shadow: 0 0 12px rgba(193,244,91,.34); }
+.hero-function-label small { font-size: 6px; line-height: 1; letter-spacing: .1em; opacity: .78; }
+.hero-function-label::after { width: 34px; border-top: 1px dotted currentColor; opacity: .48; animation: calloutLinePulse 3.8s ease-in-out infinite; }
+.label-classify { left: 6%; top: 12%; animation-delay: 0s; }
+.label-classify::after { left: 100%; top: 78%; transform: rotate(30deg); }
+.label-calculate { right: 8%; top: 12%; animation-delay: 0s; }
+.label-calculate::after { right: 100%; top: 78%; transform: rotate(-30deg); }
+.label-connect { left: 50%; bottom: 2.5% !important; transform: translateX(-50%); animation-delay: 0s; }
+.label-connect::after { left: 50%; bottom: 100%; width: 34px; transform: rotate(-18deg); transform-origin: left center; }
+.material-can { top: 27%; left: 3%; }
+.material-organic { right: 18%; bottom: 0%; }
+@keyframes calloutFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -3px; } }
+@media (max-width: 860px) {
+  .label-classify { left: 5%; top: 12%; }
+  .label-calculate { right: 4%; top: 12%; }
+  .material-can { top: 27%; left: 2%; }
+  .material-organic { right: 16%; bottom: 1%; }
+  .hero-function-label small { font-size: 5px; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-function-label { animation: none; } .hero-function-label::after { animation: none; } }

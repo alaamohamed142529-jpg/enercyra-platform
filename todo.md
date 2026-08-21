@@ -344,3 +344,6 @@
 - [x] Match CLASSIFY base color to CALCULATE and CONNECT
 - [x] Add the same hover/focus color, glow, and interaction feedback to CLASSIFY
 - [x] Validate three-callout color parity on desktop/mobile, RTL, themes, TypeScript, tests, and production build
+- [x] Make CONNECT use the same horizontal label/icon arrangement as CLASSIFY and CALCULATE
+- [x] Make CONNECT hover movement and connector treatment match the two upper callouts
+- [x] Recheck CONNECT visual parity against the provided recording

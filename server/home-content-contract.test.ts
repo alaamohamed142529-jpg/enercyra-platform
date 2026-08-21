@@ -8,6 +8,8 @@ describe("homepage content contract", () => {
   it("does not fabricate a Plastic Bottle Recent Analysis entry", () => {
     expect(appSource).toContain("No analyses yet");
     expect(appSource).toContain("readRecentClassification");
+    expect(appSource).toContain("classification.imageDataUrl");
+    expect(appSource).toContain("classification.imageName");
     expect(appSource).not.toContain('<div className="mini-material">PET</div><div><strong>{lang === "ar" ? "زجاجة بلاستيكية"');
   });
 
@@ -18,6 +20,8 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("<ScanSearch />");
     expect(appSource).toContain("<BadgeDollarSign />");
     expect(appSource).toContain("<Handshake />");
+    expect(appSource).toContain("recent-connect");
+    expect(appSource).toContain("Connect with buyers");
   });
 });
 

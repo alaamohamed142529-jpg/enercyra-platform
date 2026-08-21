@@ -238,11 +238,11 @@
 - [x] Recheck Light, Dark, Arabic RTL, mobile, reduced motion, tests, and publish the correction
 
 - [x] Diagnose why the public callout correction still appears unchanged or visually incorrect
-- [ ] Make CONNECT clearly separate from the organic material and remove all remaining line layers near CALCULATE
-- [ ] Verify the corrected public bundle in English, Arabic RTL, Light, Dark, and mobile before publishing
+- [x] Make CONNECT clearly separate from the organic material and remove all remaining line layers near CALCULATE
+- [x] Verify the corrected public bundle in English, Arabic RTL, Light, Dark, and mobile before publishing
 
-- [ ] Place CONNECT / تواصل in a clear visible area like the reference, fully outside material images and without clipping
-- [ ] Verify the new CONNECT placement in Light, Dark, Arabic RTL, mobile, and the public deployment
+- [x] Place CONNECT / تواصل in a clear visible area like the reference, fully outside material images and without clipping
+- [x] Verify the new CONNECT placement in Light, Dark, Arabic RTL, mobile, and the public deployment
 
 - [x] Remove the WASTE INTELLIGENCE FOR BUSINESS eyebrow from the homepage hero
 - [x] Remove the Estimates are labeled and transparent row and Arabic / English labels from the homepage hero
@@ -255,4 +255,8 @@
 - [x] Remove the homepage three-step section labeled A simple three-step flow / ثلاث خطوات واضحة
 - [x] Remove the footer phrase Reference estimates / التقديرات مرجعية
 - [x] Remove the misplaced CONNECT / تواصل label from the referenced visual area without altering the main layout
-- [ ] Validate the final cleanup in English, Arabic RTL, Light/Dark, mobile, tests, and confirm the exact latest public bundle
+- [x] Validate the final cleanup in English, Arabic RTL, Light/Dark, mobile, tests, and confirm the exact latest public bundle
+
+- [x] Show the actual classified image in Recent Analysis with its saved material name, confidence, value status, and energy status
+- [x] Add a contextual Connect action inside Recent Analysis only when a real classification exists
+- [x] Validate actual and empty Recent Analysis states in English, Arabic RTL, Light/Dark, mobile, tests, and public deployment

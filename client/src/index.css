@@ -787,3 +787,12 @@ h1, h2, h3, p { margin: 0; }
   .hero-function-label, .label-classify, .label-calculate, .label-connect { animation: none; }
   .label-classify::after, .label-calculate::after, .label-connect::after { animation: none; }
 }
+
+/* Three-callout parity: CONNECT gets the same blue anchor dot and pulse as the upper callouts. */
+.hero-function-label::before { display: block !important; width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 8px rgba(68,217,238,.8); animation: calloutDotPulse 3.8s ease-in-out infinite; }
+.label-classify::before { right: -9px; bottom: -8px; left: auto; top: auto; }
+.label-calculate::before { left: -9px; bottom: -8px; right: auto; top: auto; }
+.label-connect::before { left: -9px; top: -8px; right: auto; bottom: auto; }
+.hero-function-label, .label-classify, .label-calculate, .label-connect { animation: calloutFloat 5.6s ease-in-out infinite; }
+@keyframes calloutDotPulse { 0%,100% { opacity: .62; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .hero-function-label::before { animation: none; } }

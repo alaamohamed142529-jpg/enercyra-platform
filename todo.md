@@ -329,3 +329,6 @@
 - [x] Make CONNECT motion exactly match CLASSIFY and CALCULATE without changing the callout system
 - [x] Move CLASSIFY farther from the decorative corner frame while preserving the frame
 - [x] Re-test callout alignment, spacing, responsive behavior, RTL, themes, tests, TypeScript, and production build
+- [x] Add the same blue orbital dot to CONNECT that appears with CLASSIFY and CALCULATE
+- [x] Synchronize CONNECT title, dot, connector, opacity, glow, and motion with the other two callouts
+- [x] Re-test three-callout visual parity, responsive behavior, RTL, themes, TypeScript, tests, and production build

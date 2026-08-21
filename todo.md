@@ -320,3 +320,6 @@
 - [x] Normalize CONNECT spacing and motion timing to match CLASSIFY and CALCULATE
 - [x] Replace the vertical CONNECT connector with a matching subtle angled dotted connector
 - [x] Re-test callout alignment on desktop/mobile, RTL, themes, tests, TypeScript, and production build
+- [x] Raise and center the existing Hero visual while preserving intentional space before Recent Analysis
+- [x] Rebalance five waste objects and unify CLASSIFY/CALCULATE/CONNECT labels, subtitles, and core-directed connectors
+- [x] Preserve subtle continuous motion and validate desktop/mobile, RTL, themes, tests, TypeScript, and production build

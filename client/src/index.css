@@ -728,3 +728,23 @@ h1, h2, h3, p { margin: 0; }
 .label-connect::after { display: block !important; width: 34px; height: 0; border: 0; border-top: 1px dotted currentColor; left: 50%; bottom: 100%; opacity: .42; transform: rotate(-28deg); transform-origin: left center; }
 @media (max-width: 860px) { .label-connect { bottom: -4% !important; } }
 @media (prefers-reduced-motion: reduce) { .label-connect::after { opacity: .34; } }
+
+/* Unified ecosystem callouts: matching anchors, subtitles, and quiet core-directed leaders. */
+.hero-function-label { position: absolute; display: grid; grid-template-columns: auto auto; align-items: center; gap: 4px 5px; min-height: 20px; padding: 3px 5px; font-size: 10px; letter-spacing: .1em; }
+.hero-function-label small { grid-column: 2; font-size: 6px; line-height: 1; letter-spacing: .1em; }
+.hero-function-label::after { display: block !important; position: absolute; height: 0; width: 36px; border: 0; border-top: 1px dotted currentColor; background: transparent; opacity: .52; animation: calloutLinePulse 3.8s ease-in-out infinite; }
+.label-classify { left: 11%; top: 17%; }
+.label-classify::after { left: 100%; top: 75%; transform: rotate(30deg); transform-origin: left center; }
+.label-calculate { right: 8%; top: 17%; }
+.label-calculate::after { right: 100%; top: 75%; transform: rotate(-30deg); transform-origin: right center; }
+.label-connect { left: 50%; right: auto; bottom: 2.5% !important; transform: translateX(-50%); }
+.label-connect::after { left: 50%; bottom: 100%; width: 34px; transform: rotate(-18deg); transform-origin: left center; }
+@keyframes calloutLinePulse { 0%,100% { opacity: .3; } 50% { opacity: .68; } }
+@media (max-width: 860px) {
+  .hero-function-label { font-size: 8px; }
+  .hero-function-label small { font-size: 5px; }
+  .label-classify { left: 7%; top: 17%; }
+  .label-calculate { right: 3%; top: 17%; }
+  .label-connect { bottom: 2% !important; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-function-label::after { animation: none; opacity: .42; } }

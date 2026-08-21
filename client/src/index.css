@@ -987,3 +987,22 @@ h1, h2, h3, p { margin: 0; }
   color: var(--lime);
   filter: brightness(1.12);
 }
+
+/* Exact shared callout behavior: CONNECT uses the same simple scale-only hover as the upper labels. */
+.label-connect {
+  padding: 3px 5px !important;
+  transform: translateX(-50%) !important;
+  transform-origin: center !important;
+}
+.label-connect:hover,
+.label-connect:focus-visible {
+  transform: translateX(-50%) scale(1.08) !important;
+  transform-origin: center !important;
+  filter: none !important;
+}
+.label-connect:active {
+  transform: translateX(-50%) scale(.985) !important;
+  transform-origin: center !important;
+}
+.label-connect::before,
+.label-connect::after { pointer-events: none; }

@@ -359,3 +359,6 @@
 - [x] Instrument and reproduce the live CONNECT hover event in the browser
 - [x] Replace the ineffective CONNECT interaction path with a reliable visible hover implementation
 - [x] Validate the real hover behavior and project integrity before delivery
+- [x] Remove CONNECT-specific React hover state and special motion overrides
+- [x] Apply exactly the shared CLASSIFY/CALCULATE hover behavior to CONNECT
+- [x] Verify the simplified parity and project integrity across desktop/mobile, RTL, themes, tests, and production build

@@ -485,3 +485,5 @@
 - [x] Verify the swapped Team order and publish the correction
 - [x] Undo only the latest Arabic Team position swap and restore the previous order, keeping «عهود طه» and all other Team changes
 - [x] Verify and publish the restored Arabic Team order
+- [x] Change only the English Team name from «Huda Taha» to «Ohoud Taha», preserving Arabic name «عهود طه» and all other Team details
+- [x] Verify and publish the English Team name correction

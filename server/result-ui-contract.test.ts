@@ -25,7 +25,14 @@ describe("Classification Result calculation UI contract", () => {
 
   it("passes Result values into the editable Publish form without pre-filling location or notes", () => {
     expect(appSource).toContain("window.sessionStorage.setItem(\"enercyra-publish-draft\", JSON.stringify({ weight: nextWeight }))");
-    expect(appSource).toContain("typeof draft?.weight === \"string\" ? draft.weight : \"\"");
+    expect(appSource).toContain("function readPublishDraft(): PublishDraft");
+    expect(appSource).toContain("const openPublish = () =>");
+    expect(appSource).toContain("displayNameEn: classification.displayNameEn");
+    expect(appSource).toContain("displayNameAr: classification.displayNameAr");
+    expect(appSource).toContain("category: item.category");
+    expect(appSource).toContain("imageDataUrl: classification.imageDataUrl");
+    expect(appSource).toContain("const publishDraft = readPublishDraft();");
+    expect(appSource).toContain("const [weight, setWeight] = useState(() => publishDraft.weight || \"\");");
     expect(appSource).toContain("<input value={material} onChange={(event) => setMaterial(event.target.value)} required />");
     expect(appSource).toContain("const [location, setLocation] = useState(() => profile?.location || \"\");");
     expect(appSource).toContain("const [notes, setNotes] = useState(\"\");");

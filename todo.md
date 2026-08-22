@@ -442,3 +442,5 @@
 - [x] Fix vertical label/input layout and verify English, Arabic RTL, responsive behavior, tests, and production build
 - [x] Fix the shared Publish listing field layout so Material, Weight, Location, and Condition render with labels above controls without overlap
 - [x] Add regression coverage and verify the shared layout in English, Arabic RTL, responsive views, tests, and production build
+- [x] Fix the Result-to-Publish handoff so Material and Weight are real editable input values, with image and category context carried over when available
+- [x] Add end-to-end regression coverage for classify → calculate → publish and verify English, Arabic RTL, responsive behavior, and production build

@@ -377,3 +377,7 @@
 - [x] Match CONNECT line shape exactly to CLASSIFY and CALCULATE
 - [x] Match CONNECT line tilt and transform origin to the upper callouts
 - [x] Verify final line parity and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Refine Arabic heading sizes, weights, and line-heights without changing the font
+- [x] Improve Arabic small-text clarity and RTL spacing
+- [x] Remove final full stops from Arabic UI sentences
+- [x] Verify Arabic/English layouts, themes, responsiveness, tests, and production build

@@ -120,16 +120,16 @@ const copy: Record<Lang, Copy> = {
   },
   ar: {
     nav: { dashboard: "لوحة التحكم", classify: "التصنيف", marketplace: "السوق", businesses: "الشركات", how: "كيف تعمل المنصة", about: "من نحن" },
-    heroTitle: "شوف النفايات. شوف قيمتها.",
-    heroSub: "منصة ذكية لتصنيف النفايات وتقدير قيمتها ومحتواها الطاقي وربطها بفرص الأعمال.",
+    heroTitle: "شوف النفايات شوف قيمتها",
+    heroSub: "منصة ذكية لتصنيف النفايات وتقدير قيمتها ومحتواها الطاقي وربطها بفرص الأعمال", 
     classify: "صنّف نفاياتك",
     marketplace: "استكشف السوق",
-    featureTitle: "حوّل الصورة إلى إشارة تجارية.",
-    featureCopy: "تساعدك إنِرسيرا على معرفة نوع المادة وفهم التقديرات المرجعية والوصول إلى الاتصال المناسب.",
+    featureTitle: "حوّل الصورة إلى إشارة تجارية",
+    featureCopy: "تساعدك إنِرسيرا على معرفة نوع المادة وفهم التقديرات المرجعية والوصول إلى الاتصال المناسب",
     valueTitle: "تقديرات مرجعية",
-    valueCopy: "راجع حالة السعر وLHV وMJ وkWh عند توافر بيانات الكتالوج.",
+    valueCopy: "راجع حالة السعر وLHV وMJ وkWh عند توافر بيانات الكتالوج",
     connectTitle: "اكتشف المشترين",
-    connectCopy: "اعثر على شركات وشركاء إعادة تدوير مناسبين للمادة المصنّفة.",
+    connectCopy: "اعثر على شركات وشركاء إعادة تدوير مناسبين للمادة المصنّفة",
     uploadTitle: "اسحب الصورة وأفلتها هنا",
     uploadSub: "أو اخترها من جهازك",
     choose: "اختر صورة",
@@ -188,7 +188,7 @@ function SiteHeader({ lang, setLang, dark, setDark, currency, setCurrency, text 
     <header className="site-header">
       <Link href="/" className="brand-link">
         <BrandMark />
-        <span className="brand-copy"><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات. اكتشف قيمتها." : "See Waste. See Value."}</small></span>
+        <span className="brand-copy"><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات، اكتشف قيمتها" : "See Waste. See Value."}</small></span>
       </Link>
       <nav className={`desktop-nav ${menuOpen ? "is-open" : ""}`}>
         {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "How It Works" ? "how" : "about"]}</Link>)}
@@ -211,14 +211,14 @@ function Home({ text, lang }: { text: Copy; lang: Lang }) {
   return <div className="page home-page">
     <section className="hero container">
       <div className="hero-copy">
-        <h1><span>{lang === "ar" ? "شوف النفايات." : "See Waste."}</span><span>{lang === "ar" ? "شوف قيمتها." : "See Value."}</span></h1>
+        <h1><span>{lang === "ar" ? "شوف النفايات" : "See Waste."}</span><span>{lang === "ar" ? "شوف قيمتها" : "See Value."}</span></h1>
         <span className="hero-rule" aria-hidden="true" />
         <p>{text.heroSub}</p>
         <div className="hero-actions"><Link href="/classify" className="btn btn-primary"><Sparkles size={18} />{text.classify}<ArrowRight size={17} /></Link><Link href="/marketplace" className="btn btn-secondary"><PackageSearch size={18} />{text.marketplace}<ArrowRight size={17} /></Link></div>
       </div>
       <InteractiveHeroVisual lang={lang} />
     </section>
-    <section className="feature-strip container"><FeatureCard href="/classify" icon={<ScanSearch />} title={lang === "ar" ? "تعرّف على المادة" : "Material identification"} copy={lang === "ar" ? "ارفع صورة ليحدد النموذج فئة المادة ودرجة الثقة." : "Upload one image to identify its material class and confidence."} /><FeatureCard href="/result" icon={<BadgeDollarSign />} title={text.valueTitle} copy={text.valueCopy} /><FeatureCard href="/businesses" icon={<Handshake />} title={text.connectTitle} copy={text.connectCopy} /><RecentAnalysis lang={lang} /></section>
+    <section className="feature-strip container"><FeatureCard href="/classify" icon={<ScanSearch />} title={lang === "ar" ? "تعرّف على المادة" : "Material identification"} copy={lang === "ar" ? "ارفع صورة ليحدد النموذج فئة المادة ودرجة الثقة" : "Upload one image to identify its material class and confidence."} /><FeatureCard href="/result" icon={<BadgeDollarSign />} title={text.valueTitle} copy={text.valueCopy} /><FeatureCard href="/businesses" icon={<Handshake />} title={text.connectTitle} copy={text.connectCopy} /><RecentAnalysis lang={lang} /></section>
   </div>;
 }
 
@@ -364,7 +364,7 @@ function MyListings({ lang }: { text: Copy; lang: Lang }) {
   if (!user) return <div className="page container auth-card"><LogIn size={35} /><h1>{lang === "ar" ? "سجّل الدخول للوصول إلى إعلاناتك" : "Sign in to access your listings"}</h1><p>{lang === "ar" ? "النشر وإدارة الإعلانات محميان بتسجيل الدخول." : "Publishing and listing management are protected by sign-in."}</p><button className="btn btn-primary" onClick={() => startLogin()}><LogIn size={17} />{lang === "ar" ? "تسجيل الدخول" : "Sign in"}</button></div>;
   return <div className="page container content-page"><div className="market-heading"><div><span className="eyebrow"><UserRound size={15} />{lang === "ar" ? "حسابك" : "Your account"}</span><h1>{lang === "ar" ? "إعلاناتي" : "My Listings"}</h1><p>{lang === "ar" ? "إعلاناتك المنشورة والمملوكة لحسابك." : "Your published materials owned by this account."}</p></div><button className="btn btn-primary" onClick={() => navigate("/publish")}><Tag size={17} />{lang === "ar" ? "نشر مادة" : "Publish material"}</button></div>{!mine.data?.length ? <div className="empty-state"><PackageSearch size={38} /><h3>{lang === "ar" ? "لا توجد إعلانات بعد" : "No listings yet"}</h3><p>{lang === "ar" ? "انشر أول مادة لك من صفحة النتيجة." : "Publish your first material from the result page."}</p></div> : <div className="market-grid">{mine.data.map((listing) => <article className="listing-card" key={listing.id}><div className="listing-content"><div className="listing-title"><div><h3>{lang === "ar" ? listing.displayNameAr : listing.displayNameEn}</h3><small>{listing.location}</small></div><Tag size={17} /></div><div className="listing-meta"><span><PackageSearch size={15} />{listing.weightKg} kg</span><span><CircleHelp size={15} />{listing.status}</span></div><div className="listing-bottom"><strong>{lang === "ar" ? "إعلانك" : "Your listing"}</strong><button onClick={() => remove.mutate({ id: listing.id })} disabled={remove.isPending}><Trash2 size={15} />{lang === "ar" ? "حذف" : "Delete"}</button></div></div></article>)}</div>}</div>;
 }
-function Footer({ lang }: { lang: Lang }) { return <footer className="site-footer container"><div><BrandMark /><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات. اكتشف قيمتها." : "See Waste. See Value."}</small></div><span>© 2026 Enercyra.</span><div className="footer-links"><Link href="/about">{lang === "ar" ? "من نحن" : "About"}</Link><Link href="/how-it-works">{lang === "ar" ? "كيف تعمل" : "How it works"}</Link></div></footer>; }
+function Footer({ lang }: { lang: Lang }) { return <footer className="site-footer container"><div><BrandMark /><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات، اكتشف قيمتها" : "See Waste. See Value."}</small></div><span>© 2026 Enercyra.</span><div className="footer-links"><Link href="/about">{lang === "ar" ? "من نحن" : "About"}</Link><Link href="/how-it-works">{lang === "ar" ? "كيف تعمل" : "How it works"}</Link></div></footer>; }
 
 export default App;
 

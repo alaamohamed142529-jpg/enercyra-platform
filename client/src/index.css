@@ -1095,3 +1095,32 @@ h1, h2, h3, p { margin: 0; }
   transform-origin: left center !important;
   animation: calloutLinePulse 3.8s ease-in-out infinite !important;
 }
+
+/* Arabic typography polish: preserve the current font while improving rhythm and legibility. */
+[dir="rtl"] .hero h1 {
+  line-height: 1.12;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+[dir="rtl"] .hero h1 span { font-weight: 500; }
+[dir="rtl"] .hero-copy > p,
+[dir="rtl"] .page-heading p,
+[dir="rtl"] .market-heading p,
+[dir="rtl"] .feature-card p,
+[dir="rtl"] .recent-card,
+[dir="rtl"] .notice {
+  line-height: 1.85;
+}
+[dir="rtl"] .hero-copy > p { font-size: clamp(15px, 1.35vw, 18px); }
+[dir="rtl"] .feature-card h3,
+[dir="rtl"] .page-heading h1,
+[dir="rtl"] .market-heading h1 { line-height: 1.35; font-weight: 600; }
+[dir="rtl"] .hero-function-label small { font-size: 7px; line-height: 1.35; letter-spacing: 0; }
+[dir="rtl"] .hero-function-label { letter-spacing: 0; }
+[dir="rtl"] .hero-actions .btn { letter-spacing: 0; }
+[dir="rtl"] .feature-card { text-align: right; }
+@media (max-width: 820px) {
+  [dir="rtl"] .hero h1 { line-height: 1.16; }
+  [dir="rtl"] .hero-copy > p { font-size: 15px; line-height: 1.9; }
+  [dir="rtl"] .hero-function-label small { font-size: 6px; }
+}

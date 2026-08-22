@@ -1166,3 +1166,6 @@ h1, h2, h3, p { margin: 0; }
 .page:has(.classify-grid) .page-heading h1 .heading-accent { color: #8fd34f; }
 .page:has(.classify-grid) .page-heading h1 span { display: inline; }
 [dir="rtl"] .page:has(.classify-grid) .page-heading { padding-top: 10px; }
+
+/* The Classification page has no eyebrow label; keep any legacy Step 1 label hidden. */
+.page:has(.classify-grid) .page-heading .eyebrow { display: none !important; }

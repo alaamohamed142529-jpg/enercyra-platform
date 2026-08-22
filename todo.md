@@ -392,3 +392,5 @@
 - [x] Refine Classification heading typography and spacing
 - [x] Apply a distinct accent color to the English Your Waste phrase
 - [x] Verify Arabic/English layouts, themes, responsiveness, tests, and build
+- [x] Remove the remaining Step 1 of 3 label permanently from Classification
+- [x] Verify heading spacing and Classification functionality after removal

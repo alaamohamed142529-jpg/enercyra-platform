@@ -453,3 +453,5 @@
 - [x] Remove all hardcoded Marketplace mock listings and read only real published listings
 - [x] Persist successful listings with material, weight, location, condition, notes, and classified image; update Marketplace immediately
 - [x] Add a clear empty state with publish CTA and regression coverage for persistence, real images, RTL, responsive behavior, and production build
+- [x] Diagnose why the live Marketplace screenshot still shows old hardcoded mock cards after the real-data update
+- [x] Remove any remaining stale mock-data path, verify the live empty state and real listing behavior, and publish a correction

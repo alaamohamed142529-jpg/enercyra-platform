@@ -448,3 +448,5 @@
 - [x] Verify the navigation in Arabic and English and run the focused validation before publishing
 - [x] Remove every remaining Business connections / اتصالات الأعمال label from marketplace-related navigation while preserving icons and routes
 - [x] Verify all language variants and publish the final label-removal checkpoint
+- [x] Remove the remaining marketplace eyebrow icon while preserving the Marketplace title and unrelated navigation icons
+- [x] Verify English and Arabic RTL marketplace headers and publish the correction

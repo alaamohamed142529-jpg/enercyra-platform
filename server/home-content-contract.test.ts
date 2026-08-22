@@ -14,7 +14,8 @@ describe("homepage content contract", () => {
   });
 
   it("removes the marketplace eyebrow label while preserving its icon", () => {
-    expect(appSource).toContain('<span className="eyebrow"><PackageSearch size={15} /></span>');
+    expect(appSource).toContain('<h1>{lang === "ar" ? "السوق" : "Marketplace"}</h1>');
+    expect(appSource).not.toContain('<span className="eyebrow"><PackageSearch size={15} /></span>');
     expect(appSource).not.toContain("اتصالات الأعمال");
     expect(appSource).not.toContain("Business connections");
   });

@@ -492,3 +492,5 @@
 - [x] Replace the stale public English Team label visibly showing «Huda Taha» with «Ohoud Taha» and verify the live card
 - [x] Use the Enercyra circular logo as the browser favicon and public app/home-screen icon
 - [x] Verify favicon metadata, browser rendering, responsive branding, tests, and production build
+- [ ] Replace the black-looking favicon with a clear Enercyra circular icon suitable for dark browser tab bars
+- [ ] Verify the corrected favicon in the browser, tests, production build, and public deployment

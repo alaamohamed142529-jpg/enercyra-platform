@@ -481,3 +481,5 @@
 - [x] Verify preserved card visuals, English/Arabic RTL ordering, responsive layouts, tests, and production build
 - [x] Rename the second Arabic Team member from «هدى طه» to «عهود طه» without changing image, LinkedIn link, order, or design
 - [x] Verify the corrected About Team name and publish the update
+- [x] Swap only the Arabic Team card positions for «آلاء محمد» and «رحمة محمد», preserving all content and styling
+- [x] Verify the swapped Team order and publish the correction

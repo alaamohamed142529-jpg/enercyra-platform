@@ -48,6 +48,7 @@ describe("homepage content contract", () => {
     expect(appSource).toContain('nameEn: "Huda Taha", nameAr: "عهود طه"');
     expect(appSource).toContain('nameEn: "Rahma Mohamed", nameAr: "رحمة محمد"');
     expect(appSource).toContain('dir={lang === "ar" ? "rtl" : "ltr"}');
+    expect(appSource).toContain('(lang === "ar" ? [teamMembers[2], teamMembers[1], teamMembers[0]] : teamMembers)');
     expect(appSource).toContain('const memberName = lang === "ar" ? member.nameAr : member.nameEn;');
     expect(appSource).not.toContain("<small>{member.role}</small>");
     expect(appSource).toContain("/manus-storage/alaa_3689a963.jpg");
@@ -56,7 +57,7 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("https://www.linkedin.com/in/alaa-mohamed-analyst/");
     expect(appSource).toContain("https://www.linkedin.com/in/ohoudtaha/");
     expect(appSource).toContain("https://www.linkedin.com/in/rahma-mohamed-data/");
-    expect(appSource).toContain("teamMembers.map");
+    expect(appSource).toContain(").map((member) =>");
     expect(appSource).toContain('target="_blank" rel="noopener noreferrer"');
     expect(appSource).toContain('className="team-avatar"');
   });

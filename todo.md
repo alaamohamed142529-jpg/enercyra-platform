@@ -466,3 +466,5 @@
 - [x] Match the existing Marketplace QR style and verify destination, RTL, themes, responsive layout, tests, and production build
 - [x] Fix the About QR so it encodes the correct fully qualified public URL and opens reliably when scanned
 - [x] Decode and verify the QR in English, Arabic RTL, responsive views, tests, and production build
+- [x] Improve Share Enercyra QR-card spacing, icon/title separation, description line-height, QR centering, and uniform padding
+- [x] Verify the refined card in Arabic RTL, English, themes, responsive layouts, tests, and production build

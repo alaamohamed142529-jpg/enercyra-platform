@@ -1184,3 +1184,18 @@ h1, h2, h3, p { margin: 0; }
 .classify-grid .progress-steps span:not(.active) { border-color: rgba(68,217,238,.46); color: #9bc9d1; background: rgba(68,217,238,.045); }
 .classify-grid .progress-steps i { background: rgba(68,217,238,.34); }
 .classify-grid .progress-steps p { color: #9bc9d1; }
+
+/* Light theme correction: keep Classification surfaces bright and readable instead of gray-tinted. */
+.app-shell.theme-light .classify-grid .upload-card { background: linear-gradient(145deg, #ffffff, #edf8f4); color: #102d3a; border-color: rgba(61,169,121,.48); box-shadow: 0 14px 34px rgba(30,78,72,.10); }
+.app-shell.theme-light .classify-grid .upload-card > svg { color: #7fbe28; }
+.app-shell.theme-light .classify-grid .upload-card strong { color: #102d3a; }
+.app-shell.theme-light .classify-grid .upload-card span, .app-shell.theme-light .classify-grid .upload-card small { color: #526b70; }
+.app-shell.theme-light .classify-grid .benefit-panel { background: #f4fbf8; color: #102d3a; border-color: rgba(61,169,121,.22); box-shadow: 0 14px 34px rgba(30,78,72,.08); }
+.app-shell.theme-light .classify-grid .benefit { background: #ffffff; border-color: rgba(16,45,58,.12); }
+.app-shell.theme-light .classify-grid .benefit strong { color: #102d3a; }
+.app-shell.theme-light .classify-grid .benefit small { color: #526b70; }
+.app-shell.theme-light .classify-grid .benefit > span { background: #f5fbf7; }
+.app-shell.theme-light .classify-grid .progress-steps { border-color: rgba(16,45,58,.12); }
+.app-shell.theme-light .classify-grid .progress-steps span:not(.active) { color: #167f91; border-color: rgba(21,158,177,.48); background: rgba(21,158,177,.05); }
+.app-shell.theme-light .classify-grid .progress-steps i { background: rgba(21,158,177,.34); }
+.app-shell.theme-light .classify-grid .progress-steps p { color: #526b70; }

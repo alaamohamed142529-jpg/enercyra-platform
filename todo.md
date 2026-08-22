@@ -407,3 +407,6 @@
 - [x] Verify the concise progress wording in Arabic/English and validate the build
 - [x] Replace gray inactive progress-step styling with a suitable dark teal/cyan accent
 - [x] Verify active green step, themes, RTL, responsiveness, tests, and production build
+- [x] Fix the light-theme gray overlay and muted Classification surfaces
+- [x] Restore clear green/cyan accents and readable light-theme text
+- [x] Verify light/dark themes, RTL, responsiveness, tests, and production build

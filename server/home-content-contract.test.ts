@@ -65,6 +65,18 @@ describe("homepage content contract", () => {
     expect(appSource).toContain('className="team-avatar"');
   });
 
+  it("uses the Enercyra circular mark for browser and app identity", () => {
+    const indexHtml = readFileSync(resolve(process.cwd(), "client/index.html"), "utf8");
+    const manifest = readFileSync(resolve(process.cwd(), "client/public/site.webmanifest"), "utf8");
+    expect(indexHtml).toContain('rel="icon" type="image/x-icon" href="/favicon.ico?v=icon-2026-08-22"');
+    expect(indexHtml).toContain("enercyra-circular-mark_43fba3fa.png?v=icon-2026-08-22");
+    expect(indexHtml).toContain("/favicon.ico?v=icon-2026-08-22");
+    expect(indexHtml).toContain('rel="manifest" href="/site.webmanifest?v=icon-2026-08-22"');
+    expect(manifest).toContain('"short_name": "Enercyra"');
+    expect(manifest).toContain("enercyra-circular-mark_43fba3fa.png?v=icon-2026-08-22");
+    expect(manifest).toContain('"short_name": "Enercyra"');
+  });
+
   it("encodes the About QR with the stable public homepage URL", () => {
     expect(appSource).toContain('const shareUrl = "https://enercyraai-drvxzjat.manus.space/";');
     expect(appSource).toContain("<QRCodeSVG value={shareUrl}");

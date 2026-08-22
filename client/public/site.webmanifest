@@ -1,0 +1,17 @@
+{
+  "name": "Enercyra — See Waste. See Value.",
+  "short_name": "Enercyra",
+  "description": "AI-powered waste classification, reference value estimation, and energy insights.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#041923",
+  "theme_color": "#041923",
+  "icons": [
+    {
+      "src": "/manus-storage/enercyra-circular-mark_43fba3fa.png?v=icon-2026-08-22",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

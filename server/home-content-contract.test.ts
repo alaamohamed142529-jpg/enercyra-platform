@@ -42,6 +42,14 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("Contact seller");
   });
 
+  it("encodes the About QR with the stable public homepage URL", () => {
+    expect(appSource).toContain('const shareUrl = "https://enercyraai-drvxzjat.manus.space/";');
+    expect(appSource).toContain("<QRCodeSVG value={shareUrl}");
+    expect(appSource).toContain('marginSize={4}');
+    expect(appSource).toContain('level="H"');
+    expect(appSource).toContain('target="_blank"');
+  });
+
   it("starts the shared header at the page edge without a stray top strip", () => {
     const stylesheet = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
     expect(stylesheet).toContain("html, body, #root { min-height: 100%; margin: 0; }");

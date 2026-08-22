@@ -464,3 +464,5 @@
 - [x] Verify clean page starts across key routes in light/dark, Arabic RTL, responsive layouts, tests, and production build
 - [x] Add a branded QR code to About only, linking to the Enercyra homepage with a clear Arabic/English caption
 - [x] Match the existing Marketplace QR style and verify destination, RTL, themes, responsive layout, tests, and production build
+- [x] Fix the About QR so it encodes the correct fully qualified public URL and opens reliably when scanned
+- [x] Decode and verify the QR in English, Arabic RTL, responsive views, tests, and production build

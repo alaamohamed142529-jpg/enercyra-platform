@@ -1330,3 +1330,11 @@ html, body, #root { min-height: 100%; margin: 0; }
 .app-shell.theme-light .about-qr-card { background: linear-gradient(145deg, #ffffff, #eef8f6); border-color: var(--border-subtle); box-shadow: 0 14px 30px rgba(24,76,79,.09); }
 .app-shell.theme-light .about-qr-copy p { color: var(--text-secondary); }
 @media (max-width: 600px) { .about-qr-card { padding: 24px 20px 28px; } .about-qr-shell { margin-top: 20px; } .about-qr-shell svg { width: 176px; height: 176px; } }
+
+/* Native Marketplace selects: keep the opened option list readable in both themes. */
+.market-tools select { color-scheme: dark; }
+.market-tools select option { background-color: #082230; color: #f4fbff; }
+.market-tools select option:checked, .market-tools select option:hover { background-color: #1b5e73; color: #ffffff; }
+.app-shell.theme-light .market-tools select { color-scheme: light; }
+.app-shell.theme-light .market-tools select option { background-color: #ffffff; color: #102d3b; }
+.app-shell.theme-light .market-tools select option:checked, .app-shell.theme-light .market-tools select option:hover { background-color: #dff5ee; color: #102d3b; }

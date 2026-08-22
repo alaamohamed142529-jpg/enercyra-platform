@@ -470,3 +470,5 @@
 - [x] Verify the refined card in Arabic RTL, English, themes, responsive layouts, tests, and production build
 - [x] Replace non-Egyptian Marketplace locations with all Egyptian governorates and preserve bilingual filtering behavior
 - [x] Verify the complete location list, search/filter behavior, RTL, responsive layout, tests, and production build
+- [x] Fix Marketplace native location dropdown option contrast in Dark Mode while preserving Light Mode and filtering
+- [x] Verify dropdown readability in Arabic/English, both themes, responsive layouts, tests, and production build

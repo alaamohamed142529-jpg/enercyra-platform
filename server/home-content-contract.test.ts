@@ -50,6 +50,14 @@ describe("homepage content contract", () => {
     expect(appSource).toContain('target="_blank"');
   });
 
+  it("keeps Marketplace native select options readable in both themes", () => {
+    const stylesheet = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
+    expect(stylesheet).toContain(".market-tools select { color-scheme: dark; }");
+    expect(stylesheet).toContain(".market-tools select option { background-color: #082230; color: #f4fbff; }");
+    expect(stylesheet).toContain(".app-shell.theme-light .market-tools select { color-scheme: light; }");
+    expect(stylesheet).toContain(".app-shell.theme-light .market-tools select option { background-color: #ffffff; color: #102d3b; }");
+  });
+
   it("starts the shared header at the page edge without a stray top strip", () => {
     const stylesheet = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
     expect(stylesheet).toContain("html, body, #root { min-height: 100%; margin: 0; }");

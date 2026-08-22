@@ -17,7 +17,8 @@ describe("Vercel deployment contract", () => {
     const config = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf8"));
     const functionConfig = config.functions["api/[...path].ts"];
     expect(functionConfig).toBeDefined();
-    expect(functionConfig.includeFiles).toEqual(expect.arrayContaining(["server/models/**", "model/**"]));
+    expect(functionConfig.includeFiles).toContain("server/models/**");
+    expect(functionConfig.includeFiles).toContain("model/**");
     const handler = readFileSync(resolve(root, "api/[...path].ts"), "utf8");
     expect(handler).toContain("createApp({ includeStatic: false })");
     expect(handler).toContain("export default async function handler");

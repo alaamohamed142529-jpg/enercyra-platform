@@ -7,11 +7,7 @@
   "functions": {
     "api/[...path].ts": {
       "maxDuration": 60,
-      "includeFiles": [
-        "server/models/**",
-        "model/**",
-        "scripts/**"
-      ]
+      "includeFiles": "{server/models/**,model/**,scripts/**}"
     }
   },
   "rewrites": [

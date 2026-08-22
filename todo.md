@@ -510,6 +510,6 @@
 - [x] Validate the portable package and provide simple flash-drive launch instructions
 - [x] Add a Vercel-compatible serverless entrypoint for the Express/tRPC backend
 - [x] Add vercel.json with the correct Vite output directory, API function routing, rewrites, and included runtime assets
-- [ ] Configure or document required Vercel environment variables for database, auth, storage, and frontend runtime
+- [x] Configure or document required Vercel environment variables for database, auth, storage, and frontend runtime
 - [ ] Deploy the connected Git repository to Vercel and verify the UI and API instead of raw source-file responses
-- [ ] Document Vercel limitations for Python-based MobileNet inference and any required follow-up architecture
+- [x] Document Vercel limitations for Python-based MobileNet inference and any required follow-up architecture

@@ -489,3 +489,4 @@
 - [x] Verify and publish the English Team name correction
 - [x] Diagnose why the public About page does not show the updated English Team name «Ohoud Taha»
 - [x] Verify and republish the live English/Arabic Team names after resolving any stale deployment or rendering issue
+- [ ] Replace the stale public English Team label visibly showing «Huda Taha» with «Ohoud Taha» and verify the live card

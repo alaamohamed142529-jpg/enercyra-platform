@@ -1238,6 +1238,10 @@ h1, h2, h3, p { margin: 0; }
 .calculation-metrics .metric-label svg { color: var(--cyan); flex: 0 0 auto; }
 .calculation-metrics .metric strong { color: var(--text); font-size: 18px; line-height: 1.25; }
 .calculation-metrics .metric strong em { color: var(--muted); font-size: 10px; font-style: normal; font-weight: 500; }
+.calculation-metrics .metric-secondary { display: grid; gap: 2px; padding-top: 2px; border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.calculation-metrics .metric-secondary small { color: var(--muted); font-size: 10px; line-height: 1.35; }
+.calculation-metrics .metric-secondary strong { font-size: 15px; line-height: 1.25; }
+.calculation-metrics .metric-secondary strong em { font-size: 9px; }
 .calculation-metrics .metric-note, .calculation-metrics .field-help { color: var(--muted); font-size: 10px; line-height: 1.45; }
 .calculation-metrics .metric > .pending, .calculation-metrics .metric > .reference-tag { margin-top: auto; }
 .calculation-metrics .weight-metric input { width: 100%; min-height: 38px; padding: 8px 10px; border: 1px solid var(--cyan); border-radius: 9px; background: rgba(255,255,255,.06); color: var(--text); font: inherit; }

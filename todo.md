@@ -432,3 +432,4 @@
 - [x] Hide the weight validation hint for valid positive input and show it only for invalid states
 - [x] Verify all currencies and empty, zero, negative, and text weight states
 - [x] Re-run RTL, theme, responsive, tests, and production build checks
+- [x] Show the material's original LHV/kg immediately beneath Reference price in the same metric card, while keeping calculated value and energy pending until valid weight

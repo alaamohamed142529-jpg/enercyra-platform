@@ -401,3 +401,5 @@
 - [x] Verify Classification benefits in Arabic/English, themes, responsive layouts, tests, and production build
 - [x] Rewrite the Arabic Classification benefits and progress wording for clarity
 - [x] Verify revised Arabic copy, RTL layout, responsiveness, tests, and production build
+- [x] Rewrite Classification progress steps as upload, analyze, and publish
+- [x] Verify Arabic/English progress wording, layout, navigation, tests, and production build

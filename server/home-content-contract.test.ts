@@ -65,6 +65,10 @@ describe("homepage content contract", () => {
     expect(appSource).toContain('className="team-avatar"');
   });
 
+  it("uses the configured Enercyra app logo for platform-managed identity", () => {
+    expect(process.env.VITE_APP_LOGO).toBe("/manus-storage/enercyra-circular-mark_43fba3fa.png");
+  });
+
   it("uses the Enercyra circular mark for browser and app identity", () => {
     const indexHtml = readFileSync(resolve(process.cwd(), "client/index.html"), "utf8");
     const manifest = readFileSync(resolve(process.cwd(), "client/public/site.webmanifest"), "utf8");

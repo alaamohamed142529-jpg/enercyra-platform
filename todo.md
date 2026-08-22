@@ -483,3 +483,5 @@
 - [x] Verify the corrected About Team name and publish the update
 - [x] Swap only the Arabic Team card positions for «آلاء محمد» and «رحمة محمد», preserving all content and styling
 - [x] Verify the swapped Team order and publish the correction
+- [x] Undo only the latest Arabic Team position swap and restore the previous order, keeping «عهود طه» and all other Team changes
+- [x] Verify and publish the restored Arabic Team order

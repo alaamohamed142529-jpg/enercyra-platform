@@ -446,3 +446,5 @@
 - [x] Add end-to-end regression coverage for classify → calculate → publish and verify English, Arabic RTL, responsive behavior, and production build
 - [x] Remove only the Arabic marketplace navigation label «اتصالات الأعمال» while preserving the icon, route, and other links
 - [x] Verify the navigation in Arabic and English and run the focused validation before publishing
+- [x] Remove every remaining Business connections / اتصالات الأعمال label from marketplace-related navigation while preserving icons and routes
+- [x] Verify all language variants and publish the final label-removal checkpoint

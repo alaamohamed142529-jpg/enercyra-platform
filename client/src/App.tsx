@@ -103,7 +103,7 @@ const copy: Record<Lang, Copy> = {
   en: {
     nav: { dashboard: "Dashboard", classify: "Classify", marketplace: "Marketplace", businesses: "Businesses", how: "How It Works", about: "About" },
     heroTitle: "See Waste. See Value.",
-    heroSub: "AI-powered waste classification, reference value estimation, energy insights, and business connections.",
+    heroSub: "AI-powered waste classification, reference value estimation, and energy insights.",
     classify: "Classify Waste",
     marketplace: "Explore Marketplace",
     featureTitle: "Turn a photo into a business signal.",

@@ -403,3 +403,5 @@
 - [x] Verify revised Arabic copy, RTL layout, responsiveness, tests, and production build
 - [x] Rewrite Classification progress steps as upload, analyze, and publish
 - [x] Verify Arabic/English progress wording, layout, navigation, tests, and production build
+- [x] Replace the rendered Arabic progress summary with «ارفع، حلّل، انشر»
+- [x] Verify the concise progress wording in Arabic/English and validate the build

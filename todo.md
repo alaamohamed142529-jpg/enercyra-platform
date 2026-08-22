@@ -457,3 +457,6 @@
 - [x] Remove any remaining stale mock-data path, verify the live empty state and real listing behavior, and publish a correction
 - [x] Audit and improve Enercyra logo sizing across header, footer, and major visual cards while preserving aspect ratio and rendering clarity
 - [x] Verify logo consistency in English, Arabic RTL, light/dark, responsive layouts, and production build
+- [x] Make every real Marketplace listing card clickable and open complete listing details
+- [x] Keep card Contact buttons independent and add regression coverage for card navigation and contact isolation
+- [x] Verify detail views with multiple listings in English, Arabic RTL, responsive layouts, tests, and production build

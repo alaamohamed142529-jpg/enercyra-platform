@@ -30,6 +30,18 @@ describe("homepage content contract", () => {
     expect(appSource).not.toContain("Mixed Materials");
   });
 
+  it("opens complete listing details while keeping contact actions isolated", () => {
+    expect(appSource).toContain('<Route path="/marketplace/:id"');
+    expect(appSource).toContain("listing-card-clickable");
+    expect(appSource).toContain("onClick={openDetails}");
+    expect(appSource).toContain("event.stopPropagation()");
+    expect(appSource).toContain("function ListingDetail");
+    expect(appSource).toContain("listing-detail-image");
+    expect(appSource).toContain("item.condition");
+    expect(appSource).toContain("item.notes");
+    expect(appSource).toContain("Contact seller");
+  });
+
   it("uses distinct functional feature-card titles and icons", () => {
     expect(appSource).toContain("Material identification");
     expect(appSource).toContain("Reference estimates");

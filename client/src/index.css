@@ -1077,3 +1077,21 @@ h1, h2, h3, p { margin: 0; }
   transform-origin: left center !important;
   animation: calloutLinePulse 3.8s ease-in-out infinite !important;
 }
+
+/* Line parity: same plain dotted stroke as the upper callouts, with a clean inward tilt. */
+.label-connect::after {
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: calc(100% + 2px) !important;
+  width: 34px !important;
+  height: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-top: 1px dotted currentColor !important;
+  background: transparent !important;
+  opacity: .48 !important;
+  transform: rotate(-60deg) !important;
+  transform-origin: left center !important;
+  animation: calloutLinePulse 3.8s ease-in-out infinite !important;
+}

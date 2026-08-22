@@ -374,3 +374,6 @@
 - [x] Move CONNECT’s dotted connector to the inner side nearest the orbit
 - [x] Match CONNECT connector length, thickness, opacity, and angle to the upper callouts
 - [x] Verify the corrected inward connector and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Match CONNECT line shape exactly to CLASSIFY and CALCULATE
+- [x] Match CONNECT line tilt and transform origin to the upper callouts
+- [x] Verify final line parity and project integrity across desktop/mobile, RTL, themes, tests, and production build

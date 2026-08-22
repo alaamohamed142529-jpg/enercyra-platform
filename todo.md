@@ -462,3 +462,5 @@
 - [x] Verify detail views with multiple listings in English, Arabic RTL, responsive layouts, tests, and production build
 - [x] Remove the unintended dark strip or border above the shared header across the application
 - [x] Verify clean page starts across key routes in light/dark, Arabic RTL, responsive layouts, tests, and production build
+- [x] Add a branded QR code to About only, linking to the Enercyra homepage with a clear Arabic/English caption
+- [x] Match the existing Marketplace QR style and verify destination, RTL, themes, responsive layout, tests, and production build

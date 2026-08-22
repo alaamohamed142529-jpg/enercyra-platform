@@ -196,7 +196,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
       </nav>
       <div className="header-actions">
         <button className="icon-button" aria-label="Switch language" onClick={() => setLang(lang === "en" ? "ar" : "en")}><Globe2 size={17} /><span>{lang === "en" ? "العربية" : "English"}</span></button>
-        <button className="theme-toggle" aria-label="Toggle theme" onClick={() => setDark(!dark)}>{dark ? <Sun size={16} /> : <Moon size={16} />}<span className="toggle-dot" /></button>
+        <button className="theme-toggle" aria-label={dark ? "Switch to light mode" : "Switch to dark mode"} title={dark ? "Switch to light mode" : "Switch to dark mode"} onClick={() => setDark(!dark)}>{dark ? <Moon size={16} /> : <Sun size={16} />}<span className="toggle-dot" /></button>
         {user ? <Link href="/my-listings" className="avatar-button"><UserRound size={17} /></Link> : <button className="login-button" onClick={() => startLogin()}><LogIn size={16} />{lang === "ar" ? "دخول" : "Sign in"}</button>}
         <button className="mobile-menu" aria-label="Open menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
       </div>

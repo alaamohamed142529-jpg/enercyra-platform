@@ -412,3 +412,7 @@
 - [x] Verify light/dark themes, RTL, responsiveness, tests, and production build
 - [x] Replace remaining gray-toned light-theme Classification surfaces with pale teal-blue
 - [x] Verify light/dark themes, Arabic RTL, responsiveness, tests, and production build
+- [x] Refactor Light Mode into centralized brand color tokens
+- [x] Replace dark/gray Light Mode surfaces with bright accessible cards and page backgrounds
+- [x] Improve Light Mode text contrast, icon treatments, and theme-toggle state clarity
+- [x] Verify Light/Dark modes, Arabic RTL, English, responsive layouts, tests, and production build

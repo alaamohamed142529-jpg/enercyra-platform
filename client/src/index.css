@@ -1205,3 +1205,17 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .classify-grid .benefit-panel { background: linear-gradient(145deg, #e7f6f2 0%, #d6ecec 100%); border-color: rgba(21,158,177,.32); }
 .app-shell.theme-light .classify-grid .benefit { background: #cfe7e8; border-color: rgba(21,103,116,.20); }
 .app-shell.theme-light .classify-grid .benefit > span { background: #e8f8f5; }
+
+/* Centralized Enercyra theme tokens. */
+.app-shell { --bg-primary: var(--bg); --bg-card: var(--panel); --bg-card-soft: var(--panel2); --text-primary: var(--text); --text-secondary: var(--muted); --accent: var(--lime); --accent-cyan: var(--cyan); --border-subtle: var(--line); }
+.app-shell.theme-light { --bg-primary: #fbfdfc; --bg-card: #ffffff; --bg-card-soft: #eef8f6; --text-primary: #102d3a; --text-secondary: #46636b; --accent: #7ebc27; --accent-cyan: #16899b; --border-subtle: rgba(16,45,58,.16); background: var(--bg-primary); color: var(--text-primary); }
+.app-shell.theme-light .site-header { background: rgba(255,255,255,.94); border-color: var(--border-subtle); box-shadow: 0 8px 24px rgba(24,76,79,.08); }
+.app-shell.theme-light .nav-link, .app-shell.theme-light .icon-button, .app-shell.theme-light .login-button, .app-shell.theme-light .avatar-button { color: var(--text-secondary); }
+.app-shell.theme-light .feature-card, .app-shell.theme-light .recent-card, .app-shell.theme-light .flow-card, .app-shell.theme-light .principles-card, .app-shell.theme-light .about-panel, .app-shell.theme-light .auth-card, .app-shell.theme-light .market-tools, .app-shell.theme-light .listing-card, .app-shell.theme-light .result-card, .app-shell.theme-light .calculation-panel, .app-shell.theme-light .benefit-panel, .app-shell.theme-light .upload-card { background: var(--bg-card); color: var(--text-primary); border-color: var(--border-subtle); }
+.app-shell.theme-light .feature-card p, .app-shell.theme-light .recent-card small, .app-shell.theme-light .flow-card p, .app-shell.theme-light .principles-card p, .app-shell.theme-light .about-panel p, .app-shell.theme-light .listing-meta, .app-shell.theme-light .benefit small, .app-shell.theme-light .upload-card span, .app-shell.theme-light .upload-card small { color: var(--text-secondary); }
+.app-shell.theme-light .feature-card h3, .app-shell.theme-light .recent-card strong, .app-shell.theme-light .flow-card h2, .app-shell.theme-light .principles-card h3, .app-shell.theme-light .about-panel h1, .app-shell.theme-light .about-panel h3, .app-shell.theme-light .benefit strong, .app-shell.theme-light .benefit-panel h3, .app-shell.theme-light .upload-card strong { color: var(--text-primary); }
+.app-shell.theme-light .classify-grid .benefit { background: var(--bg-card-soft); border-color: var(--border-subtle); }
+.app-shell.theme-light .classify-grid .benefit > span { background: linear-gradient(145deg, #f7fffb, #dff4f1); }
+.app-shell.theme-light .theme-toggle { color: var(--accent-cyan); background: #e7f7f3; border-color: rgba(22,137,155,.32); }
+.app-shell.theme-light .theme-toggle .toggle-dot { background: var(--accent); box-shadow: 0 0 0 3px rgba(126,188,39,.16); }
+.app-shell.theme-light .demo-note { background: #ffffff; color: var(--text-secondary); border-color: var(--border-subtle); }

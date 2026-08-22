@@ -444,3 +444,5 @@
 - [x] Add regression coverage and verify the shared layout in English, Arabic RTL, responsive views, tests, and production build
 - [x] Fix the Result-to-Publish handoff so Material and Weight are real editable input values, with image and category context carried over when available
 - [x] Add end-to-end regression coverage for classify → calculate → publish and verify English, Arabic RTL, responsive behavior, and production build
+- [x] Remove only the Arabic marketplace navigation label «اتصالات الأعمال» while preserving the icon, route, and other links
+- [x] Verify the navigation in Arabic and English and run the focused validation before publishing

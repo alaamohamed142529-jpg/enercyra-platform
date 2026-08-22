@@ -13,6 +13,12 @@ describe("homepage content contract", () => {
     expect(appSource).not.toContain('<div className="mini-material">PET</div><div><strong>{lang === "ar" ? "زجاجة بلاستيكية"');
   });
 
+  it("removes the marketplace eyebrow label while preserving its icon", () => {
+    expect(appSource).toContain('<span className="eyebrow"><PackageSearch size={15} /></span>');
+    expect(appSource).not.toContain("اتصالات الأعمال");
+    expect(appSource).not.toContain("Business connections");
+  });
+
   it("uses distinct functional feature-card titles and icons", () => {
     expect(appSource).toContain("Material identification");
     expect(appSource).toContain("Reference estimates");

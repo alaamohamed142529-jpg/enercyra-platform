@@ -433,3 +433,5 @@
 - [x] Verify all currencies and empty, zero, negative, and text weight states
 - [x] Re-run RTL, theme, responsive, tests, and production build checks
 - [x] Show the material's original LHV/kg immediately beneath Reference price in the same metric card, while keeping calculated value and energy pending until valid weight
+- [x] Prefill Publish form with classified material, entered weight, and available category/condition while leaving location and notes blank and all fields editable
+- [x] Add regression coverage and verify the Result-to-Publish handoff in English, Arabic RTL, responsive layouts, and production build

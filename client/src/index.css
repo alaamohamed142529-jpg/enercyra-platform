@@ -1124,3 +1124,14 @@ h1, h2, h3, p { margin: 0; }
   [dir="rtl"] .hero-copy > p { font-size: 15px; line-height: 1.9; }
   [dir="rtl"] .hero-function-label small { font-size: 6px; }
 }
+
+/* Classification-only currency control: kept beside weight, removed from the global header. */
+.weight-currency-row { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 14px; }
+.weight-currency-row > label:first-child { min-width: 0; }
+.classify-currency { min-width: 116px; }
+.classify-currency select { min-width: 66px; }
+[dir="rtl"] .weight-currency-row { direction: rtl; }
+@media (max-width: 560px) {
+  .weight-currency-row { grid-template-columns: 1fr; gap: 10px; }
+  .classify-currency { width: 100%; }
+}

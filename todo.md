@@ -381,3 +381,6 @@
 - [x] Improve Arabic small-text clarity and RTL spacing
 - [x] Remove final full stops from Arabic UI sentences
 - [x] Verify Arabic/English layouts, themes, responsiveness, tests, and production build
+- [x] Remove the currency selector from the homepage header
+- [x] Add the currency selector beside the Classification weight field
+- [x] Preserve currency persistence, estimates, RTL, responsive behavior, tests, and production build

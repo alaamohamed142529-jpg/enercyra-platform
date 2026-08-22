@@ -405,3 +405,5 @@
 - [x] Verify Arabic/English progress wording, layout, navigation, tests, and production build
 - [x] Replace the rendered Arabic progress summary with «ارفع، حلّل، انشر»
 - [x] Verify the concise progress wording in Arabic/English and validate the build
+- [x] Replace gray inactive progress-step styling with a suitable dark teal/cyan accent
+- [x] Verify active green step, themes, RTL, responsiveness, tests, and production build

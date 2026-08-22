@@ -1179,3 +1179,8 @@ h1, h2, h3, p { margin: 0; }
 .classify-grid .benefit small { max-width: 230px; }
 [dir="rtl"] .classify-grid .benefit { text-align: right; }
 @media (max-width: 560px) { .classify-grid .benefit { padding: 12px 10px; } }
+
+/* Progress-step color refinement: replace muted gray with the platform's calm teal-cyan accent. */
+.classify-grid .progress-steps span:not(.active) { border-color: rgba(68,217,238,.46); color: #9bc9d1; background: rgba(68,217,238,.045); }
+.classify-grid .progress-steps i { background: rgba(68,217,238,.34); }
+.classify-grid .progress-steps p { color: #9bc9d1; }

@@ -494,3 +494,8 @@
 - [x] Verify favicon metadata, browser rendering, responsive branding, tests, and production build
 - [x] Replace the black-looking favicon with a clear Enercyra circular icon suitable for dark browser tab bars
 - [x] Verify the corrected favicon in the browser, tests, production build, and public deployment
+- [x] Extract Sections 3 and 4 from EcoSyncAI_Energy_Pipeline.ipynb, including the daily kWh data flow, 14-step LSTM input, 7-step forecast output, model architecture, scaler, and artifact-saving code
+- [x] Prepare persistent deployment-compatible LSTM model and scaler artifacts loaded once at server startup
+- [x] Add validated POST /api/forecast endpoint accepting exactly 14 numeric daily kWh values and returning 7 inverse-scaled predictions
+- [x] Add bilingual Energy Forecast UI with textarea, clear validation errors, forecast action, and historical/forecast line chart
+- [x] Verify the complete forecast flow, responsive presentation, tests, TypeScript, production build, and publish

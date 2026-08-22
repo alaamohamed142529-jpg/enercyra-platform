@@ -1,0 +1,21 @@
+{
+  "source": "EcoSyncAI_Energy_Pipeline.ipynb Sections 3-4",
+  "historical_data": "synthetic demo data",
+  "n_days": 200,
+  "lookback": 14,
+  "horizon": 7,
+  "seed": 42,
+  "scaler_data_min": 121.00712839337703,
+  "scaler_data_max": 252.5067805384836,
+  "scaler_scale": 0.007604582853926678,
+  "scaler_min": -0.920208733783179,
+  "preview_forecast_kwh": [
+    167.541397,
+    165.775864,
+    171.750885,
+    177.536011,
+    175.04895,
+    178.801117,
+    170.70639
+  ]
+}

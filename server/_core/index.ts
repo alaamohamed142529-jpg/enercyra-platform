@@ -8,6 +8,7 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import { energyForecastConfig, forecastEnergy } from "../energyForecast";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -36,6 +37,18 @@ async function startServer() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   registerStorageProxy(app);
   registerOAuthRoutes(app);
+  app.post("/api/forecast", (request, response) => {
+    try {
+      const values = request.body?.values;
+      if (!Array.isArray(values)) return response.status(400).json({ error: "Send a JSON body with a values array." });
+      if (values.length !== energyForecastConfig.lookback) return response.status(400).json({ error: `Exactly ${energyForecastConfig.lookback} daily kWh values are required.` });
+      if (values.some((value: unknown) => typeof value !== "number" || !Number.isFinite(value) || value < 0)) return response.status(400).json({ error: "Daily kWh values must be finite non-negative numbers." });
+      return response.json({ predictions: forecastEnergy(values), lookback: energyForecastConfig.lookback, horizon: energyForecastConfig.horizon, unit: "kWh" });
+    } catch (error) {
+      console.error("[Forecast] Request failed", error);
+      return response.status(500).json({ error: "Energy forecast is temporarily unavailable." });
+    }
+  });
   // tRPC API
   app.use(
     "/api/trpc",

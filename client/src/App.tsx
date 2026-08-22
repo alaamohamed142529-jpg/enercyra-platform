@@ -45,6 +45,7 @@ import {
   Zap,
 } from "lucide-react";
 import { Toaster, toast } from "sonner";
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
 import { trpc } from "./lib/trpc";
@@ -95,7 +96,7 @@ type Copy = {
 
 const copy: Record<Lang, Copy> = {
   en: {
-    nav: { dashboard: "Dashboard", classify: "Classify", marketplace: "Marketplace", businesses: "Businesses", how: "How It Works", about: "About" },
+    nav: { dashboard: "Dashboard", classify: "Classify", marketplace: "Marketplace", businesses: "Businesses", forecast: "Forecast", how: "How It Works", about: "About" },
     heroTitle: "See Waste. See Value.",
     heroSub: "AI-powered waste classification, reference value estimation, and energy insights.",
     classify: "Classify Waste",
@@ -114,7 +115,7 @@ const copy: Record<Lang, Copy> = {
     pending: "Price pending",
   },
   ar: {
-    nav: { dashboard: "لوحة التحكم", classify: "التصنيف", marketplace: "السوق", businesses: "الشركات", how: "كيف تعمل المنصة", about: "من نحن" },
+    nav: { dashboard: "لوحة التحكم", classify: "التصنيف", marketplace: "السوق", businesses: "الشركات", forecast: "التنبؤ", how: "كيف تعمل المنصة", about: "من نحن" },
     heroTitle: "شوف النفايات شوف قيمتها",
     heroSub: "منصة ذكية لتصنيف النفايات وتقدير قيمتها ومحتواها الطاقي وربطها بفرص الأعمال", 
     classify: "صنّف نفاياتك",
@@ -155,6 +156,7 @@ function App() {
             <Route path="/marketplace/:id" component={() => <ListingDetail text={text} lang={lang} />} />
             <Route path="/marketplace" component={() => <Marketplace text={text} lang={lang} />} />
             <Route path="/businesses" component={() => <Businesses lang={lang} />} />
+            <Route path="/forecast" component={() => <EnergyForecast lang={lang} />} />
             <Route path="/how-it-works" component={() => <HowItWorks text={text} lang={lang} />} />
             <Route path="/about" component={() => <About text={text} lang={lang} />} />
             <Route path="/my-listings" component={() => <MyListings text={text} lang={lang} />} />
@@ -177,6 +179,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
     ["/classify", "Classify", "التصنيف", Sparkles],
     ["/marketplace", "Marketplace", "السوق", PackageSearch],
     ["/businesses", "Businesses", "الشركات", Building2],
+    ["/forecast", "Forecast", "التنبؤ", BarChart3],
     ["/how-it-works", "How It Works", "كيف تعمل المنصة", CircleHelp],
     ["/about", "About", "من نحن", UserRound],
   ] as const;
@@ -187,7 +190,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
         <span className="brand-copy"><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات، اكتشف قيمتها" : "See Waste. See Value."}</small></span>
       </Link>
       <nav className={`desktop-nav ${menuOpen ? "is-open" : ""}`}>
-        {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "How It Works" ? "how" : "about"]}</Link>)}
+        {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "Forecast" ? "forecast" : en === "How It Works" ? "how" : "about"]}</Link>)}
       </nav>
       <div className="header-actions">
         <button className="icon-button" aria-label="Switch language" onClick={() => setLang(lang === "en" ? "ar" : "en")}><Globe2 size={17} /><span>{lang === "en" ? "العربية" : "English"}</span></button>
@@ -371,6 +374,37 @@ function Businesses({ lang }: { lang: Lang }) {
     <div className="business-grid">{filtered.map((business) => <article className="business-card" key={business.id}><div className="business-card-top"><div className="business-logo"><Recycle size={22} /></div><div><span className="business-city"><MapPin size={13} />{isAr ? business.arCity : business.city}</span><h2>{isAr ? business.arName : business.name}</h2><p>{isAr ? business.arType : business.type}</p></div></div><div className="business-materials">{(isAr ? business.arMaterials : business.materials).map((material) => <span key={material}>{material}</span>)}</div><div className="business-contact"><span><MapPin size={15} />{isAr ? business.arAddress : business.address}</span>{business.phone.length > 0 ? <span><Phone size={15} />{business.phone.join(" · ")}</span> : <span><Phone size={15} />{isAr ? "الهاتف غير منشور" : "Phone not publicly listed"}</span>}<span><Mail size={15} />{business.email}</span></div><div className="business-actions"><a className="btn btn-primary" href={business.website} target="_blank" rel="noreferrer"><ExternalLink size={15} />{isAr ? "الموقع الرسمي" : "Official website"}</a>{business.phone[0] && <a className="btn btn-secondary" href={`tel:${business.phone[0]}`}><Phone size={15} />{isAr ? "اتصال" : "Call"}</a>}</div><small className="business-source"><ShieldCheck size={13} />{isAr ? "المصدر: " : "Source: "}<a href={business.website} target="_blank" rel="noreferrer">{business.source}</a></small></article>)}</div>{filtered.length === 0 && <div className="empty-state"><Search size={35} /><h3>{isAr ? "لا توجد نتائج" : "No businesses found"}</h3><p>{isAr ? "جربي تغيير البحث أو الفلاتر." : "Try another search or filter."}</p></div>}<div className="business-disclaimer"><ShieldCheck size={18} /><p>{isAr ? "تنبيه: الإدراج لا يعني اعتمادًا أو ضمانًا للخدمة. تحققي من الأسعار، نطاق الاستلام، والتراخيص مباشرة مع الشركة قبل تسليم أي مخلفات أو توقيع اتفاق." : "Directory note: listing does not constitute endorsement or guarantee. Verify pricing, pickup coverage, and licensing directly with each company before handing over waste or signing an agreement."}</p></div>
   </div>;
 }
+type ForecastChartPoint = { day: string; historical?: number; forecast?: number };
+
+function EnergyForecast({ lang }: { lang: Lang }) {
+  const [rawValues, setRawValues] = useState("");
+  const [predictions, setPredictions] = useState<number[]>([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const labels = lang === "ar" ? { eyebrow: "تحليل الطاقة", title: "توقع استهلاك الطاقة", description: "توقع استهلاك الطاقة القادم بناءً على بيانات تاريخية", placeholder: "مثال: 145, 152, 148, 160 ...", action: "توقع الأيام السبعة القادمة", history: "بيانات تاريخية", forecast: "التوقعات", unit: "kWh", invalidCount: "أدخل 14 قيمة يومية بالضبط.", invalidNumber: "كل القيم يجب أن تكون أرقامًا غير سالبة.", empty: "أدخل قيم الطاقة اليومية أولًا." } : { eyebrow: "Energy intelligence", title: "Energy Forecast", description: "Forecast upcoming energy consumption based on historical data", placeholder: "Example: 145, 152, 148, 160 ...", action: "Forecast next 7 days", history: "Historical", forecast: "Forecast", unit: "kWh", invalidCount: "Enter exactly 14 daily values.", invalidNumber: "Every value must be a finite non-negative number.", empty: "Enter daily energy values first." };
+  const chartData: ForecastChartPoint[] = useMemo(() => {
+    const input = rawValues.split(",").map((value) => value.trim()).filter(Boolean).map(Number).filter((value) => Number.isFinite(value));
+    return [...input.map((value, index) => ({ day: `${lang === "ar" ? "ي" : "D"}${index + 1}`, historical: value })), ...predictions.map((value, index) => ({ day: `${lang === "ar" ? "ي" : "D"}${input.length + index + 1}`, forecast: value }))];
+  }, [lang, predictions, rawValues]);
+  const runForecast = async () => {
+    setError("");
+    const values = rawValues.split(",").map((value) => value.trim()).filter(Boolean).map(Number);
+    if (values.length !== 14) { setPredictions([]); setError(labels.invalidCount); return; }
+    if (values.some((value) => !Number.isFinite(value) || value < 0)) { setPredictions([]); setError(labels.invalidNumber); return; }
+    setLoading(true);
+    try {
+      const response = await fetch("/api/forecast", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ values }) });
+      const body = await response.json() as { predictions?: number[]; error?: string };
+      if (!response.ok || !body.predictions) throw new Error(body.error || "Forecast request failed");
+      setPredictions(body.predictions);
+    } catch (requestError) {
+      setPredictions([]);
+      setError(requestError instanceof Error ? requestError.message : "Forecast request failed");
+    } finally { setLoading(false); }
+  };
+  return <div className="page container content-page forecast-page"><div className="page-heading"><span className="eyebrow"><BarChart3 size={15} />{labels.eyebrow}</span><h1>{labels.title}</h1><p>{labels.description}</p></div><div className="forecast-grid"><section className="forecast-input-card"><div className="forecast-card-heading"><div className="feature-icon"><Zap size={20} /></div><div><h2>{labels.title}</h2><p>{labels.description}</p></div></div><label htmlFor="forecast-values">{lang === "ar" ? "القيم اليومية (14 يومًا)" : "Daily values (14 days)"}</label><textarea id="forecast-values" dir="ltr" value={rawValues} onChange={(event) => { setRawValues(event.target.value); setError(""); }} placeholder={labels.placeholder} rows={5} aria-describedby="forecast-help forecast-error" /><small id="forecast-help">{lang === "ar" ? "افصل بين القيم بفاصلة، والوحدة kWh" : "Separate values with commas. Unit: kWh"}</small>{error && <p id="forecast-error" className="field-error" role="alert">{error}</p>}<button className="btn btn-primary forecast-button" type="button" onClick={runForecast} disabled={loading}>{loading ? (lang === "ar" ? "جارٍ التنبؤ..." : "Forecasting...") : labels.action}<ArrowRight size={17} /></button></section><section className="forecast-result-card" aria-live="polite"><div className="forecast-result-heading"><div><span className="eyebrow"><Sparkles size={14} />{predictions.length ? (lang === "ar" ? "النتيجة" : "Result") : (lang === "ar" ? "جاهز للتنبؤ" : "Ready to forecast")}</span><h2>{predictions.length ? (lang === "ar" ? "توقع الأيام القادمة" : "Next 7 days") : (lang === "ar" ? "أدخل البيانات لرؤية الرسم" : "Add data to see the chart")}</h2></div>{predictions.length > 0 && <strong className="forecast-total">{predictions.reduce((sum, value) => sum + value, 0).toFixed(1)} {labels.unit}</strong>}</div>{chartData.length > 0 ? <div className="forecast-chart"><ResponsiveContainer width="100%" height={300}><LineChart data={chartData} margin={{ top: 12, right: 8, left: 0, bottom: 4 }}><CartesianGrid strokeDasharray="3 3" stroke="var(--line)" /><XAxis dataKey="day" stroke="var(--text-secondary)" /><YAxis stroke="var(--text-secondary)" unit=" kWh" /><Tooltip formatter={(value: number) => [`${value.toFixed(2)} kWh`, ""]} contentStyle={{ background: "var(--bg-card)", border: "1px solid var(--line)", borderRadius: 12 }} /><Line type="monotone" dataKey="historical" name={labels.history} stroke="var(--cyan)" strokeWidth={3} dot={{ r: 3 }} connectNulls /><Line type="monotone" dataKey="forecast" name={labels.forecast} stroke="var(--lime)" strokeWidth={3} strokeDasharray="6 5" dot={{ r: 4 }} connectNulls /></LineChart></ResponsiveContainer></div> : <div className="forecast-empty"><BarChart3 size={34} /><p>{labels.empty}</p></div>}{predictions.length > 0 && <div className="forecast-values">{predictions.map((value, index) => <div key={`${value}-${index}`}><small>{lang === "ar" ? `اليوم +${index + 1}` : `Day +${index + 1}`}</small><strong>{value.toFixed(2)} <span>{labels.unit}</span></strong></div>)}</div>}</section></div></div>;
+}
+
 function HowItWorks({ lang }: { text: Copy; lang: Lang }) { return <div className="page container content-page"><div className="page-heading"><span className="eyebrow"><Zap size={15} />{lang === "ar" ? "كيف تعمل إنِرسيرا" : "How Enercyra works"}</span><h1>{lang === "ar" ? "من الصورة إلى فرصة عمل." : "From image to business opportunity."}</h1><p>{lang === "ar" ? "ثلاث خطوات تجعل المادة أوضح وأسهل في الوصول إلى الاتصال المناسب." : "Three clear steps make a material easier to understand and easier to connect."}</p></div><div className="flow-grid"><FlowCard n="01" icon={<Sparkles />} title={lang === "ar" ? "صنّف" : "Classify"} copy={lang === "ar" ? "ارفع صورة. يحدد MobileNet نوع المادة من بين 37 فئة." : "Upload an image. MobileNet identifies the material across 37 categories."} /><FlowCard n="02" icon={<BarChart3 />} title={lang === "ar" ? "احسب" : "Calculate"} copy={lang === "ar" ? "أدخل الوزن وشاهد القيمة والطاقة كتقديرات مرجعية واضحة." : "Add weight and see clearly labeled reference value and energy estimates."} /><FlowCard n="03" icon={<UsersRound />} title={lang === "ar" ? "تواصل" : "Connect"} copy={lang === "ar" ? "انشر المادة واعثر على مشترين محتملين عبر السوق." : "Publish the material and find potential buyers through the marketplace."} /></div><div className="principles-card"><div><ShieldCheck size={23} /><h3>{lang === "ar" ? "مصمم بوضوح" : "Designed for clarity"}</h3></div><p>{lang === "ar" ? "نفرّق دائمًا بين نتيجة النموذج وبين التقديرات المرجعية. لا يوجد سعر مخفي أو رقم معروض كحقيقة سوقية دون وسم." : "We keep model output separate from reference estimates. No hidden price or number is presented as a market fact without a label."}</p></div></div>; }
 function FlowCard({ n, icon, title, copy: description }: { n: string; icon: React.ReactNode; title: string; copy: string }) { return <div className="flow-card"><span className="flow-number">{n}</span><div className="feature-icon">{icon}</div><h2>{title}</h2><p>{description}</p><ArrowRight className="feature-arrow" size={19} /></div>; }
 const ENGLISH_OHOUD_NAME = ["Ohoud", "Taha"].join(" ");

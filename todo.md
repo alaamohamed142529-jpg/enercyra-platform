@@ -475,3 +475,7 @@
 - [x] Add the three supplied portraits to reliable web storage and map them in a teamMembers data array with their correct LinkedIn URLs
 - [x] Add a responsive About Team section with clickable circular avatars, names, roles, hover affordances, RTL support, and regression coverage
 - [x] Verify the team images and links in English/Arabic, light/dark, desktop/mobile, tests, and production build
+- [x] Diagnose why the public About page does not show the newly added Team section
+- [x] Verify and republish the visible Team section across English, Arabic RTL, responsive layouts, and the public domain
+- [x] Remove team role labels, correct the Arabic name to «آلاء محمد», and apply Arabic-only visual order آلاء ثم هدى ثم رحمة
+- [x] Verify preserved card visuals, English/Arabic RTL ordering, responsive layouts, tests, and production build

@@ -384,3 +384,7 @@
 - [x] Remove the currency selector from the homepage header
 - [x] Add the currency selector beside the Classification weight field
 - [x] Preserve currency persistence, estimates, RTL, responsive behavior, tests, and production build
+- [x] Align Classification page typography and color hierarchy with the supplied reference
+- [x] Refine Classification wording and benefit labels for clearer Arabic/English meaning
+- [x] Improve upload panel, benefits-card spacing, and progress-step presentation without removing functionality
+- [x] Verify real upload flow, RTL, themes, responsiveness, tests, and production build

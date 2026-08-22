@@ -20,6 +20,16 @@ describe("homepage content contract", () => {
     expect(appSource).not.toContain("Business connections");
   });
 
+  it("renders only real persisted Marketplace listings with an empty state", () => {
+    expect(appSource).toContain("trpc.marketplace.list.useQuery()");
+    expect(appSource).toContain("No published listings yet");
+    expect(appSource).toContain("انشر أول مادة حقيقية لتظهر هنا.");
+    expect(appSource).toContain('src={item.imageUrl || ""}');
+    expect(appSource).not.toContain("Plastic Bottles");
+    expect(appSource).not.toContain("Aluminum Cans");
+    expect(appSource).not.toContain("Mixed Materials");
+  });
+
   it("uses distinct functional feature-card titles and icons", () => {
     expect(appSource).toContain("Material identification");
     expect(appSource).toContain("Reference estimates");

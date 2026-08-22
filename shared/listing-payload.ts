@@ -6,6 +6,7 @@ export type ClassificationPayload = {
   displayNameAr: string;
   confidence?: number;
   imageName?: string;
+  imageDataUrl?: string;
 };
 
 export function buildListingPayload(classification: ClassificationPayload, fields: { weightKg: number; location: string; contactPhone?: string; condition?: string; notes?: string }) {
@@ -25,5 +26,6 @@ export function buildListingPayload(classification: ClassificationPayload, field
       fileName: classification.imageName,
       capturedAt: new Date().toISOString(),
     }) : undefined,
+    imageDataUrl: classification.imageDataUrl || undefined,
   };
 }

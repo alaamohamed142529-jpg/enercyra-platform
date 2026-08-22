@@ -11,10 +11,12 @@ describe("buildListingPayload", () => {
       displayNameAr: "بلاستيك",
       confidence: 0.941234,
       imageName: "bottle.jpg",
+      imageDataUrl: "data:image/jpeg;base64,ZmFrZQ==",
     }, { weightKg: 2.5, location: "Cairo", condition: "Clean", notes: "Sorted" });
     expect(payload.classId).toBe("plastic");
     expect(payload.displayNameEn).toBe("Plastic");
     expect(payload.weightKg).toBe(2.5);
     expect(JSON.parse(payload.imageMetadata || "{}")).toMatchObject({ source: "model", modelClassId: "24", confidence: 0.941234, fileName: "bottle.jpg" });
+    expect(payload.imageDataUrl).toBe("data:image/jpeg;base64,ZmFrZQ==");
   });
 });

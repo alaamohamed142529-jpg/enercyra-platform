@@ -5,6 +5,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { createListing, listActiveListings, listListingsForOwner, listReferenceData, removeListing } from "./db";
 import { runMobileNetInference } from "./inference";
+import { storagePut } from "./storage";
 
 export const appRouter = router({
   system: systemRouter,
@@ -42,7 +43,20 @@ export const appRouter = router({
       notes: z.string().max(3000).optional(),
       imageUrl: z.string().url().optional(),
       imageMetadata: z.string().max(2000).optional(),
-    })).mutation(({ ctx, input }) => createListing({ ...input, ownerId: ctx.user.id, weightKg: input.weightKg.toFixed(3) })),
+      imageDataUrl: z.string().startsWith("data:image/").max(11_000_000).optional(),
+    })).mutation(async ({ ctx, input }) => {
+      const { imageDataUrl, ...listingInput } = input;
+      let imageUrl = listingInput.imageUrl;
+      if (imageDataUrl) {
+        const match = imageDataUrl.match(/^data:(image\/[A-Za-z0-9.+-]+);base64,(.+)$/);
+        if (!match) throw new Error("Invalid classified image data");
+        const [, contentType, encoded] = match;
+        const extension = contentType.split("/")[1]?.replace(/[^A-Za-z0-9]/g, "") || "jpeg";
+        const stored = await storagePut(`listings/${ctx.user.id}/${Date.now()}.${extension}`, Buffer.from(encoded, "base64"), contentType);
+        imageUrl = stored.url;
+      }
+      return createListing({ ...listingInput, imageUrl, ownerId: ctx.user.id, weightKg: input.weightKg.toFixed(3) });
+    }),
     remove: protectedProcedure.input(z.object({ id: z.number().int().positive() })).mutation(({ ctx, input }) => removeListing(ctx.user.id, input.id).then(() => ({ success: true }))),
   }),
 });

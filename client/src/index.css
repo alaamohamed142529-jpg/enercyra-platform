@@ -1280,3 +1280,6 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .publish-source-summary { background: var(--surface-soft); border-color: var(--border-subtle); }
 .app-shell.theme-light .publish-form .form-field > span { color: var(--text-primary); }
 @media (max-width: 760px) { .publish-source-summary { align-items: flex-start; } .publish-form .form-grid { grid-template-columns: 1fr; } }
+
+.listing-image { display: block; width: 100%; height: 180px; object-fit: cover; background: var(--panel2); border-bottom: 1px solid var(--line); }
+.listing-notes { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }

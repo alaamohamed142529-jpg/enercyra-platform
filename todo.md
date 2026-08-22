@@ -450,3 +450,6 @@
 - [x] Verify all language variants and publish the final label-removal checkpoint
 - [x] Remove the remaining marketplace eyebrow icon while preserving the Marketplace title and unrelated navigation icons
 - [x] Verify English and Arabic RTL marketplace headers and publish the correction
+- [x] Remove all hardcoded Marketplace mock listings and read only real published listings
+- [x] Persist successful listings with material, weight, location, condition, notes, and classified image; update Marketplace immediately
+- [x] Add a clear empty state with publish CTA and regression coverage for persistence, real images, RTL, responsive behavior, and production build

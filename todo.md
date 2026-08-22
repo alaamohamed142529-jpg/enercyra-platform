@@ -394,3 +394,5 @@
 - [x] Verify Arabic/English layouts, themes, responsiveness, tests, and build
 - [x] Remove the remaining Step 1 of 3 label permanently from Classification
 - [x] Verify heading spacing and Classification functionality after removal
+- [x] Match Your Waste heading color to the Enercyra logo green
+- [x] Verify heading color, themes, responsiveness, tests, and production build

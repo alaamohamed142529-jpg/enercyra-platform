@@ -1163,7 +1163,7 @@ h1, h2, h3, p { margin: 0; }
 
 /* Classification heading refinement: no eyebrow; emphasize the second English phrase. */
 .page:has(.classify-grid) .page-heading { padding-top: 10px; }
-.page:has(.classify-grid) .page-heading h1 .heading-accent { color: #8fd34f; }
+.page:has(.classify-grid) .page-heading h1 .heading-accent { color: var(--lime); }
 .page:has(.classify-grid) .page-heading h1 span { display: inline; }
 [dir="rtl"] .page:has(.classify-grid) .page-heading { padding-top: 10px; }
 

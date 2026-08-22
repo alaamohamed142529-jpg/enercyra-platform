@@ -419,3 +419,6 @@
 - [x] Add subtle turquoise separation to the main Classification cards
 - [x] Strengthen the Light Mode camera-button turquoise border while keeping its light fill
 - [x] Verify Light/Dark modes, RTL, responsiveness, tests, and production build
+- [x] Unify all Classification benefit subtitles to the same calm gray-teal color
+- [x] Prevent inherited link or element styles from creating subtitle color differences
+- [x] Verify subtitle parity in English/Arabic, themes, responsiveness, tests, and production build

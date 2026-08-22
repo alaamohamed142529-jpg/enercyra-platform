@@ -1226,3 +1226,7 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .classify-grid .benefit { background: #cfe7e8 !important; border-color: rgba(21,103,116,.20); }
 .app-shell.theme-light .classify-grid .upload-card .btn-secondary { color: #145b68; background: #ffffff; border: 1px solid #16899b; box-shadow: 0 2px 7px rgba(21,137,155,.10); }
 .app-shell.theme-light .classify-grid .upload-card .btn-secondary:hover, .app-shell.theme-light .classify-grid .upload-card .btn-secondary:focus-visible { color: #0d4b58; background: #edfafa; border-color: #0f7182; }
+
+/* Benefit subtitle parity: one explicit calm gray-teal value for every card. */
+.classify-grid .benefit small, .classify-grid .benefit small a { color: #9eb3ba !important; font-weight: 400; opacity: 1; text-decoration: none; }
+.app-shell.theme-light .classify-grid .benefit small, .app-shell.theme-light .classify-grid .benefit small a { color: #46636b !important; }

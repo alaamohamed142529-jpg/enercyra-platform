@@ -16,6 +16,12 @@ describe("Classification Result calculation UI contract", () => {
     expect(appSource).toContain("item.lhv === null ? \"—\" : item.lhv.toFixed(1)");
   });
 
+  it("does not render technical uploaded filenames in the preview UI", () => {
+    expect(appSource).not.toContain("<small>{classification.imageName ||");
+    expect(appSource).toContain("<strong>{busy ? (lang === \"ar\" ? \"جارٍ تحليل الصورة...\" : \"Analyzing image...\") : text.uploadTitle}</strong>");
+    expect(appSource).toContain("<span>{busy ? (lang === \"ar\" ? \"يتم تشغيل MobileNetV3\" : \"Running MobileNetV3\") : text.uploadSub}</span>");
+  });
+
   it("passes Result values into the editable Publish form without pre-filling location or notes", () => {
     expect(appSource).toContain("window.sessionStorage.setItem(\"enercyra-publish-draft\", JSON.stringify({ weight: nextWeight }))");
     expect(appSource).toContain("typeof draft?.weight === \"string\" ? draft.weight : \"\"");

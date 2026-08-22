@@ -499,3 +499,9 @@
 - [x] Add validated POST /api/forecast endpoint accepting exactly 14 numeric daily kWh values and returning 7 inverse-scaled predictions
 - [x] Add bilingual Energy Forecast UI with textarea, clear validation errors, forecast action, and historical/forecast line chart
 - [x] Verify the complete forecast flow, responsive presentation, tests, TypeScript, production build, and publish
+- [x] Diagnose why the public domain does not show the new Energy Forecast route and compare it with preview/build output
+- [x] Fix any public route, deployment, or cache issue preventing Energy Forecast from appearing
+- [x] Republish and verify the public forecast page and `/api/forecast` with cache-busting
+- [x] Prepare a sanitized downloadable local archive of the current Enercyra source and model artifacts
+- [x] Add local setup and run instructions without including secrets
+- [x] Validate the archive contents and deliver it with the local installation steps

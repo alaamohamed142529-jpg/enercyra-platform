@@ -45,7 +45,7 @@ describe("homepage content contract", () => {
   it("renders the About Team section from data-driven LinkedIn-linked members", () => {
     expect(appSource).toContain("const teamMembers = [");
     expect(appSource).toContain('nameEn: "Alaa Mohamed", nameAr: "آلاء محمد"');
-    expect(appSource).toContain('nameEn: "Huda Taha", nameAr: "هدى طه"');
+    expect(appSource).toContain('nameEn: "Huda Taha", nameAr: "عهود طه"');
     expect(appSource).toContain('nameEn: "Rahma Mohamed", nameAr: "رحمة محمد"');
     expect(appSource).toContain('dir={lang === "ar" ? "rtl" : "ltr"}');
     expect(appSource).toContain('const memberName = lang === "ar" ? member.nameAr : member.nameEn;');

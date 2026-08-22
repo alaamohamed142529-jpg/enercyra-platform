@@ -479,3 +479,5 @@
 - [x] Verify and republish the visible Team section across English, Arabic RTL, responsive layouts, and the public domain
 - [x] Remove team role labels, correct the Arabic name to «آلاء محمد», and apply Arabic-only visual order آلاء ثم هدى ثم رحمة
 - [x] Verify preserved card visuals, English/Arabic RTL ordering, responsive layouts, tests, and production build
+- [x] Rename the second Arabic Team member from «هدى طه» to «عهود طه» without changing image, LinkedIn link, order, or design
+- [x] Verify the corrected About Team name and publish the update

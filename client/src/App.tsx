@@ -375,7 +375,7 @@ function HowItWorks({ lang }: { text: Copy; lang: Lang }) { return <div classNam
 function FlowCard({ n, icon, title, copy: description }: { n: string; icon: React.ReactNode; title: string; copy: string }) { return <div className="flow-card"><span className="flow-number">{n}</span><div className="feature-icon">{icon}</div><h2>{title}</h2><p>{description}</p><ArrowRight className="feature-arrow" size={19} /></div>; }
 const teamMembers = [
   { nameEn: "Alaa Mohamed", nameAr: "آلاء محمد", image: "/manus-storage/alaa_3689a963.jpg", linkedin: "https://www.linkedin.com/in/alaa-mohamed-analyst/" },
-  { nameEn: "Huda Taha", nameAr: "هدى طه", image: "/manus-storage/ohoud_5d143c3b.jpg", linkedin: "https://www.linkedin.com/in/ohoudtaha/" },
+  { nameEn: "Huda Taha", nameAr: "عهود طه", image: "/manus-storage/ohoud_5d143c3b.jpg", linkedin: "https://www.linkedin.com/in/ohoudtaha/" },
   { nameEn: "Rahma Mohamed", nameAr: "رحمة محمد", image: "/manus-storage/rahma_00948031.jpg", linkedin: "https://www.linkedin.com/in/rahma-mohamed-data/" },
 ] as const;
 function About({ lang }: { text: Copy; lang: Lang }) {

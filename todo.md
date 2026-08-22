@@ -399,3 +399,5 @@
 - [x] Update Classification benefit wording to the agreed clearer Arabic/English copy
 - [x] Apply reference-inspired benefit icons, accent colors, inner cards, spacing, and hierarchy
 - [x] Verify Classification benefits in Arabic/English, themes, responsive layouts, tests, and production build
+- [x] Rewrite the Arabic Classification benefits and progress wording for clarity
+- [x] Verify revised Arabic copy, RTL layout, responsiveness, tests, and production build

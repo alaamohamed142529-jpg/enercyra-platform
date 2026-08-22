@@ -1045,3 +1045,19 @@ h1, h2, h3, p { margin: 0; }
   transform-origin: right center !important;
   animation: calloutLinePulse 3.8s ease-in-out infinite !important;
 }
+
+/* Inward connector correction: the CONNECT leader starts above the label and points into the orbital system. */
+.label-connect::after {
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 100% !important;
+  width: 28px !important;
+  height: 0 !important;
+  border: 0 !important;
+  border-top: 1px dotted currentColor !important;
+  opacity: .42 !important;
+  transform: rotate(-90deg) !important;
+  transform-origin: left center !important;
+  animation: calloutLinePulse 3.8s ease-in-out infinite !important;
+}

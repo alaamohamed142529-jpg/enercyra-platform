@@ -368,3 +368,6 @@
 - [x] Replace the inappropriate CONNECT arrow with the short subtle dotted leader shown in the reference
 - [x] Match CONNECT connector length, angle, opacity, and timing to the other callouts
 - [x] Verify the corrected connector and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Reverse CONNECT’s dotted connector so it points inward toward the AI core
+- [x] Preserve matching connector length, thickness, opacity, and animation
+- [x] Verify the inward direction and project integrity across desktop/mobile, RTL, themes, tests, and production build

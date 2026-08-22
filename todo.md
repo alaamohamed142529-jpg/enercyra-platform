@@ -416,3 +416,6 @@
 - [x] Replace dark/gray Light Mode surfaces with bright accessible cards and page backgrounds
 - [x] Improve Light Mode text contrast, icon treatments, and theme-toggle state clarity
 - [x] Verify Light/Dark modes, Arabic RTL, English, responsive layouts, tests, and production build
+- [x] Add subtle turquoise separation to the main Classification cards
+- [x] Strengthen the Light Mode camera-button turquoise border while keeping its light fill
+- [x] Verify Light/Dark modes, RTL, responsiveness, tests, and production build

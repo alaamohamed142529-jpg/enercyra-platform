@@ -1219,3 +1219,10 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .theme-toggle { color: var(--accent-cyan); background: #e7f7f3; border-color: rgba(22,137,155,.32); }
 .app-shell.theme-light .theme-toggle .toggle-dot { background: var(--accent); box-shadow: 0 0 0 3px rgba(126,188,39,.16); }
 .app-shell.theme-light .demo-note { background: #ffffff; color: var(--text-secondary); border-color: var(--border-subtle); }
+
+/* Final Light Mode hierarchy overrides — intentionally last to win the cascade. */
+.app-shell.theme-light .classify-grid .upload-card { background: linear-gradient(145deg, #e8f8f5 0%, #cceae8 100%) !important; border: 1px dashed rgba(21,137,155,.58); box-shadow: 0 2px 8px rgba(24,76,79,.10); }
+.app-shell.theme-light .classify-grid .benefit-panel { background: linear-gradient(145deg, #e7f6f2 0%, #d6ecec 100%) !important; border: 1px solid rgba(21,137,155,.34); box-shadow: 0 2px 8px rgba(24,76,79,.08); }
+.app-shell.theme-light .classify-grid .benefit { background: #cfe7e8 !important; border-color: rgba(21,103,116,.20); }
+.app-shell.theme-light .classify-grid .upload-card .btn-secondary { color: #145b68; background: #ffffff; border: 1px solid #16899b; box-shadow: 0 2px 7px rgba(21,137,155,.10); }
+.app-shell.theme-light .classify-grid .upload-card .btn-secondary:hover, .app-shell.theme-light .classify-grid .upload-card .btn-secondary:focus-visible { color: #0d4b58; background: #edfafa; border-color: #0f7182; }

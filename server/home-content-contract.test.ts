@@ -42,6 +42,19 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("Contact seller");
   });
 
+  it("renders the About Team section from data-driven LinkedIn-linked members", () => {
+    expect(appSource).toContain("const teamMembers = [");
+    expect(appSource).toContain("/manus-storage/alaa_3689a963.jpg");
+    expect(appSource).toContain("/manus-storage/ohoud_5d143c3b.jpg");
+    expect(appSource).toContain("/manus-storage/rahma_00948031.jpg");
+    expect(appSource).toContain("https://www.linkedin.com/in/alaa-mohamed-analyst/");
+    expect(appSource).toContain("https://www.linkedin.com/in/ohoudtaha/");
+    expect(appSource).toContain("https://www.linkedin.com/in/rahma-mohamed-data/");
+    expect(appSource).toContain("teamMembers.map");
+    expect(appSource).toContain('target="_blank" rel="noopener noreferrer"');
+    expect(appSource).toContain('className="team-avatar"');
+  });
+
   it("encodes the About QR with the stable public homepage URL", () => {
     expect(appSource).toContain('const shareUrl = "https://enercyraai-drvxzjat.manus.space/";');
     expect(appSource).toContain("<QRCodeSVG value={shareUrl}");

@@ -472,3 +472,6 @@
 - [x] Verify the complete location list, search/filter behavior, RTL, responsive layout, tests, and production build
 - [x] Fix Marketplace native location dropdown option contrast in Dark Mode while preserving Light Mode and filtering
 - [x] Verify dropdown readability in Arabic/English, both themes, responsive layouts, tests, and production build
+- [x] Add the three supplied portraits to reliable web storage and map them in a teamMembers data array with their correct LinkedIn URLs
+- [x] Add a responsive About Team section with clickable circular avatars, names, roles, hover affordances, RTL support, and regression coverage
+- [x] Verify the team images and links in English/Arabic, light/dark, desktop/mobile, tests, and production build

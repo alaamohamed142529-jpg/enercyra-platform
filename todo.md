@@ -505,3 +505,6 @@
 - [x] Prepare a sanitized downloadable local archive of the current Enercyra source and model artifacts
 - [x] Add local setup and run instructions without including secrets
 - [x] Validate the archive contents and deliver it with the local installation steps
+- [x] Create a Windows portable launcher that starts Enercyra locally from a USB-drive folder
+- [x] Package the built app, dependencies, runtime guidance, and model artifacts for portable use
+- [x] Validate the portable package and provide simple flash-drive launch instructions

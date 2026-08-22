@@ -24,6 +24,12 @@ http://localhost:3000/forecast
 
 صفحة `/forecast` تعمل على إرسال 14 قيمة kWh إلى `POST /api/forecast` وإرجاع توقعات الأيام السبعة التالية. ملفات `server/models/lstm_model.pt` و`server/models/scaler.pkl` موجودة داخل النسخة ويتم تحميلها مرة واحدة عند بدء الخادم. يستخدم الخادم ملف JSON المحسّن للاستدلال السريع مع الاحتفاظ بملفات النموذج الأصلية للمراجعة وإعادة التدريب.
 
+## تشغيل نسخة الفلاشة Portable على Windows
+
+إذا أردتِ تشغيل الموقع من فلاشة بدون تثبيت Node.js، استخدمي الحزمة `Enercyra-Portable-Windows.zip`. فكّي الضغط كاملًا داخل الفلاشة، ثم افتحي `Start-Enercyra.bat`. سيبدأ الموقع تلقائيًا ويفتح صفحة Energy Forecast على `http://localhost:3000/forecast`. لا تنقلي ملف التشغيل وحده؛ يجب أن يبقى مجلد `runtime` و`dist` و`model` و`server` بجانبه.
+
+هذه الحزمة المحمولة تشغّل واجهة الموقع وEnergy Forecast محليًا باستخدام Node المرفق. أما تصنيف الصور بـ MobileNetV3 فيحتاج Python و`onnxruntime` وPillow على Windows، أو تشغيل الحزمة عبر Docker Desktop؛ لا يحتاج Energy Forecast هذه المتطلبات الإضافية.
+
 ## التشغيل باستخدام Docker
 
 من داخل مجلد المشروع:

@@ -3,6 +3,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 const appSource = fs.readFileSync(path.resolve(process.cwd(), "client/src/App.tsx"), "utf8");
+const cssSource = fs.readFileSync(path.resolve(process.cwd(), "client/src/index.css"), "utf8");
 
 describe("Classification Result calculation UI contract", () => {
   it("derives reference price from the selected display currency", () => {
@@ -40,6 +41,12 @@ describe("Classification Result calculation UI contract", () => {
     expect(appSource).toContain("contactPhone");
     expect(appSource).toContain("Condition (optional)");
     expect(appSource).toContain("Notes (optional)");
+  });
+
+  it("uses one shared vertical layout for every Publish form field", () => {
+    expect(cssSource).toContain(".publish-form .form-field { display: flex; flex-direction: column;");
+    expect(cssSource).toContain(".publish-form .form-field > span { display: block;");
+    expect(cssSource).toContain(".publish-form .form-field input, .publish-form .form-field textarea { width: 100%;");
   });
 
   it("shows the weight hint only while the parsed weight is not positive", () => {

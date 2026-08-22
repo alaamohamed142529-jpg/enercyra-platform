@@ -440,3 +440,5 @@
 - [x] Show classification-derived material, weight, and image context on Publish without requiring re-entry
 - [x] Add editable account-prefilled location and phone fields; keep condition and notes optional
 - [x] Fix vertical label/input layout and verify English, Arabic RTL, responsive behavior, tests, and production build
+- [x] Fix the shared Publish listing field layout so Material, Weight, Location, and Condition render with labels above controls without overlap
+- [x] Add regression coverage and verify the shared layout in English, Arabic RTL, responsive views, tests, and production build

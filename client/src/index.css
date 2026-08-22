@@ -1230,3 +1230,34 @@ h1, h2, h3, p { margin: 0; }
 /* Benefit subtitle parity: one explicit calm gray-teal value for every card. */
 .classify-grid .benefit small, .classify-grid .benefit small a { color: #9eb3ba !important; font-weight: 400; opacity: 1; text-decoration: none; }
 .app-shell.theme-light .classify-grid .benefit small, .app-shell.theme-light .classify-grid .benefit small a { color: #46636b !important; }
+
+/* Result-page unified calculation metrics. */
+.calculation-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.calculation-metrics .metric { min-width: 0; min-height: 142px; padding: 14px 13px; border: 1px solid var(--line); border-radius: 14px; background: rgba(8,31,45,.48); display: flex; flex-direction: column; gap: 8px; }
+.calculation-metrics .metric-label { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 11px; line-height: 1.3; }
+.calculation-metrics .metric-label svg { color: var(--cyan); flex: 0 0 auto; }
+.calculation-metrics .metric strong { color: var(--text); font-size: 18px; line-height: 1.25; }
+.calculation-metrics .metric strong em { color: var(--muted); font-size: 10px; font-style: normal; font-weight: 500; }
+.calculation-metrics .metric-note, .calculation-metrics .field-help { color: var(--muted); font-size: 10px; line-height: 1.45; }
+.calculation-metrics .metric > .pending, .calculation-metrics .metric > .reference-tag { margin-top: auto; }
+.calculation-metrics .weight-metric input { width: 100%; min-height: 38px; padding: 8px 10px; border: 1px solid var(--cyan); border-radius: 9px; background: rgba(255,255,255,.06); color: var(--text); font: inherit; }
+.calculation-metrics .weight-metric input::placeholder { color: var(--muted); }
+.calculation-metrics .weight-metric .currency-control { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 6px; color: var(--muted); font-size: 10px; }
+.calculation-metrics .weight-metric .currency-control select { min-height: 27px; padding: 3px 7px; border: 1px solid var(--cyan); border-radius: 7px; background: var(--panel2); color: var(--text); font: inherit; }
+.app-shell.theme-light .calculation-metrics .metric { background: #eef8f6; border-color: var(--border-subtle); }
+.app-shell.theme-light .calculation-metrics .metric-label, .app-shell.theme-light .calculation-metrics .metric-note, .app-shell.theme-light .calculation-metrics .field-help, .app-shell.theme-light .calculation-metrics .metric strong em { color: var(--text-secondary); }
+.app-shell.theme-light .calculation-metrics .metric strong { color: var(--text-primary); }
+.app-shell.theme-light .calculation-metrics .weight-metric input { background: #ffffff; color: var(--text-primary); border-color: var(--accent-cyan); }
+.app-shell.theme-light .calculation-metrics .weight-metric .currency-control select { background: #ffffff; color: var(--text-primary); border-color: var(--accent-cyan); }
+@media (max-width: 760px) { .calculation-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .calculation-metrics { grid-template-columns: 1fr; } }
+
+/* Result redesign: keep the calculation panel as one vertical stack, with a full-width metric row. */
+.result-page .calculation-panel { grid-template-columns: 1fr !important; align-items: stretch; }
+.result-page .calculation-panel .calc-intro, .result-page .calculation-panel .calculation-metrics, .result-page .calculation-panel .result-actions { grid-column: 1 / -1; }
+.result-page .calculation-metrics { width: 100%; }
+.result-page .calculation-metrics .metric-label { margin: 0; border: 0; padding: 0; }
+.result-page .calculation-metrics .weight-metric .field-help { margin: 0; }
+.result-page .calculation-metrics .weight-metric .currency-control span { border: 0; padding: 0; }
+@media (max-width: 760px) { .result-page .calculation-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .result-page .calculation-metrics { grid-template-columns: 1fr; } }

@@ -422,3 +422,8 @@
 - [x] Unify all Classification benefit subtitles to the same calm gray-teal color
 - [x] Prevent inherited link or element styles from creating subtitle color differences
 - [x] Verify subtitle parity in English/Arabic, themes, responsiveness, tests, and production build
+- [x] Add a clear AI Classification Result heading
+- [x] Consolidate weight, reference price, estimated value, and estimated energy into one unified metric row
+- [x] Remove the obsolete five-column metric row and oversized reference-note layout
+- [x] Update Classify Another Image to camera icon plus trailing arrow
+- [x] Verify real result data, RTL, English, themes, responsiveness, tests, and production build

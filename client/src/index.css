@@ -1061,3 +1061,19 @@ h1, h2, h3, p { margin: 0; }
   transform-origin: left center !important;
   animation: calloutLinePulse 3.8s ease-in-out infinite !important;
 }
+
+/* Final inward geometry: CONNECT starts at its inner top edge and travels up-right into the orbit. */
+.label-connect::after {
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 100% !important;
+  width: 34px !important;
+  height: 0 !important;
+  border: 0 !important;
+  border-top: 1px dotted currentColor !important;
+  opacity: .48 !important;
+  transform: rotate(-30deg) !important;
+  transform-origin: left center !important;
+  animation: calloutLinePulse 3.8s ease-in-out infinite !important;
+}

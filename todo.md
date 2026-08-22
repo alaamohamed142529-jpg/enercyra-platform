@@ -371,3 +371,6 @@
 - [x] Reverse CONNECT’s dotted connector so it points inward toward the AI core
 - [x] Preserve matching connector length, thickness, opacity, and animation
 - [x] Verify the inward direction and project integrity across desktop/mobile, RTL, themes, tests, and production build
+- [x] Move CONNECT’s dotted connector to the inner side nearest the orbit
+- [x] Match CONNECT connector length, thickness, opacity, and angle to the upper callouts
+- [x] Verify the corrected inward connector and project integrity across desktop/mobile, RTL, themes, tests, and production build

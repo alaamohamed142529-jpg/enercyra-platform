@@ -468,3 +468,5 @@
 - [x] Decode and verify the QR in English, Arabic RTL, responsive views, tests, and production build
 - [x] Improve Share Enercyra QR-card spacing, icon/title separation, description line-height, QR centering, and uniform padding
 - [x] Verify the refined card in Arabic RTL, English, themes, responsive layouts, tests, and production build
+- [x] Replace non-Egyptian Marketplace locations with all Egyptian governorates and preserve bilingual filtering behavior
+- [x] Verify the complete location list, search/filter behavior, RTL, responsive layout, tests, and production build

@@ -26,10 +26,20 @@ describe("Classification Result calculation UI contract", () => {
     expect(appSource).toContain("window.sessionStorage.setItem(\"enercyra-publish-draft\", JSON.stringify({ weight: nextWeight }))");
     expect(appSource).toContain("typeof draft?.weight === \"string\" ? draft.weight : \"\"");
     expect(appSource).toContain("<input value={material} onChange={(event) => setMaterial(event.target.value)} required />");
-    expect(appSource).toContain("const [location, setLocation] = useState(\"\");");
+    expect(appSource).toContain("const [location, setLocation] = useState(() => profile?.location || \"\");");
     expect(appSource).toContain("const [notes, setNotes] = useState(\"\");");
     expect(appSource).toContain("displayNameEn: lang === \"ar\" ? classification.displayNameEn : material");
     expect(appSource).toContain("displayNameAr: lang === \"ar\" ? material : classification.displayNameAr");
+  });
+
+  it("renders classification context and editable account-contact fields on Publish", () => {
+    expect(appSource).toContain("className=\"publish-source-summary\"");
+    expect(appSource).toContain("alt={lang === \"ar\" ? \"الصورة المصنفة\" : \"Classified waste\"}");
+    expect(appSource).toContain("const profile = user as (typeof user & { location?: string; phone?: string }) | null;");
+    expect(appSource).toContain("type=\"tel\" inputMode=\"tel\"");
+    expect(appSource).toContain("contactPhone");
+    expect(appSource).toContain("Condition (optional)");
+    expect(appSource).toContain("Notes (optional)");
   });
 
   it("shows the weight hint only while the parsed weight is not positive", () => {

@@ -22,6 +22,13 @@
       "when": 1787213384671,
       "tag": "0002_public_electro",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787382890549,
+      "tag": "0003_quiet_wonder_man",
+      "breakpoints": true
     }
   ]
 }

@@ -8,13 +8,14 @@ export type ClassificationPayload = {
   imageName?: string;
 };
 
-export function buildListingPayload(classification: ClassificationPayload, fields: { weightKg: number; location: string; condition?: string; notes?: string }) {
+export function buildListingPayload(classification: ClassificationPayload, fields: { weightKg: number; location: string; contactPhone?: string; condition?: string; notes?: string }) {
   return {
     classId: classification.classId,
     displayNameEn: classification.displayNameEn,
     displayNameAr: classification.displayNameAr,
     weightKg: fields.weightKg,
     location: fields.location,
+    contactPhone: fields.contactPhone || undefined,
     condition: fields.condition || undefined,
     notes: fields.notes || undefined,
     imageMetadata: classification.imageName ? JSON.stringify({

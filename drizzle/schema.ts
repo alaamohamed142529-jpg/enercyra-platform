@@ -35,6 +35,7 @@ export const wasteListings = mysqlTable("waste_listings", {
   displayNameAr: varchar("displayNameAr", { length: 160 }).notNull(),
   weightKg: decimal("weightKg", { precision: 10, scale: 3 }).notNull(),
   location: varchar("location", { length: 160 }).notNull(),
+  contactPhone: varchar("contactPhone", { length: 40 }),
   condition: varchar("condition", { length: 120 }),
   notes: text("notes"),
   imageUrl: text("imageUrl"),

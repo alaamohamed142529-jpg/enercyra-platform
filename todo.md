@@ -437,3 +437,6 @@
 - [x] Add regression coverage and verify the Result-to-Publish handoff in English, Arabic RTL, responsive layouts, and production build
 - [x] Remove the technical uploaded filename bar from the classification image preview while preserving upload and analysis feedback
 - [x] Add regression coverage and verify the clean preview in English, Arabic RTL, responsive layouts, and production build
+- [x] Show classification-derived material, weight, and image context on Publish without requiring re-entry
+- [x] Add editable account-prefilled location and phone fields; keep condition and notes optional
+- [x] Fix vertical label/input layout and verify English, Arabic RTL, responsive behavior, tests, and production build

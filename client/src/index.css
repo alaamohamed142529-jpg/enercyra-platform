@@ -1265,3 +1265,18 @@ h1, h2, h3, p { margin: 0; }
 .result-page .calculation-metrics .weight-metric .currency-control span { border: 0; padding: 0; }
 @media (max-width: 760px) { .result-page .calculation-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .result-page .calculation-metrics { grid-template-columns: 1fr; } }
+
+/* Publish review form: keep source context visible and every label above its control. */
+.publish-source-summary { display: flex; align-items: center; gap: 14px; margin: 18px 0 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel2); color: var(--text); }
+.publish-source-summary img { width: 54px; height: 54px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.publish-source-summary div { display: grid; gap: 4px; }
+.publish-source-summary strong { font-size: 13px; }
+.publish-source-summary span { color: var(--muted); font-size: 11px; line-height: 1.45; }
+.publish-form .form-grid { align-items: start; }
+.publish-form .form-field { display: flex; flex-direction: column; align-items: stretch; gap: 7px; min-width: 0; color: var(--text); font-size: 12px; line-height: 1.35; }
+.publish-form .form-field > span { display: block; color: var(--text); font-weight: 600; }
+.publish-form .form-field input, .publish-form .form-field textarea { width: 100%; margin: 0; }
+.publish-form > .form-field { margin-top: 16px; }
+.app-shell.theme-light .publish-source-summary { background: var(--surface-soft); border-color: var(--border-subtle); }
+.app-shell.theme-light .publish-form .form-field > span { color: var(--text-primary); }
+@media (max-width: 760px) { .publish-source-summary { align-items: flex-start; } .publish-form .form-grid { grid-template-columns: 1fr; } }

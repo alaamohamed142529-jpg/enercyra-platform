@@ -1,0 +1,1 @@
+ALTER TABLE `waste_listings` ADD `contactPhone` varchar(40);

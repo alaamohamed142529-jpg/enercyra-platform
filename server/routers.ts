@@ -37,6 +37,7 @@ export const appRouter = router({
       displayNameAr: z.string().min(1).max(160),
       weightKg: z.number().positive(),
       location: z.string().min(1).max(160),
+      contactPhone: z.string().max(40).optional(),
       condition: z.string().max(120).optional(),
       notes: z.string().max(3000).optional(),
       imageUrl: z.string().url().optional(),

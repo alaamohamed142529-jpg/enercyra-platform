@@ -388,3 +388,7 @@
 - [x] Refine Classification wording and benefit labels for clearer Arabic/English meaning
 - [x] Improve upload panel, benefits-card spacing, and progress-step presentation without removing functionality
 - [x] Verify real upload flow, RTL, themes, responsiveness, tests, and production build
+- [x] Remove the Step One eyebrow from Classification
+- [x] Refine Classification heading typography and spacing
+- [x] Apply a distinct accent color to the English Your Waste phrase
+- [x] Verify Arabic/English layouts, themes, responsiveness, tests, and build

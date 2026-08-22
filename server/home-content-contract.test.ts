@@ -42,6 +42,12 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("Contact seller");
   });
 
+  it("starts the shared header at the page edge without a stray top strip", () => {
+    const stylesheet = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
+    expect(stylesheet).toContain("html, body, #root { min-height: 100%; margin: 0; }");
+    expect(stylesheet).toContain(".site-header { top: 0; margin-top: 0; }");
+  });
+
   it("uses distinct functional feature-card titles and icons", () => {
     expect(appSource).toContain("Material identification");
     expect(appSource).toContain("Reference estimates");

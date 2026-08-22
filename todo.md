@@ -460,3 +460,5 @@
 - [x] Make every real Marketplace listing card clickable and open complete listing details
 - [x] Keep card Contact buttons independent and add regression coverage for card navigation and contact isolation
 - [x] Verify detail views with multiple listings in English, Arabic RTL, responsive layouts, tests, and production build
+- [x] Remove the unintended dark strip or border above the shared header across the application
+- [x] Verify clean page starts across key routes in light/dark, Arabic RTL, responsive layouts, tests, and production build

@@ -427,3 +427,8 @@
 - [x] Remove the obsolete five-column metric row and oversized reference-note layout
 - [x] Update Classify Another Image to camera icon plus trailing arrow
 - [x] Verify real result data, RTL, English, themes, responsiveness, tests, and production build
+- [x] Synchronize Reference price and Estimated value units with the selected currency
+- [x] Convert displayed reference and estimated values using the selected currency rate
+- [x] Hide the weight validation hint for valid positive input and show it only for invalid states
+- [x] Verify all currencies and empty, zero, negative, and text weight states
+- [x] Re-run RTL, theme, responsive, tests, and production build checks

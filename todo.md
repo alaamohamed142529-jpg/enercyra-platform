@@ -487,3 +487,5 @@
 - [x] Verify and publish the restored Arabic Team order
 - [x] Change only the English Team name from «Huda Taha» to «Ohoud Taha», preserving Arabic name «عهود طه» and all other Team details
 - [x] Verify and publish the English Team name correction
+- [x] Diagnose why the public About page does not show the updated English Team name «Ohoud Taha»
+- [x] Verify and republish the live English/Arabic Team names after resolving any stale deployment or rendering issue

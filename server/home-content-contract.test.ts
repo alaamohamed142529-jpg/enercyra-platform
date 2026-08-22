@@ -46,6 +46,7 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("const teamMembers = [");
     expect(appSource).toContain('nameEn: "Alaa Mohamed", nameAr: "آلاء محمد"');
     expect(appSource).toContain('nameEn: "Ohoud Taha", nameAr: "عهود طه"');
+    expect(appSource).not.toContain('nameEn: "Huda Taha"');
     expect(appSource).toContain('nameEn: "Rahma Mohamed", nameAr: "رحمة محمد"');
     expect(appSource).toContain('dir={lang === "ar" ? "rtl" : "ltr"}');
     expect(appSource).toContain("teamMembers.map");

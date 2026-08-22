@@ -1199,3 +1199,9 @@ h1, h2, h3, p { margin: 0; }
 .app-shell.theme-light .classify-grid .progress-steps span:not(.active) { color: #167f91; border-color: rgba(21,158,177,.48); background: rgba(21,158,177,.05); }
 .app-shell.theme-light .classify-grid .progress-steps i { background: rgba(21,158,177,.34); }
 .app-shell.theme-light .classify-grid .progress-steps p { color: #526b70; }
+
+/* Stronger light-theme palette: clearly replace gray with Enercyra pale teal-blue. */
+.app-shell.theme-light .classify-grid .upload-card { background: linear-gradient(145deg, #e8f8f5 0%, #cceae8 100%); border-color: rgba(21,158,177,.55); }
+.app-shell.theme-light .classify-grid .benefit-panel { background: linear-gradient(145deg, #e7f6f2 0%, #d6ecec 100%); border-color: rgba(21,158,177,.32); }
+.app-shell.theme-light .classify-grid .benefit { background: #cfe7e8; border-color: rgba(21,103,116,.20); }
+.app-shell.theme-light .classify-grid .benefit > span { background: #e8f8f5; }

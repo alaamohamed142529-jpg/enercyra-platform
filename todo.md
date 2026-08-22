@@ -410,3 +410,5 @@
 - [x] Fix the light-theme gray overlay and muted Classification surfaces
 - [x] Restore clear green/cyan accents and readable light-theme text
 - [x] Verify light/dark themes, RTL, responsiveness, tests, and production build
+- [x] Replace remaining gray-toned light-theme Classification surfaces with pale teal-blue
+- [x] Verify light/dark themes, Arabic RTL, responsiveness, tests, and production build

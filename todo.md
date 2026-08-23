@@ -533,3 +533,5 @@
 - [x] Move production MobileNetV3 inference from Python subprocesses to direct Node.js onnxruntime-node, harden classification JSON responses, add regression coverage, and verify/push the Vercel-compatible fix
 
 - [ ] Allow only required native install scripts for onnxruntime-node (and sharp if required), clean-install with frozen lockfile, verify Vercel ONNX classification, and push the result to main
+
+- [ ] Diagnose the production classification endpoint returning HTML instead of JSON, prove whether the Vercel function is reached, apply the minimum routing fix, and verify real production ONNX inference

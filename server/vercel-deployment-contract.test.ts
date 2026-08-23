@@ -15,18 +15,25 @@ describe("Vercel deployment contract", () => {
 
   it("routes API traffic to the Express catch-all function and includes model assets", () => {
     const config = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf8"));
-    const functionConfig = config.functions["api/[...path].ts"];
-    expect(functionConfig).toBeDefined();
-    expect(functionConfig.includeFiles).toContain("server/models/**");
-    expect(functionConfig.includeFiles).toContain("model/**");
-    expect(functionConfig.includeFiles).toContain("node_modules/onnxruntime-node/**");
-    expect(functionConfig.includeFiles).toContain("node_modules/sharp/**");
+    const functionPaths = ["api/[...path].ts", "api/trpc/[...path].ts", "api/forecast.ts"];
+    for (const functionPath of functionPaths) {
+      const functionConfig = config.functions[functionPath];
+      expect(functionConfig).toBeDefined();
+      expect(functionConfig.includeFiles).toContain("server/models/**");
+      expect(functionConfig.includeFiles).toContain("model/**");
+      expect(functionConfig.includeFiles).toContain("node_modules/onnxruntime-node/**");
+      expect(functionConfig.includeFiles).toContain("node_modules/sharp/**");
+      const handler = readFileSync(resolve(root, functionPath), "utf8");
+      expect(handler).toContain("createVercelHandler");
+      expect(handler).toContain("export default handler");
+    }
     const packageJson = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"));
     expect(packageJson.dependencies["onnxruntime-node"]).toBeTruthy();
     expect(packageJson.dependencies.sharp).toBeTruthy();
-    const handler = readFileSync(resolve(root, "api/[...path].ts"), "utf8");
-    expect(handler).toContain("createApp({ includeStatic: false })");
-    expect(handler).toContain("export default async function handler");
+    const sharedHandler = readFileSync(resolve(root, "server/vercel-handler.ts"), "utf8");
+    expect(sharedHandler).toContain("createApp({ includeStatic: false })");
+    expect(sharedHandler).toContain("content-type");
+    expect(sharedHandler).toContain("application/json");
   });
 
   it("pins a pnpm release that honors the native install allowlist", () => {

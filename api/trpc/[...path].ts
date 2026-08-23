@@ -1,4 +1,4 @@
-import { createVercelHandler } from "../server/vercel-handler";
+import { createVercelHandler } from "../../server/vercel-handler";
 
 const handler = createVercelHandler();
 

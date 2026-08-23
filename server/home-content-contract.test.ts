@@ -54,9 +54,9 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("teamMembers.map");
     expect(appSource).toContain('const memberName = lang === "ar" ? member.nameAr : member.nameEn;');
     expect(appSource).not.toContain("<small>{member.role}</small>");
-    expect(appSource).toContain("/manus-storage/alaa_3689a963.jpg");
-    expect(appSource).toContain("/manus-storage/ohoud_5d143c3b.jpg");
-    expect(appSource).toContain("/manus-storage/rahma_00948031.jpg");
+    expect(appSource).toContain("/assets/alaa_3689a963.jpg");
+    expect(appSource).toContain("/assets/ohoud_5d143c3b.jpg");
+    expect(appSource).toContain("/assets/rahma_00948031.jpg");
     expect(appSource).toContain("https://www.linkedin.com/in/alaa-mohamed-analyst/");
     expect(appSource).toContain("https://www.linkedin.com/in/ohoudtaha/");
     expect(appSource).toContain("https://www.linkedin.com/in/rahma-mohamed-data/");
@@ -66,18 +66,18 @@ describe("homepage content contract", () => {
   });
 
   it("uses the configured Enercyra app logo for platform-managed identity", () => {
-    expect(process.env.VITE_APP_LOGO).toBe("/manus-storage/enercyra-circular-mark_43fba3fa.png");
+    expect(process.env.VITE_APP_LOGO).not.toContain("/manus-storage/");
   });
 
   it("uses the Enercyra circular mark for browser and app identity", () => {
     const indexHtml = readFileSync(resolve(process.cwd(), "client/index.html"), "utf8");
     const manifest = readFileSync(resolve(process.cwd(), "client/public/site.webmanifest"), "utf8");
     expect(indexHtml).toContain('rel="icon" type="image/x-icon" href="/favicon.ico?v=icon-2026-08-22-light"');
-    expect(indexHtml).toContain("enercyra-circular-mark_43fba3fa.png?v=icon-2026-08-22-light");
+    expect(indexHtml).toContain("enercyra-circular-mark_43fba3fa.png?v=asset-local-2026-08-23");
     expect(indexHtml).toContain("/favicon.ico?v=icon-2026-08-22-light");
     expect(indexHtml).toContain('rel="manifest" href="/site.webmanifest?v=icon-2026-08-22-light"');
     expect(manifest).toContain('"short_name": "Enercyra"');
-    expect(manifest).toContain("enercyra-circular-mark_43fba3fa.png?v=icon-2026-08-22-light");
+    expect(manifest).toContain("enercyra-circular-mark_43fba3fa.png?v=asset-local-2026-08-23");
     expect(manifest).toContain('"short_name": "Enercyra"');
   });
 

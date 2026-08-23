@@ -202,7 +202,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
   );
 }
 
-const ENERCYRA_MARK_URL = "/manus-storage/enercyra-circular-mark_43fba3fa.png";
+const ENERCYRA_MARK_URL = "/assets/enercyra-circular-mark_43fba3fa.png";
 
 function BrandMark({ className = "" }: { className?: string }) { return <img className={`brand-mark ${className}`} src={ENERCYRA_MARK_URL} alt="" aria-hidden="true" />; }
 
@@ -227,7 +227,7 @@ function InteractiveHeroVisual({ lang }: { lang: Lang }) {
     <div className="interactive-material-orbit" aria-label={lang === "ar" ? "زجاجة بلاستيك وعلبة صفيح وزجاجة زجاج وكرتون ومخلفات عضوية تتحرك حول مركز طاقة" : "Plastic bottle, tin can, glass bottle, cardboard, and organic waste moving around an energy core"}>
       <span className="energy-ring energy-ring-outer" /><span className="energy-ring energy-ring-middle" /><span className="energy-ring energy-ring-inner" /><span className="energy-wave energy-wave-one" /><span className="energy-wave energy-wave-two" />
       <span className="energy-particle particle-a" /><span className="energy-particle particle-b" /><span className="energy-particle particle-c" /><span className="energy-particle particle-d" /><span className="energy-particle particle-e" /><span className="energy-particle particle-f" />
-      <span className="material-object material-bottle" tabIndex={0} role="img" aria-label={lang === "ar" ? "زجاجة بلاستيكية" : "Plastic bottle"}><img src="/manus-storage/enercyra-plastic-bottle-hero_1a2f45aa.webp" alt="" aria-hidden="true" /></span><span className="material-object material-can" tabIndex={0} role="img" aria-label={lang === "ar" ? "علبة معدنية" : "Metal can"}><img src="/manus-storage/enercyra-can-hero_941405f5.webp" alt="" aria-hidden="true" /></span><span className="material-object material-glass" tabIndex={0} role="img" aria-label={lang === "ar" ? "زجاجة زجاجية" : "Glass bottle"}><img src="/manus-storage/enercyra-glass-bottle-clear-v2_0adf2f18.webp" alt="" aria-hidden="true" /></span><span className="material-object material-cardboard" tabIndex={0} role="img" aria-label={lang === "ar" ? "كرتون" : "Cardboard"}><img src="/manus-storage/enercyra-cardboard-hero_14d3326e.webp" alt="" aria-hidden="true" /></span><span className="material-object material-organic" tabIndex={0} role="img" aria-label={lang === "ar" ? "مخلفات عضوية" : "Organic waste"}><img src="/manus-storage/enercyra-organic-hero_5ad406e3.webp" alt="" aria-hidden="true" /></span>
+      <span className="material-object material-bottle" tabIndex={0} role="img" aria-label={lang === "ar" ? "زجاجة بلاستيكية" : "Plastic bottle"}><img src="/assets/enercyra-plastic-bottle-hero_1a2f45aa.webp" alt="" aria-hidden="true" /></span><span className="material-object material-can" tabIndex={0} role="img" aria-label={lang === "ar" ? "علبة معدنية" : "Metal can"}><img src="/assets/enercyra-can-hero_941405f5.webp" alt="" aria-hidden="true" /></span><span className="material-object material-glass" tabIndex={0} role="img" aria-label={lang === "ar" ? "زجاجة زجاجية" : "Glass bottle"}><img src="/assets/enercyra-glass-bottle-clear-v2_0adf2f18.webp" alt="" aria-hidden="true" /></span><span className="material-object material-cardboard" tabIndex={0} role="img" aria-label={lang === "ar" ? "كرتون" : "Cardboard"}><img src="/assets/enercyra-cardboard-hero_14d3326e.webp" alt="" aria-hidden="true" /></span><span className="material-object material-organic" tabIndex={0} role="img" aria-label={lang === "ar" ? "مخلفات عضوية" : "Organic waste"}><img src="/assets/enercyra-organic-hero_5ad406e3.webp" alt="" aria-hidden="true" /></span>
       <span className="energy-core"><BrandMark /><span className="core-pulse" /></span>
     </div>
     <a className="hero-function-label label-connect" href="/businesses" aria-label={lang === "ar" ? "تواصل مع المشترين" : "Connect with buyers"}><UsersRound size={13} /><span>{lang === "ar" ? "تواصل" : "CONNECT"}</span><small>{lang === "ar" ? "السوق والشركات" : "MARKETPLACE"}</small></a>
@@ -409,9 +409,9 @@ function HowItWorks({ lang }: { text: Copy; lang: Lang }) { return <div classNam
 function FlowCard({ n, icon, title, copy: description }: { n: string; icon: React.ReactNode; title: string; copy: string }) { return <div className="flow-card"><span className="flow-number">{n}</span><div className="feature-icon">{icon}</div><h2>{title}</h2><p>{description}</p><ArrowRight className="feature-arrow" size={19} /></div>; }
 const ENGLISH_OHOUD_NAME = ["Ohoud", "Taha"].join(" ");
 const teamMembers = [
-  { nameEn: "Alaa Mohamed", nameAr: "آلاء محمد", image: "/manus-storage/alaa_3689a963.jpg", linkedin: "https://www.linkedin.com/in/alaa-mohamed-analyst/" },
-  { nameEn: ENGLISH_OHOUD_NAME, nameAr: "عهود طه", image: "/manus-storage/ohoud_5d143c3b.jpg", linkedin: "https://www.linkedin.com/in/ohoudtaha/" },
-  { nameEn: "Rahma Mohamed", nameAr: "رحمة محمد", image: "/manus-storage/rahma_00948031.jpg", linkedin: "https://www.linkedin.com/in/rahma-mohamed-data/" },
+  { nameEn: "Alaa Mohamed", nameAr: "آلاء محمد", image: "/assets/alaa_3689a963.jpg", linkedin: "https://www.linkedin.com/in/alaa-mohamed-analyst/" },
+  { nameEn: ENGLISH_OHOUD_NAME, nameAr: "عهود طه", image: "/assets/ohoud_5d143c3b.jpg", linkedin: "https://www.linkedin.com/in/ohoudtaha/" },
+  { nameEn: "Rahma Mohamed", nameAr: "رحمة محمد", image: "/assets/rahma_00948031.jpg", linkedin: "https://www.linkedin.com/in/rahma-mohamed-data/" },
 ] as const;
 function About({ lang }: { text: Copy; lang: Lang }) {
   const shareUrl = "https://enercyraai-drvxzjat.manus.space/";

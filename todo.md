@@ -513,3 +513,17 @@
 - [x] Configure or document required Vercel environment variables for database, auth, storage, and frontend runtime
 - [ ] Deploy the connected Git repository to Vercel and verify the UI and API instead of raw source-file responses
 - [x] Document Vercel limitations for Python-based MobileNet inference and any required follow-up architecture
+- [ ] Verify public Vercel routes and inspect missing environment variables after SSO is disabled
+- [ ] Connect an authorized free MySQL provider and obtain a valid DATABASE_URL without exposing credentials
+- [ ] Add DATABASE_URL and required OAuth/Storage variables to Vercel and redeploy
+- [ ] Verify Classify, Marketplace, About, and Energy Forecast on the public Vercel domain
+- [ ] Inventory every `/manus-storage/` image reference and identify the corresponding persistent source assets
+- [ ] Copy all referenced images into deployable local static assets and replace every code reference
+- [ ] Verify the full asset inventory, tests, production build, and Vercel deployment on Classify, Marketplace, and About
+- [ ] Audit Manus and Vercel parity, including routes, assets, database, storage, and inference runtime
+- [ ] Complete external-host portability for static assets, backend storage, and model paths
+- [ ] Connect authorized external MySQL/storage services and configure Vercel environment variables
+- [ ] Redeploy and verify Classify, Marketplace, About, Forecast, and critical API workflows on Vercel
+- [ ] Report backup readiness and any remaining differences from Manus hosting
+
+- [x] Create and validate a complete Enercyra backup archive containing frontend, backend, model artifacts, local assets, deployment files, schema, and setup documentation

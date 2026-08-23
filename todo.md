@@ -529,3 +529,5 @@
 - [x] Create and validate a complete Enercyra backup archive containing frontend, backend, model artifacts, local assets, deployment files, schema, and setup documentation
 
 - [x] Publish the complete non-secret Enercyra project to a private GitHub repository and verify it can be connected to external hosting
+
+- [x] Move production MobileNetV3 inference from Python subprocesses to direct Node.js onnxruntime-node, harden classification JSON responses, add regression coverage, and verify/push the Vercel-compatible fix

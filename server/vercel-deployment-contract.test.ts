@@ -19,6 +19,11 @@ describe("Vercel deployment contract", () => {
     expect(functionConfig).toBeDefined();
     expect(functionConfig.includeFiles).toContain("server/models/**");
     expect(functionConfig.includeFiles).toContain("model/**");
+    expect(functionConfig.includeFiles).toContain("node_modules/onnxruntime-node/**");
+    expect(functionConfig.includeFiles).toContain("node_modules/sharp/**");
+    const packageJson = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"));
+    expect(packageJson.dependencies["onnxruntime-node"]).toBeTruthy();
+    expect(packageJson.dependencies.sharp).toBeTruthy();
     const handler = readFileSync(resolve(root, "api/[...path].ts"), "utf8");
     expect(handler).toContain("createApp({ includeStatic: false })");
     expect(handler).toContain("export default async function handler");

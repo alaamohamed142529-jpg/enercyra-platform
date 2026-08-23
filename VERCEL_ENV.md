@@ -22,6 +22,8 @@ The Vercel project must define these variables in **Project Settings → Environ
 
 After adding or changing `VITE_*` values, create a new deployment because they are injected during the Vite build. After adding `DATABASE_URL` or server-only secrets, redeploy so the function environment is refreshed.
 
-## Important Vercel runtime limitation
+## MobileNetV3 runtime
 
-The current MobileNetV3 server procedure invokes `python3` and `scripts/infer_mobilenet_onnx.py`. Vercel Node.js Functions do not provide the same Python subprocess runtime as the current Manus/Docker deployment. The Vercel configuration in this repository correctly serves the React frontend, tRPC, forecast endpoint, OAuth routes, and storage proxy, but live MobileNet classification on Vercel requires a follow-up migration to a Node-compatible ONNX runtime or a separate Python inference service. The local Manus deployment remains the complete reference deployment for MobileNet classification.
+MobileNetV3 classification runs directly inside the Node.js server/function through `onnxruntime-node` and `sharp`. The production path does not invoke Python, spawn a subprocess, or depend on a persistent local server. The Vercel function includes the committed `model/` directory through `includeFiles`, and the inference session is initialized lazily and reused while the serverless instance remains warm.
+
+The legacy `scripts/infer_mobilenet_onnx.py` file remains in the repository only as a reference for preprocessing and output-parity checks; it is not part of the production classification path.

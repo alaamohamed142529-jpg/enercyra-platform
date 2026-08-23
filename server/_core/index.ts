@@ -1,5 +1,5 @@
 import "dotenv/config";
-import express, { type Express } from "express";
+import express, { type Express, type NextFunction, type Request, type Response } from "express";
 import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
@@ -56,6 +56,13 @@ export async function createApp(options: AppOptions = {}): Promise<Express> {
       createContext,
     })
   );
+
+  app.use((error: unknown, request: Request, response: Response, next: NextFunction) => {
+    if (!request.path.startsWith("/api/") || response.headersSent) return next(error);
+    const status = typeof error === "object" && error !== null && "status" in error && typeof error.status === "number" ? error.status : 500;
+    const message = error instanceof Error ? error.message : "The API request could not be completed.";
+    return response.status(status >= 400 && status < 600 ? status : 500).type("application/json").json({ success: false, error: message });
+  });
 
   if (includeStatic) {
     const server = createServer(app);

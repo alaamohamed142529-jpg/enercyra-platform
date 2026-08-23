@@ -22,6 +22,10 @@ The Vercel project must define these variables in **Project Settings → Environ
 
 After adding or changing `VITE_*` values, create a new deployment because they are injected during the Vite build. After adding `DATABASE_URL` or server-only secrets, redeploy so the function environment is refreshed.
 
+## Dependency installation
+
+The repository pins pnpm 10.19.0 in `package.json` and keeps the native build permission in `pnpm-workspace.yaml`. The allowlist contains only `onnxruntime-node`, whose postinstall downloads the platform-specific provider libraries needed by the Node binding. `sharp` is used for preprocessing, but its current package has no install/postinstall lifecycle hook and therefore is not added to the allowlist. Vercel should continue using `pnpm install --frozen-lockfile`; the pin and workspace settings ensure that `onnxruntime-node` is built while unrelated dependency scripts remain blocked.
+
 ## MobileNetV3 runtime
 
 MobileNetV3 classification runs directly inside the Node.js server/function through `onnxruntime-node` and `sharp`. The production path does not invoke Python, spawn a subprocess, or depend on a persistent local server. The Vercel function includes the committed `model/` directory through `includeFiles`, and the inference session is initialized lazily and reused while the serverless instance remains warm.

@@ -41,7 +41,7 @@ describe("Vercel deployment contract", () => {
   it("uses a client-side SPA fallback instead of exposing repository source files", () => {
     const config = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf8"));
     expect(config.rewrites).toEqual(expect.arrayContaining([
-      { source: "/(.*)", destination: "/index.html" },
+      { source: "/((?!api(?:/|$)).*)", destination: "/index.html" },
     ]));
     const bootstrap = readFileSync(resolve(root, "server/_core/index.ts"), "utf8");
     expect(bootstrap).toContain("export async function createApp");

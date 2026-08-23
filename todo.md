@@ -537,3 +537,5 @@
 - [ ] Diagnose the production classification endpoint returning HTML instead of JSON, prove whether the Vercel function is reached, apply the minimum routing fix, and verify real production ONNX inference
 
 - [ ] Correct the pnpm allowlist as read by the exact Vercel commit, remove the `Ignored build scripts: onnxruntime-node` warning, redeploy, and verify real production classification
+
+- [ ] Resolve Vercel pnpm 10 approval behavior after the CLI override still leaves onnxruntime-node ignored, using the exact supported configuration and reverify production

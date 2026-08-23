@@ -11,7 +11,9 @@ describe("Vercel deployment contract", () => {
     expect(config.buildCommand).toBe("pnpm run build");
     expect(config.outputDirectory).toBe("dist/public");
     expect(config.installCommand).toContain("pnpm install --frozen-lockfile");
-    expect(config.installCommand).toContain("--config.onlyBuiltDependencies=onnxruntime-node");
+    expect(config.installCommand).toContain("--force");
+    const npmrc = readFileSync(resolve(root, ".npmrc"), "utf8");
+    expect(npmrc).toContain("only-built-dependencies[]=onnxruntime-node");
   });
 
   it("routes API traffic to the Express catch-all function and includes model assets", () => {

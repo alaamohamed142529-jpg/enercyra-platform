@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "installCommand": "pnpm install --frozen-lockfile --config.onlyBuiltDependencies=onnxruntime-node",
+  "installCommand": "pnpm install --frozen-lockfile --force",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/public",
   "functions": {

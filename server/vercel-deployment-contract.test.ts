@@ -29,6 +29,15 @@ describe("Vercel deployment contract", () => {
     expect(handler).toContain("export default async function handler");
   });
 
+  it("pins a pnpm release that honors the native install allowlist", () => {
+    const packageJson = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"));
+    expect(packageJson.packageManager).toContain("pnpm@10.19.0");
+    const workspace = readFileSync(resolve(root, "pnpm-workspace.yaml"), "utf8");
+    expect(workspace).toContain("onlyBuiltDependencies:");
+    expect(workspace).toContain("- onnxruntime-node");
+    expect(workspace).not.toContain("- sharp");
+  });
+
   it("uses a client-side SPA fallback instead of exposing repository source files", () => {
     const config = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf8"));
     expect(config.rewrites).toEqual(expect.arrayContaining([

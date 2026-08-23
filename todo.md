@@ -528,4 +528,4 @@
 
 - [x] Create and validate a complete Enercyra backup archive containing frontend, backend, model artifacts, local assets, deployment files, schema, and setup documentation
 
-- [ ] Publish the complete non-secret Enercyra project to a private GitHub repository and verify it can be connected to external hosting
+- [x] Publish the complete non-secret Enercyra project to a private GitHub repository and verify it can be connected to external hosting

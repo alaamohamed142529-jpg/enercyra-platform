@@ -24,7 +24,7 @@ After adding or changing `VITE_*` values, create a new deployment because they a
 
 ## Dependency installation
 
-The repository pins pnpm 10.19.0 in `package.json` and keeps the native build permission in `pnpm-workspace.yaml`. The allowlist contains only `onnxruntime-node`, whose postinstall downloads the platform-specific provider libraries needed by the Node binding. `sharp` is used for preprocessing, but its current package has no install/postinstall lifecycle hook and therefore is not added to the allowlist. Vercel should continue using `pnpm install --frozen-lockfile`; the pin and workspace settings ensure that `onnxruntime-node` is built while unrelated dependency scripts remain blocked.
+The repository pins pnpm 10.19.0 in `package.json` and keeps the native build permission in both `pnpm-workspace.yaml` and the committed `.npmrc` (`only-built-dependencies[]=onnxruntime-node`). The allowlist contains only `onnxruntime-node`, whose postinstall downloads the platform-specific provider libraries needed by the Node binding. `sharp` is used for preprocessing, but its current package has no install/postinstall lifecycle hook and therefore is not added to the allowlist. Vercel uses `pnpm install --frozen-lockfile --force`; `--force` makes restored caches reprocess the approved native package, while `.npmrc` ensures `onnxruntime-node` is built and unrelated dependency scripts remain blocked.
 
 ## MobileNetV3 runtime
 

@@ -539,3 +539,5 @@
 - [ ] Correct the pnpm allowlist as read by the exact Vercel commit, remove the `Ignored build scripts: onnxruntime-node` warning, redeploy, and verify real production classification
 
 - [ ] Resolve Vercel pnpm 10 approval behavior after the CLI override still leaves onnxruntime-node ignored, using the exact supported configuration and reverify production
+
+- [ ] Re-audit checkpoint 5fad5520, validate the supported pnpm 10 native-script configuration, push only the verified fix, and prove production classification returns HTTP 200 JSON

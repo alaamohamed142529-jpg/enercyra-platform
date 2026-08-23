@@ -15,7 +15,7 @@ describe("Vercel deployment contract", () => {
 
   it("routes API traffic to the Express catch-all function and includes model assets", () => {
     const config = JSON.parse(readFileSync(resolve(root, "vercel.json"), "utf8"));
-    const functionPaths = ["api/[...path].ts", "api/trpc/[...path].ts", "api/forecast.ts"];
+    const functionPaths = ["api/[...path].ts", "api/trpc/[...path].ts", "api/trpc/inference.classify.ts", "api/forecast.ts"];
     for (const functionPath of functionPaths) {
       const functionConfig = config.functions[functionPath];
       expect(functionConfig).toBeDefined();

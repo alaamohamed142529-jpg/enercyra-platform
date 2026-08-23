@@ -13,6 +13,10 @@
       "maxDuration": 60,
       "includeFiles": "{server/models/**,model/**,scripts/**,node_modules/onnxruntime-node/**,node_modules/sharp/**,node_modules/@img/**}"
     },
+    "api/trpc/inference.classify.ts": {
+      "maxDuration": 60,
+      "includeFiles": "{server/models/**,model/**,scripts/**,node_modules/onnxruntime-node/**,node_modules/sharp/**,node_modules/@img/**}"
+    },
     "api/forecast.ts": {
       "maxDuration": 60,
       "includeFiles": "{server/models/**,model/**,scripts/**,node_modules/onnxruntime-node/**,node_modules/sharp/**,node_modules/@img/**}"

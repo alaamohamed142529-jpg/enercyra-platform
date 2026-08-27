@@ -19,4 +19,20 @@ describe("buildListingPayload", () => {
     expect(JSON.parse(payload.imageMetadata || "{}")).toMatchObject({ source: "model", modelClassId: "24", confidence: 0.941234, fileName: "bottle.jpg" });
     expect(payload.imageDataUrl).toBe("data:image/jpeg;base64,ZmFrZQ==");
   });
+
+  it("preserves the exact classification estimate snapshot", () => {
+    const payload = buildListingPayload({ classId: "plastic", displayNameEn: "Plastic", displayNameAr: "بلاستيك" }, {
+      weightKg: 2,
+      location: "Minya",
+      estimateSnapshot: {
+        currency: "SAR",
+        referencePricePerKg: 7.5,
+        estimatedValue: 15,
+        originalEnergyMjPerKg: 35,
+        estimatedEnergyMj: 70,
+        estimatedEnergyKwh: 19.444,
+      },
+    });
+    expect(JSON.parse(payload.imageMetadata || "{}").estimateSnapshot).toEqual({ currency: "SAR", referencePricePerKg: 7.5, estimatedValue: 15, originalEnergyMjPerKg: 35, estimatedEnergyMj: 70, estimatedEnergyKwh: 19.444 });
+  });
 });

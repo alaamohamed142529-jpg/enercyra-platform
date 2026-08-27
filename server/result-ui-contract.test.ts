@@ -31,6 +31,8 @@ describe("Classification Result calculation UI contract", () => {
     expect(appSource).toContain("displayNameAr: classification.displayNameAr");
     expect(appSource).toContain("category: item.category");
     expect(appSource).toContain("imageDataUrl: classification.imageDataUrl");
+    expect(appSource).toContain("const estimateSnapshot: EstimateSnapshot");
+    expect(appSource).toContain("estimateSnapshot: publishDraft.estimateSnapshot");
     expect(appSource).toContain("const publishDraft = readPublishDraft();");
     expect(appSource).toContain("const [weight, setWeight] = useState(() => publishDraft.weight || \"\");");
     expect(appSource).toContain("<input value={material} onChange={(event) => setMaterial(event.target.value)} required />");

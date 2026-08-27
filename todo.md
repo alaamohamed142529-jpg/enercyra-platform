@@ -545,3 +545,4 @@
 - [x] Add safe delete controls for real Marketplace listings with confirmation, persistence, and empty-state updates
 - [x] Simplify Marketplace weight labels from fixed three-decimal formatting to a user-friendly kg display without changing stored values
 - [x] Carry classification price and energy estimates into published Marketplace listings and show them in listing cards and details
+- [x] Persist calculated Classification Result price and energy snapshots through Publish so Marketplace details show the exact values from that classification

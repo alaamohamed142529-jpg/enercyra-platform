@@ -9,7 +9,24 @@ export type ClassificationPayload = {
   imageDataUrl?: string;
 };
 
-export function buildListingPayload(classification: ClassificationPayload, fields: { weightKg: number; location: string; contactPhone?: string; condition?: string; notes?: string }) {
+export type EstimateSnapshot = {
+  currency: string;
+  referencePricePerKg: number | null;
+  estimatedValue: number | null;
+  originalEnergyMjPerKg: number | null;
+  estimatedEnergyMj: number | null;
+  estimatedEnergyKwh: number | null;
+};
+
+export function buildListingPayload(classification: ClassificationPayload, fields: { weightKg: number; location: string; contactPhone?: string; condition?: string; notes?: string; estimateSnapshot?: EstimateSnapshot }) {
+  const imageMetadata = classification.imageName || fields.estimateSnapshot ? JSON.stringify({
+    source: classification.source || "demo",
+    modelClassId: classification.modelClassId,
+    confidence: classification.confidence,
+    fileName: classification.imageName,
+    estimateSnapshot: fields.estimateSnapshot,
+    capturedAt: new Date().toISOString(),
+  }) : undefined;
   return {
     classId: classification.classId,
     displayNameEn: classification.displayNameEn,
@@ -19,13 +36,7 @@ export function buildListingPayload(classification: ClassificationPayload, field
     contactPhone: fields.contactPhone || undefined,
     condition: fields.condition || undefined,
     notes: fields.notes || undefined,
-    imageMetadata: classification.imageName ? JSON.stringify({
-      source: classification.source || "demo",
-      modelClassId: classification.modelClassId,
-      confidence: classification.confidence,
-      fileName: classification.imageName,
-      capturedAt: new Date().toISOString(),
-    }) : undefined,
+    imageMetadata,
     imageDataUrl: classification.imageDataUrl || undefined,
   };
 }

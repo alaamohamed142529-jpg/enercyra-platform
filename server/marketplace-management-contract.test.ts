@@ -12,6 +12,9 @@ describe("Marketplace management contract", () => {
     expect(app).toContain("trpc.marketplace.mine.useQuery");
     expect(app).toContain("trpc.marketplace.remove.useMutation");
     expect(app).toContain('remove.mutate({ id: listing.id })');
+    expect(app).toContain("window.confirm(prompt)");
+    expect(app).toContain("هل تريد حذف هذا الإعلان؟");
+    expect(app).toContain("Delete this listing?");
     expect(app).not.toContain("remove.mutate({ id: item.id })");
   });
 });

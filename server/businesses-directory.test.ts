@@ -27,6 +27,9 @@ describe("Businesses directory contract", () => {
     expect(nearbySource).toContain("Loading the map");
     expect(nearbySource).toContain("Compatible directory entries");
     expect(nearbySource).toContain("No compatible directory entry was found");
+    expect(nearbySource).toContain("The live map could not load");
+    expect(nearbySource).toContain("Live map unavailable");
+    expect(nearbySource).toContain("onMapError");
   });
 
   it("keeps source attribution and a verification disclaimer visible in the directory", () => {

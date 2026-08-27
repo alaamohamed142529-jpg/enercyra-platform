@@ -105,8 +105,13 @@ function loadMapScript() {
     }
     const script = document.createElement("script");
     script.async = true;
-    script.textContent = await response.text();
-    document.head.appendChild(script);
+    script.crossOrigin = "anonymous";
+    script.src = `${MAPS_PROXY_URL}/maps/api/js?key=${encodeURIComponent(API_KEY)}&v=weekly&libraries=marker,places,geocoding,geometry`;
+    await new Promise<void>((resolve, reject) => {
+      script.addEventListener("load", () => resolve(), { once: true });
+      script.addEventListener("error", () => reject(new Error("The Google Maps proxy script failed to load")), { once: true });
+      document.head.appendChild(script);
+    });
     for (let attempt = 0; attempt < 20 && !window.google?.maps; attempt += 1) {
       await new Promise(resolve => window.setTimeout(resolve, 250));
     }

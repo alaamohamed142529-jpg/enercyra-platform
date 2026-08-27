@@ -34,6 +34,9 @@ describe("Businesses directory contract", () => {
     expect(mapSource).toContain('fetch(`${MAPS_PROXY_URL}/maps/api/js?key=${API_KEY}');
     expect(mapSource).toContain('mode: "cors"');
     expect(mapSource).toContain('credentials: "omit"');
+    expect(mapSource).toContain('script.crossOrigin = "anonymous"');
+    expect(mapSource).toContain('script.src = `${MAPS_PROXY_URL}/maps/api/js?key=${encodeURIComponent(API_KEY)}');
+    expect(mapSource).toContain('The Google Maps proxy script failed to load');
   });
 
   it("keeps source attribution and a verification disclaimer visible in the directory", () => {

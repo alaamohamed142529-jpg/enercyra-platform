@@ -24,6 +24,9 @@ describe("Businesses directory contract", () => {
     expect(nearbySource).toContain("Nearest compatible facility");
     expect(nearbySource).toContain("أقرب جهة مناسبة للمادة");
     expect(nearbySource).toContain("Verify the address and pickup coverage directly with the facility.");
+    expect(nearbySource).toContain("Loading the map");
+    expect(nearbySource).toContain("Compatible directory entries");
+    expect(nearbySource).toContain("No compatible directory entry was found");
   });
 
   it("keeps source attribution and a verification disclaimer visible in the directory", () => {

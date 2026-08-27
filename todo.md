@@ -550,3 +550,4 @@
 - [x] Fix Arabic/English language switching and RTL/LTR direction behavior in the shared header
 - [x] Prototype GPS-based nearest compatible facility lookup using the existing Businesses directory with a safe fallback and no disruption to current flows
 - [x] Make the nearest-facility option visibly discoverable from the main Businesses page and classification result flow
+- [x] Replace the empty nearby-facilities map area with clear GPS permission, loading, no-results, and manual fallback states

@@ -364,8 +364,17 @@ h1, h2, h3, p { margin: 0; }
 .nearby-results { display: grid; gap: 14px; }
 .nearby-map { overflow: hidden; min-height: 260px; border: 1px solid var(--line); border-radius: 14px; }
 .nearby-map > div { height: 290px; }
+.nearby-map-empty { display: grid; place-items: center; gap: 8px; min-height: 260px; padding: 24px; color: var(--muted); text-align: center; background: linear-gradient(145deg, rgba(68,217,238,.05), rgba(193,244,91,.03)); }
+.nearby-map-empty svg { color: var(--lime); }
+.nearby-map-empty strong { color: var(--text); font-size: 14px; }
+.nearby-map-empty span { max-width: 430px; font-size: 11px; line-height: 1.6; }
+.nearby-no-match { min-height: 130px; border: 1px solid var(--line); border-radius: 14px; }
 .nearby-status { color: var(--muted); font-size: 12px; }
 .nearby-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.nearby-manual { display: grid; gap: 10px; }
+.nearby-manual-heading { display: grid; gap: 4px; }
+.nearby-manual-heading strong { color: var(--text); font-size: 13px; }
+.nearby-manual-heading span { color: var(--muted); font-size: 11px; line-height: 1.5; }
 .nearby-result { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; color: var(--text); background: rgba(68,217,238,.04); transition: border-color .18s ease, transform .18s ease; }
 .nearby-result:hover { border-color: var(--cyan); transform: translateY(-1px); }
 .nearby-result strong, .nearby-result span { display: block; overflow: hidden; text-overflow: ellipsis; }

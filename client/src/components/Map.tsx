@@ -107,6 +107,9 @@ function loadMapScript() {
     script.async = true;
     script.textContent = await response.text();
     document.head.appendChild(script);
+    for (let attempt = 0; attempt < 20 && !window.google?.maps; attempt += 1) {
+      await new Promise(resolve => window.setTimeout(resolve, 250));
+    }
     if (!window.google?.maps) throw new Error("Google Maps loaded without its API namespace");
   })().catch(error => {
     mapScriptPromise = null;

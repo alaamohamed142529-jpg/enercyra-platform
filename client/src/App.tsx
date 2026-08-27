@@ -97,7 +97,7 @@ type Copy = {
 
 const copy: Record<Lang, Copy> = {
   en: {
-    nav: { dashboard: "Dashboard", classify: "Classify", marketplace: "Marketplace", businesses: "Businesses", forecast: "Forecast", how: "How It Works", about: "About" },
+    nav: { dashboard: "Home", classify: "Classify", marketplace: "Marketplace", businesses: "Businesses", forecast: "Forecast", how: "How It Works", about: "About" },
     heroTitle: "See Waste. See Value.",
     heroSub: "AI-powered waste classification, reference value estimation, and energy insights.",
     classify: "Classify Waste",
@@ -116,7 +116,7 @@ const copy: Record<Lang, Copy> = {
     pending: "Price pending",
   },
   ar: {
-    nav: { dashboard: "لوحة التحكم", classify: "التصنيف", marketplace: "السوق", businesses: "الشركات", forecast: "التنبؤ", how: "كيف تعمل المنصة", about: "من نحن" },
+    nav: { dashboard: "الرئيسية", classify: "التصنيف", marketplace: "السوق", businesses: "الشركات", forecast: "التنبؤ", how: "كيف تعمل المنصة", about: "من نحن" },
     heroTitle: "شوف النفايات شوف قيمتها",
     heroSub: "منصة ذكية لتصنيف النفايات وتقدير قيمتها ومحتواها الطاقي وربطها بفرص الأعمال", 
     classify: "صنّف نفاياتك",
@@ -177,7 +177,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
   const [menuOpen, setMenuOpen] = useState(false);
   const { user } = useAuth();
   const links = [
-    ["/", "Dashboard", "لوحة التحكم", Grid2X2],
+    ["/", "Home", "الرئيسية", Grid2X2],
     ["/classify", "Classify", "التصنيف", Sparkles],
     ["/marketplace", "Marketplace", "السوق", PackageSearch],
     ["/businesses", "Businesses", "الشركات", Building2],
@@ -192,7 +192,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
         <span className="brand-copy"><strong>Enercyra</strong><small>{lang === "ar" ? "اكتشف النفايات، اكتشف قيمتها" : "See Waste. See Value."}</small></span>
       </Link>
       <nav className={`desktop-nav ${menuOpen ? "is-open" : ""}`}>
-        {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "Forecast" ? "forecast" : en === "How It Works" ? "how" : "about"]}</Link>)}
+        {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Home" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "Forecast" ? "forecast" : en === "How It Works" ? "how" : "about"]}</Link>)}
       </nav>
       <div className="header-actions">
         <button className="icon-button" aria-label={lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"} title={lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"} onClick={() => setLang(lang === "en" ? "ar" : "en")}><Globe2 size={17} /><span>{lang === "en" ? "العربية" : "English"}</span></button>

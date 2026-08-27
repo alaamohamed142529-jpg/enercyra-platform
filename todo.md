@@ -548,3 +548,4 @@
 - [x] Persist calculated Classification Result price and energy snapshots through Publish so Marketplace details show the exact values from that classification
 - [x] Correct Energy Forecast wording to describe waste-derived energy output/production in Arabic and English without changing the model or layout
 - [x] Fix Arabic/English language switching and RTL/LTR direction behavior in the shared header
+- [x] Prototype GPS-based nearest compatible facility lookup using the existing Businesses directory with a safe fallback and no disruption to current flows

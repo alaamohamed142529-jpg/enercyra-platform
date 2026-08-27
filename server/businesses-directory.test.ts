@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 
 describe("Businesses directory contract", () => {
   const appSource = readFileSync(resolve(process.cwd(), "client/src/App.tsx"), "utf8");
+  const nearbySource = readFileSync(resolve(process.cwd(), "client/src/components/NearbyFacilities.tsx"), "utf8");
 
   it("keeps the public route and verified Egyptian business records", () => {
     expect(appSource).toContain('path="/businesses"');
@@ -14,6 +15,15 @@ describe("Businesses directory contract", () => {
     expect(appSource).toContain("ECARU");
     expect(appSource).toContain("hello@bekia-egypt.com");
     expect(appSource).toContain("https://ecaru.net/en/Contact");
+  });
+
+  it("offers a permission-safe nearest compatible facility trial", () => {
+    expect(appSource).toContain("NearbyFacilities");
+    expect(appSource).toContain('href={`/businesses?material=${encodeURIComponent(item.en)}`}');
+    expect(nearbySource).toContain("navigator.geolocation.getCurrentPosition");
+    expect(nearbySource).toContain("Nearest compatible facility");
+    expect(nearbySource).toContain("أقرب جهة مناسبة للمادة");
+    expect(nearbySource).toContain("Verify the address and pickup coverage directly with the facility.");
   });
 
   it("keeps source attribution and a verification disclaimer visible in the directory", () => {

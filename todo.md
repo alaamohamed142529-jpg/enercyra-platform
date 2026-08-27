@@ -552,3 +552,4 @@
 - [x] Make the nearest-facility option visibly discoverable from the main Businesses page and classification result flow
 - [x] Replace the empty nearby-facilities map area with clear GPS permission, loading, no-results, and manual fallback states
 - [ ] Connect nearby facilities to a real map provider and verify interactive map markers; keep the credential-free fallback until a provider key is supplied
+- [x] Diagnose why the real map still does not render and repair the provider initialization or report the exact external failure

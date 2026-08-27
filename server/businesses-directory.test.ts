@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 describe("Businesses directory contract", () => {
   const appSource = readFileSync(resolve(process.cwd(), "client/src/App.tsx"), "utf8");
   const nearbySource = readFileSync(resolve(process.cwd(), "client/src/components/NearbyFacilities.tsx"), "utf8");
+  const mapSource = readFileSync(resolve(process.cwd(), "client/src/components/Map.tsx"), "utf8");
 
   it("keeps the public route and verified Egyptian business records", () => {
     expect(appSource).toContain('path="/businesses"');
@@ -30,6 +31,9 @@ describe("Businesses directory contract", () => {
     expect(nearbySource).toContain("The live map could not load");
     expect(nearbySource).toContain("Live map unavailable");
     expect(nearbySource).toContain("onMapError");
+    expect(mapSource).toContain('fetch(`${MAPS_PROXY_URL}/maps/api/js?key=${API_KEY}');
+    expect(mapSource).toContain('mode: "cors"');
+    expect(mapSource).toContain('credentials: "omit"');
   });
 
   it("keeps source attribution and a verification disclaimer visible in the directory", () => {

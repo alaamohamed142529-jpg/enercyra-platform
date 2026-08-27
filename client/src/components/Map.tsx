@@ -97,22 +97,20 @@ let mapScriptPromise: Promise<void> | null = null;
 function loadMapScript() {
   if (window.google?.maps) return Promise.resolve();
   if (mapScriptPromise) return mapScriptPromise;
-  mapScriptPromise = new Promise<void>((resolve, reject) => {
+  mapScriptPromise = (async () => {
+    const response = await fetch(`${MAPS_PROXY_URL}/maps/api/js?key=${API_KEY}&v=weekly&libraries=marker,places,geocoding,geometry`, { mode: "cors", credentials: "omit" });
+    if (!response.ok) {
+      const detail = await response.text().catch(() => "");
+      throw new Error(`Failed to load Google Maps through the Manus proxy (${response.status}): ${detail.slice(0, 120)}`);
+    }
     const script = document.createElement("script");
-    script.src = `${MAPS_PROXY_URL}/maps/api/js?key=${API_KEY}&v=weekly&libraries=marker,places,geocoding,geometry`;
     script.async = true;
-    script.crossOrigin = "anonymous";
-    script.onload = () => {
-      script.remove();
-      if (window.google?.maps) resolve();
-      else reject(new Error("Google Maps loaded without its API namespace"));
-    };
-    script.onerror = () => {
-      script.remove();
-      mapScriptPromise = null;
-      reject(new Error("Failed to load Google Maps through the Manus proxy"));
-    };
+    script.textContent = await response.text();
     document.head.appendChild(script);
+    if (!window.google?.maps) throw new Error("Google Maps loaded without its API namespace");
+  })().catch(error => {
+    mapScriptPromise = null;
+    throw error;
   });
   return mapScriptPromise;
 }

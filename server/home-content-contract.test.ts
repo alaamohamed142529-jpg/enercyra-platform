@@ -40,6 +40,11 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("item.condition");
     expect(appSource).toContain("item.notes");
     expect(appSource).toContain("Contact seller");
+    expect(appSource).toContain('lang === "ar" ? "السعر المرجعي" : "Reference price"');
+    expect(appSource).toContain('lang === "ar" ? "القيمة المقدرة" : "Estimated value"');
+    expect(appSource).toContain('lang === "ar" ? "الطاقة الأصلية" : "Original energy"');
+    expect(appSource).toContain('lang === "ar" ? "إجمالي الطاقة" : "Total energy"');
+    expect(appSource).toContain("Pending verification");
   });
 
   it("renders the About Team section from data-driven LinkedIn-linked members", () => {

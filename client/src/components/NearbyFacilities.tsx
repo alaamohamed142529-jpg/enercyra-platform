@@ -96,7 +96,7 @@ export function NearbyFacilities({ lang, businesses, material = "" }: NearbyFaci
     );
   };
 
-  return <section className="nearby-facilities" aria-labelledby="nearby-facilities-title">
+  return <section id="nearby-facilities" className="nearby-facilities" aria-labelledby="nearby-facilities-title">
     <div className="nearby-heading">
       <div><span className="eyebrow"><Navigation size={15} />{isAr ? "مطابقة جغرافية" : "Location matching"}</span><h2 id="nearby-facilities-title">{isAr ? "أقرب جهة مناسبة للمادة" : "Nearest compatible facility"}</h2><p>{material ? (isAr ? `سنبحث عن جهات تقبل: ${material}` : `We will look for facilities that accept: ${material}`) : (isAr ? "اسمحي بالموقع للعثور على أقرب جهة من دليل الشركات." : "Share your location to find the nearest facility in the directory.")}</p></div>
       <div className="nearby-icon"><LocateFixed size={22} /></div>

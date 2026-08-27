@@ -520,7 +520,7 @@
 - [x] Inventory every `/manus-storage/` image reference and identify the corresponding persistent source assets
 - [x] Copy all referenced images into deployable local static assets and replace every code reference
 - [ ] Verify the full asset inventory, tests, production build, and Vercel deployment on Classify, Marketplace, and About
-- [ ] Audit Manus and Vercel parity, including routes, assets, database, storage, and inference runtime
+- [x] Audit Manus and Vercel parity, including routes, assets, database, storage, and inference runtime
 - [ ] Complete external-host portability for static assets, backend storage, and model paths
 - [ ] Connect authorized external MySQL/storage services and configure Vercel environment variables
 - [ ] Redeploy and verify Classify, Marketplace, About, Forecast, and critical API workflows on Vercel

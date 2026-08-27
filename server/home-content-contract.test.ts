@@ -30,6 +30,14 @@ describe("homepage content contract", () => {
     expect(appSource).not.toContain("Mixed Materials");
   });
 
+  it("uses the notebook’s waste-derived energy output terminology", () => {
+    expect(appSource).toContain("توقّع إنتاج الطاقة من المخلفات");
+    expect(appSource).toContain("Waste Energy Output Forecast");
+    expect(appSource).toContain("waste-derived energy output");
+    expect(appSource).not.toContain("توقع استهلاك الطاقة");
+    expect(appSource).not.toContain("energy consumption based on historical data");
+  });
+
   it("opens complete listing details while keeping contact actions isolated", () => {
     expect(appSource).toContain('<Route path="/marketplace/:id"');
     expect(appSource).toContain("listing-card-clickable");

@@ -50,6 +50,12 @@ export function calculateEstimate(weightKg: number, reference: Pick<WasteReferen
   };
 }
 
+export function formatWeightKg(value: string | number): string {
+  const numeric = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(numeric)) return String(value);
+  return new Intl.NumberFormat("en-US", { maximumFractionDigits: 3, useGrouping: false }).format(numeric);
+}
+
 export function normalizeClassId(value: string | number): string {
   return String(value).trim().toLowerCase().replace(/\s+/g, "_");
 }

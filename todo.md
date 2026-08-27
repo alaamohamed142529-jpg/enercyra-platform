@@ -543,3 +543,4 @@
 - [ ] Re-audit checkpoint 5fad5520, validate the supported pnpm 10 native-script configuration, push only the verified fix, and prove production classification returns HTTP 200 JSON
 
 - [x] Add safe delete controls for real Marketplace listings with confirmation, persistence, and empty-state updates
+- [x] Simplify Marketplace weight labels from fixed three-decimal formatting to a user-friendly kg display without changing stored values

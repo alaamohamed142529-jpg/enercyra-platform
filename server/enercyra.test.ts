@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateEstimate, normalizeClassId, parseWeightInput } from "../shared/enercyra";
+import { calculateEstimate, formatWeightKg, normalizeClassId, parseWeightInput } from "../shared/enercyra";
 import { canManageListing } from "../shared/listing-security";
 import { mobileNetReferenceCatalog } from "../shared/model-classes";
 import { energyRecoveryLabel, notebookReferenceNotice, pendingDataNotice, pendingMetricLabel, pendingMetricStatus } from "../shared/result-copy";
@@ -53,6 +53,12 @@ describe("Enercyra reference estimates", () => {
     expect(result.valueEgp).toBeNull();
     expect(result.energyKwh).toBeNull();
     expect(result.status).toBe("pending");
+  });
+
+  it("formats listing weights without unnecessary trailing zeroes", () => {
+    expect(formatWeightKg("50.000")).toBe("50");
+    expect(formatWeightKg("2.500")).toBe("2.5");
+    expect(formatWeightKg(0.125)).toBe("0.125");
   });
 
   it("normalizes model class identifiers for mapping", () => {

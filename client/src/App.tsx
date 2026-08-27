@@ -136,10 +136,11 @@ const copy: Record<Lang, Copy> = {
 };
 
 function App() {
-  const [lang, setLang] = useState<Lang>(() => new URLSearchParams(window.location.search).get("lang") === "ar" ? "ar" : "en");
+  const [lang, setLang] = useState<Lang>(() => { const requested = new URLSearchParams(window.location.search).get("lang"); if (requested === "ar" || requested === "en") return requested; return window.localStorage.getItem("enercyra-language") === "ar" ? "ar" : "en"; });
   const [dark, setDark] = useState(() => window.localStorage.getItem("enercyra-theme") !== "light");
   const [currency, setCurrency] = useState<Currency>(() => (window.localStorage.getItem("enercyra-currency") as Currency) || "EGP");
   useEffect(() => { window.localStorage.setItem("enercyra-currency", currency); }, [currency]);
+  useEffect(() => { window.localStorage.setItem("enercyra-language", lang); document.documentElement.lang = lang; document.documentElement.dir = lang === "ar" ? "rtl" : "ltr"; }, [lang]);
   useEffect(() => { window.localStorage.setItem("enercyra-theme", dark ? "dark" : "light"); }, [dark]);
   const dir = lang === "ar" ? "rtl" : "ltr";
   const text = copy[lang];
@@ -193,7 +194,7 @@ function SiteHeader({ lang, setLang, dark, setDark, text }: { lang: Lang; setLan
         {links.map(([href, en, ar, Icon]) => <Link key={href} href={href} className="nav-link"><Icon size={16} />{lang === "ar" ? ar : text.nav[en === "Dashboard" ? "dashboard" : en === "Classify" ? "classify" : en === "Marketplace" ? "marketplace" : en === "Businesses" ? "businesses" : en === "Forecast" ? "forecast" : en === "How It Works" ? "how" : "about"]}</Link>)}
       </nav>
       <div className="header-actions">
-        <button className="icon-button" aria-label="Switch language" onClick={() => setLang(lang === "en" ? "ar" : "en")}><Globe2 size={17} /><span>{lang === "en" ? "العربية" : "English"}</span></button>
+        <button className="icon-button" aria-label={lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"} title={lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"} onClick={() => setLang(lang === "en" ? "ar" : "en")}><Globe2 size={17} /><span>{lang === "en" ? "العربية" : "English"}</span></button>
         <button className="theme-toggle" aria-label={dark ? "Switch to light mode" : "Switch to dark mode"} title={dark ? "Switch to light mode" : "Switch to dark mode"} onClick={() => setDark(!dark)}>{dark ? <Moon size={16} /> : <Sun size={16} />}<span className="toggle-dot" /></button>
         {user ? <Link href="/my-listings" className="avatar-button"><UserRound size={17} /></Link> : <button className="login-button" onClick={() => startLogin()}><LogIn size={16} />{lang === "ar" ? "دخول" : "Sign in"}</button>}
         <button className="mobile-menu" aria-label="Open menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>

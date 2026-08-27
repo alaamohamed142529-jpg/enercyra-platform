@@ -5,6 +5,14 @@ import { resolve } from "node:path";
 describe("homepage content contract", () => {
   const appSource = readFileSync(resolve(process.cwd(), "client/src/App.tsx"), "utf8");
 
+  it("persists language choice and synchronizes document direction", () => {
+    expect(appSource).toContain('window.localStorage.getItem("enercyra-language") === "ar" ? "ar" : "en"');
+    expect(appSource).toContain('window.localStorage.setItem("enercyra-language", lang)');
+    expect(appSource).toContain('document.documentElement.lang = lang');
+    expect(appSource).toContain('document.documentElement.dir = lang === "ar" ? "rtl" : "ltr"');
+    expect(appSource).toContain('aria-label={lang === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"}');
+  });
+
   it("does not fabricate a Plastic Bottle Recent Analysis entry", () => {
     expect(appSource).toContain("No analyses yet");
     expect(appSource).toContain("readRecentClassification");

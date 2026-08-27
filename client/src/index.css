@@ -362,9 +362,9 @@ h1, h2, h3, p { margin: 0; }
 .nearby-icon { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; border: 1px solid color-mix(in srgb, var(--lime) 55%, transparent); border-radius: 14px; color: var(--lime); background: rgba(193,244,91,.08); }
 .nearby-facilities > .btn { justify-self: start; }
 .nearby-results { display: grid; gap: 14px; }
-.nearby-map { overflow: hidden; min-height: 260px; border: 1px solid var(--line); border-radius: 14px; }
-.nearby-map > div { height: 290px; }
-.nearby-map-empty { display: grid; place-items: center; gap: 8px; min-height: 260px; padding: 24px; color: var(--muted); text-align: center; background: linear-gradient(145deg, rgba(68,217,238,.05), rgba(193,244,91,.03)); }
+.nearby-map { overflow: hidden; min-height: 190px; border: 1px solid var(--line); border-radius: 14px; }
+.nearby-map > div { height: 190px; }
+.nearby-map-empty { display: grid; place-items: center; gap: 8px; min-height: 190px; padding: 20px; color: var(--muted); text-align: center; background: linear-gradient(145deg, rgba(68,217,238,.05), rgba(193,244,91,.03)); }
 .nearby-map-empty svg { color: var(--lime); }
 .nearby-map-empty strong { color: var(--text); font-size: 14px; }
 .nearby-map-empty span { max-width: 430px; font-size: 11px; line-height: 1.6; }
@@ -386,7 +386,7 @@ h1, h2, h3, p { margin: 0; }
 .business-disclaimer { display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; padding: 15px 17px; border: 1px solid color-mix(in srgb, var(--cyan) 28%, var(--line)); border-radius: 14px; color: var(--muted); background: rgba(68,217,238,.05); font-size: 12px; line-height: 1.6; }
 .business-disclaimer svg { flex: 0 0 auto; color: var(--cyan); margin-top: 2px; }
 .app-shell.theme-light .business-card { box-shadow: 0 18px 42px rgba(17,59,70,.08); }
-@media (max-width: 860px) { .site-header { border-radius: 20px; } .business-tools { grid-template-columns: 1fr; } .business-grid { grid-template-columns: 1fr; } .nearby-list { grid-template-columns: 1fr; } .nearby-heading { flex-direction: column-reverse; } .business-heading-actions .btn { width: 100%; justify-content: center; } .businesses-heading h1 { font-size: 58px; } }
+@media (max-width: 860px) { .site-header { border-radius: 20px; } .business-tools { grid-template-columns: 1fr; } .business-grid { grid-template-columns: 1fr; } .nearby-list { grid-template-columns: 1fr; } .nearby-heading { flex-direction: column-reverse; } .business-heading-actions .btn { width: 100%; justify-content: center; } .businesses-heading h1 { font-size: 58px; } .nearby-map { min-height: 160px; } .nearby-map > div { height: 160px; } .nearby-map-empty { min-height: 160px; padding: 16px; } }
 
 /* Reference-aligned orbit callouts: classify upper-left, calculate upper-right, connect lower-right. */
 .hero-function-label { z-index: 7; gap: 6px; min-height: 18px; padding: 2px 4px; color: var(--lime); text-shadow: 0 0 12px rgba(193,244,91,.42); }

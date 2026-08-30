@@ -558,3 +558,4 @@
 - [x] Correct the header Dashboard label or destination to represent the public Home page clearly in Arabic and English
 - [x] Remove the About-page team section members except Alaa Mohamed and update her role to site designer/creator
 - [x] Verify and resolve the reported mismatch where the deployed About page still shows the old Team section
+- [x] Polish the About creator card with a compact balanced layout and proportional image sizing

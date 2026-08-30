@@ -556,3 +556,4 @@
 - [ ] Replace the failing proxied map renderer with a reliable credential-free real-map fallback and preserve GPS/facility ranking
 - [x] Reduce the nearby-facilities map panel height while preserving the unavailable-map message and fallback list
 - [x] Correct the header Dashboard label or destination to represent the public Home page clearly in Arabic and English
+- [x] Remove the About-page team section members except Alaa Mohamed and update her role to site designer/creator

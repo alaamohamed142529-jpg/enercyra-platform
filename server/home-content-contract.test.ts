@@ -63,27 +63,20 @@ describe("homepage content contract", () => {
     expect(appSource).toContain("Pending verification");
   });
 
-  it("renders the About Team section from data-driven LinkedIn-linked members", () => {
-    expect(appSource).toContain("const teamMembers = [");
-    expect(appSource).toContain('nameEn: "Alaa Mohamed", nameAr: "آلاء محمد"');
-    expect(appSource).toContain('const ENGLISH_OHOUD_NAME = ["Ohoud", "Taha"].join(" ");');
-    expect(appSource).toContain('nameEn: ENGLISH_OHOUD_NAME, nameAr: "عهود طه"');
-    expect(appSource).not.toContain('nameEn: "Huda Taha"');
-    expect(appSource).not.toContain('nameEn: "Huda Taha", nameAr: "عهود طه"');
-    expect(appSource).toContain('nameEn: "Rahma Mohamed", nameAr: "رحمة محمد"');
-    expect(appSource).toContain('dir={lang === "ar" ? "rtl" : "ltr"}');
-    expect(appSource).toContain("teamMembers.map");
-    expect(appSource).toContain('const memberName = lang === "ar" ? member.nameAr : member.nameEn;');
-    expect(appSource).not.toContain("<small>{member.role}</small>");
+  it("renders only Alaa as the About-page site creator", () => {
+    expect(appSource).not.toContain("const teamMembers = [");
+    expect(appSource).not.toContain("team-section");
+    expect(appSource).not.toContain("عهود طه");
+    expect(appSource).not.toContain("رحمة محمد");
+    expect(appSource).toContain('className="creator-section"');
+    expect(appSource).toContain('lang === "ar" ? "منشئة الموقع" : "Site creator"');
+    expect(appSource).toContain('lang === "ar" ? "آلاء محمد" : "Alaa Mohamed"');
+    expect(appSource).toContain('مصممة ومُنشئة موقع Enercyra.');
+    expect(appSource).toContain('Designer and creator of the Enercyra website.');
     expect(appSource).toContain("/assets/alaa_3689a963.jpg");
-    expect(appSource).toContain("/assets/ohoud_5d143c3b.jpg");
-    expect(appSource).toContain("/assets/rahma_00948031.jpg");
     expect(appSource).toContain("https://www.linkedin.com/in/alaa-mohamed-analyst/");
-    expect(appSource).toContain("https://www.linkedin.com/in/ohoudtaha/");
-    expect(appSource).toContain("https://www.linkedin.com/in/rahma-mohamed-data/");
-    expect(appSource).toContain("teamMembers.map");
     expect(appSource).toContain('target="_blank" rel="noopener noreferrer"');
-    expect(appSource).toContain('className="team-avatar"');
+    expect(appSource).toContain('className="creator-avatar"');
   });
 
   it("uses the configured Enercyra app logo for platform-managed identity", () => {
